@@ -1,0 +1,881 @@
+<HTML><HEAD><META HTTP-EQUIV="Pragma" CONTENT="no-cache"><STYLE type="text/css">input {font-family: Arial, Verdana,  Helvetica, sans-serif; font-size: 80%;color: #000000}select {font-family: Arial, Verdana,  Helvetica, sans-serif; font-size: 80%; color: #000000}th {font-family: Arial, Verdana,  Helvetica, sans-serif;font-weight:bold; font-size: 90%; color: #000000;text-align:center;background-color: #6699CC}td {font-family: Arial, Verdana,  Helvetica, sans-serif; font-size: 80%; color: #000000;text-align:center;background-color: #FFFFFF}.normal{font-family: Arial, Geneva, Helvetica, Sans-serif; font-size: 12px;background-color:#00FF00; color: #000000; }</STYLE></HEAD><BODY BGCOLOR="#F5F5DC" MARGINHEIGHT="0" MARGINWIDTH="0" LEFTMARGIN="0" TOPMARGIN="0" BORDER="0" TEXT="#000000" LINK="#000000" ALINK="#000000" VLINK="#000000"><BR><table width='80%' border='1' cellspacing='0' cellpadding='0' align='center'><TR><TH>Data:Time</TH><TH>Latitude</TH><TH>Longitude</TH><TH>Depth</TH><TH>Energy</TH><TH>Op-Time</TH><TH>Dup</TH><TH>Operator</TH></TR><TR><TD>2016.04.24 06:16:19.734</TD><TD>52.486</TD><TD>153.804</TD><TD>94.2</TD><TD>Ks=8.0 </TD><TD>13.8211 min</TD><TD>&nbsp;</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.24 06:15:37.771</TD><TD>48.581</TD><TD>156.089</TD><TD>23.9</TD><TD>Ks=9.4 </TD><TD>5.42047 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.24 06:15:34.293</TD><TD>48.824</TD><TD>155.031</TD><TD>126.2</TD><TD>Ks=8.9 </TD><TD>13.0785 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.24 06:10:41.114</TD><TD>50.804</TD><TD>156.476</TD><TD>123.5</TD><TD>Ks=8.0 Kp=6.6 </TD><TD>12.7148 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.24 06:10:41.097</TD><TD>50.794</TD><TD>156.501</TD><TD>122.2</TD><TD>Ks=8.0 Kp=6.6 </TD><TD>9.09838 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.24 06:10:39.199</TD><TD>50.106</TD><TD>157.340</TD><TD>100.0</TD><TD>Ks=9.8 MPSP=5.1 Kp=9.5 </TD><TD>5.46335 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.24 06:10:38.124</TD><TD>49.938</TD><TD>155.006</TD><TD>0.0</TD><TD>Ks=10.6 Kp=9.1 </TD><TD>2.64793 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.24 06:10:26.897</TD><TD>51.459</TD><TD>154.642</TD><TD>200.8</TD><TD>Ks=8.6 Kp=6.5 </TD><TD>10.5184 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.24 06:10:26.127</TD><TD>51.822</TD><TD>153.918</TD><TD>131.5</TD><TD>Ks=8.6 Kp=6.5 </TD><TD>12.5145 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.24 05:58:01.122</TD><TD>56.633</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>81.798 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.24 05:50:55.165</TD><TD>56.627</TD><TD>161.309</TD><TD>-0.9</TD><TD>Ks=5.1 </TD><TD>86.4806 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.24 05:47:00.056</TD><TD>56.626</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>88.9491 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.24 05:35:11.444</TD><TD>51.897</TD><TD>157.818</TD><TD>138.6</TD><TD>Ks=6.4 Kp=7.6 </TD><TD>6.37593 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.24 05:35:11.244</TD><TD>51.923</TD><TD>157.776</TD><TD>139.6</TD><TD>Kp=7.6 Ks=6.4 </TD><TD>7.7126 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.24 05:11:17.134</TD><TD>56.628</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=4.1 </TD><TD>123.014 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.24 04:55:41.684</TD><TD>56.624</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=4.6 </TD><TD>136.539 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.24 04:45:44.157</TD><TD>56.620</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>144.464 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.24 04:04:19.747</TD><TD>56.628</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=4.3 </TD><TD>182.421 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.24 02:51:48.174</TD><TD>56.626</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=4.1 </TD><TD>252.447 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.24 02:43:57.677</TD><TD>56.630</TD><TD>161.316</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>258.222 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.24 02:37:26.162</TD><TD>56.625</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>263.231 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.24 01:53:09.286</TD><TD>56.627</TD><TD>161.314</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>305.812 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.24 00:59:35.090</TD><TD>56.627</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=5.4 </TD><TD>46.9818 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.24 00:40:56.128</TD><TD>56.625</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>62.5979 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.24 00:28:56.036</TD><TD>51.029</TD><TD>157.027</TD><TD>66.3</TD><TD>Ks=7.0 </TD><TD>18.2827 min</TD><TD>&nbsp;</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.24 00:28:50.421</TD><TD>50.993</TD><TD>156.943</TD><TD>120.8</TD><TD>Ks=7.5 </TD><TD>19.043 min</TD><TD>&nbsp;</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.24 00:18:08.399</TD><TD>56.624</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>83.86 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 23:59:10.463</TD><TD>56.625</TD><TD>161.299</TD><TD>-0.9</TD><TD>Ks=4.4 </TD><TD>55.7089 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 23:44:07.871</TD><TD>56.627</TD><TD>161.302</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>67.2355 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 23:27:05.994</TD><TD>56.627</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>82.5834 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 23:12:37.335</TD><TD>50.488</TD><TD>157.557</TD><TD>66.6</TD><TD>Ks=7.5 </TD><TD>343.194 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.23 23:11:11.789</TD><TD>-17.134</TD><TD>-172.442</TD><TD>10.8</TD><TD>MPLP=5.9 MPSP=5.9 MsLP=5.9 MS=5.0 </TD><TD>465.12 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.23 23:11:09.535</TD><TD>-17.870</TD><TD>-172.827</TD><TD>14.3</TD><TD>MPSP=5.9 MPLP=5.9 MS=5.0 </TD><TD>46.5577 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.23 23:11:08.826</TD><TD>-17.469</TD><TD>-172.816</TD><TD>0.0</TD><TD>MPLP=5.6 MS=4.6 </TD><TD>53.5362 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.23 23:02:59.958</TD><TD>51.745</TD><TD>-178.692</TD><TD>10.3</TD><TD>MPSP=4.8 MS=3.8 </TD><TD>305.801 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.23 22:19:00.007</TD><TD>56.629</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=4.2 </TD><TD>148.617 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 22:16:29.802</TD><TD>56.632</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>149.537 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 21:38:22.978</TD><TD>56.629</TD><TD>161.314</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>183.984 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 21:33:10.251</TD><TD>52.475</TD><TD>158.152</TD><TD>3.0</TD><TD>Ks=2.4 </TD><TD>485.612 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.23 21:14:20.962</TD><TD>56.622</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=4.2 </TD><TD>205.551 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 20:43:05.961</TD><TD>56.629</TD><TD>161.299</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>232.884 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 20:31:44.347</TD><TD>56.629</TD><TD>161.312</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>242.461 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 20:19:17.411</TD><TD>56.626</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>240.126 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 19:22:33.297</TD><TD>53.568</TD><TD>157.377</TD><TD>6.1</TD><TD>Ks=5.8 </TD><TD>544.578 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.23 19:10:01.632</TD><TD>56.624</TD><TD>161.301</TD><TD>-0.8</TD><TD>Ks=4.2 </TD><TD>306.106 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 19:06:21.545</TD><TD>56.625</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=4.2 </TD><TD>307.091 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 18:36:58.552</TD><TD>56.628</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>334.641 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 18:26:01.286</TD><TD>56.627</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>343.729 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 18:12:49.425</TD><TD>56.635</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>355.326 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 18:01:57.414</TD><TD>56.628</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>364.71 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 17:55:28.901</TD><TD>44.280</TD><TD>150.456</TD><TD>49.6</TD><TD>Ks=8.3 </TD><TD>11.5683 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.23 17:29:42.193</TD><TD>56.629</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=4.3 </TD><TD>395.247 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 17:18:03.210</TD><TD>52.034</TD><TD>157.651</TD><TD>22.8</TD><TD>Ks=5.1 </TD><TD>660.03 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.23 17:17:59.533</TD><TD>51.985</TD><TD>158.772</TD><TD>41.4</TD><TD>Ks=4.8 </TD><TD>752.141 min</TD><TD>!</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.23 16:52:30.515</TD><TD>56.624</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=4.7 </TD><TD>430.708 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 16:25:43.184</TD><TD>52.271</TD><TD>160.717</TD><TD>9.1</TD><TD>Ks=6.5 </TD><TD>695.264 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.23 16:25:23.807</TD><TD>56.628</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=4.3 </TD><TD>455.503 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 15:45:53.766</TD><TD>56.632</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>493.421 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 15:36:15.394</TD><TD>56.633</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>501.16 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 15:13:29.740</TD><TD>50.724</TD><TD>156.846</TD><TD>119.8</TD><TD>Ks=7.9 </TD><TD>757.538 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.23 15:11:05.466</TD><TD>56.629</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>524.242 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 14:57:40.657</TD><TD>53.792</TD><TD>158.966</TD><TD>154.6</TD><TD>Ks=6.6 </TD><TD>751.022 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.23 14:34:11.532</TD><TD>56.628</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>558.491 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 14:23:54.809</TD><TD>50.741</TD><TD>157.289</TD><TD>120.2</TD><TD>Ks=8.5 </TD><TD>720.67 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.23 14:07:44.571</TD><TD>56.628</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>466.974 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 13:12:38.456</TD><TD>56.630</TD><TD>161.309</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>520.359 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 13:07:14.482</TD><TD>56.625</TD><TD>161.302</TD><TD>-0.9</TD><TD>Ks=4.2 </TD><TD>520.759 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 12:50:32.848</TD><TD>56.632</TD><TD>161.312</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>536.186 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 12:20:09.453</TD><TD>56.627</TD><TD>161.312</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>564.509 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 11:47:21.196</TD><TD>56.631</TD><TD>161.314</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>593.73 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 11:36:22.117</TD><TD>56.626</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>602.115 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 10:03:36.381</TD><TD>56.629</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=5.4 </TD><TD>689.594 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 09:53:32.409</TD><TD>56.630</TD><TD>161.301</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>697.227 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 09:37:16.579</TD><TD>56.628</TD><TD>161.313</TD><TD>-0.9</TD><TD>Ks=4.3 </TD><TD>710.807 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 09:36:11.785</TD><TD>52.453</TD><TD>158.200</TD><TD>4.0</TD><TD>Ks=3.6 </TD><TD>1199.75 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.23 09:33:36.498</TD><TD>56.627</TD><TD>161.301</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>711.792 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 08:40:28.593</TD><TD>56.626</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>761.107 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 08:38:31.057</TD><TD>56.630</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>761.666 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 08:26:02.692</TD><TD>56.630</TD><TD>161.312</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>740.772 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 08:05:12.501</TD><TD>56.628</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>758.475 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 07:32:03.531</TD><TD>53.256</TD><TD>158.837</TD><TD>-1.0</TD><TD>Ks=1.8 </TD><TD>1318.69 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.23 07:11:42.811</TD><TD>56.062</TD><TD>160.674</TD><TD>-1.0</TD><TD>Ks=4.7 </TD><TD>1101.2 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 06:51:57.559</TD><TD>56.061</TD><TD>160.659</TD><TD>-1.1</TD><TD>Ks=5.0 </TD><TD>1109.57 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 06:40:38.504</TD><TD>54.158</TD><TD>160.708</TD><TD>67.4</TD><TD>Ks=6.9 </TD><TD>1137.36 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.23 05:52:24.004</TD><TD>52.251</TD><TD>160.726</TD><TD>8.7</TD><TD>Ks=6.5 </TD><TD>1144.7 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.23 05:36:56.030</TD><TD>56.066</TD><TD>160.676</TD><TD>-0.2</TD><TD>Ks=6.8 </TD><TD>1091.15 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 05:13:08.580</TD><TD>56.060</TD><TD>160.638</TD><TD>-1.4</TD><TD>Ks=5.0 </TD><TD>1101.72 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 04:56:12.868</TD><TD>56.626</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>940.152 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 04:46:37.563</TD><TD>56.060</TD><TD>160.634</TD><TD>-0.6</TD><TD>Ks=5.9 </TD><TD>1112.42 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 04:42:55.678</TD><TD>56.627</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>950.955 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 04:36:33.582</TD><TD>56.060</TD><TD>160.668</TD><TD>-1.5</TD><TD>Ks=5.2 </TD><TD>1102.01 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 04:13:11.266</TD><TD>56.633</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=4.3 </TD><TD>15.7122 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 03:48:40.797</TD><TD>56.063</TD><TD>160.655</TD><TD>-0.5</TD><TD>Ks=6.7 </TD><TD>1137.4 min</TD><TD>!</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 03:48:40.322</TD><TD>56.050</TD><TD>160.671</TD><TD>-0.2</TD><TD>Ks=6.2 </TD><TD>54.7613 min</TD><TD>!</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.23 03:41:42.668</TD><TD>56.060</TD><TD>160.657</TD><TD>-1.5</TD><TD>Ks=4.7 </TD><TD>1126.96 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 03:35:17.464</TD><TD>52.736</TD><TD>159.510</TD><TD>104.1</TD><TD>Ks=7.3 </TD><TD>1238.89 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.23 03:28:50.831</TD><TD>56.628</TD><TD>161.312</TD><TD>-0.9</TD><TD>Ks=4.2 </TD><TD>58.1361 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 02:42:53.886</TD><TD>56.627</TD><TD>161.309</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>98.7852 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 02:09:55.648</TD><TD>56.629</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>129.489 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 01:59:00.377</TD><TD>56.628</TD><TD>161.312</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>137.81 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.23 01:24:32.172</TD><TD>0.779</TD><TD>-80.517</TD><TD>10.0</TD><TD>MS=5.3 </TD><TD>94.1638 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.23 01:05:16.861</TD><TD>56.625</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>186.952 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 23:20:19.847</TD><TD>51.886</TD><TD>159.043</TD><TD>156.5</TD><TD>Ks=7.0 </TD><TD>410.886 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 23:14:23.784</TD><TD>-10.123</TD><TD>165.258</TD><TD>15.8</TD><TD>MPSP=5.6 MS=4.9 </TD><TD>42.4536 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 23:14:22.400</TD><TD>-10.181</TD><TD>165.296</TD><TD>9.1</TD><TD>MPSP=5.6 MS=4.9 </TD><TD>72.2933 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.22 23:12:32.748</TD><TD>48.253</TD><TD>155.800</TD><TD>60.6</TD><TD>Ks=8.9 </TD><TD>407.004 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 22:06:33.894</TD><TD>52.814</TD><TD>159.204</TD><TD>28.1</TD><TD>Ks=5.7 </TD><TD>440.102 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 21:42:24.251</TD><TD>49.408</TD><TD>153.933</TD><TD>155.6</TD><TD>Ks=10.1 </TD><TD>9.91247 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.22 21:42:21.053</TD><TD>48.855</TD><TD>154.712</TD><TD>171.7</TD><TD>Ks=10.2 Kp=7.9 MS20=2.2 </TD><TD>7.24912 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.22 21:42:20.899</TD><TD>48.654</TD><TD>155.375</TD><TD>183.6</TD><TD>MPSP=5.1 Kp=9.8 </TD><TD>6.885 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 21:42:17.051</TD><TD>48.932</TD><TD>153.690</TD><TD>174.4</TD><TD>Ks=10.1 </TD><TD>12.8325 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.22 21:42:16.557</TD><TD>48.896</TD><TD>153.760</TD><TD>180.9</TD><TD>Ks=10.2 Kp=7.9 MS20=2.3 </TD><TD>9.6907 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.22 21:42:16.257</TD><TD>48.958</TD><TD>153.623</TD><TD>193.7</TD><TD>Ks=10.5 Kp=9.0 MPSP=4.5 </TD><TD>13.1624 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.22 21:42:16.134</TD><TD>48.636</TD><TD>154.262</TD><TD>196.9</TD><TD>Ks=11.6 </TD><TD>38.3644 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 21:29:12.502</TD><TD>51.436</TD><TD>158.335</TD><TD>52.1</TD><TD>Ks=7.4 </TD><TD>498.108 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 21:28:11.379</TD><TD>55.699</TD><TD>160.371</TD><TD>0.2</TD><TD>Ks=4.4 </TD><TD>147.777 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 20:38:28.045</TD><TD>56.625</TD><TD>161.298</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>166.199 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 20:07:08.189</TD><TD>56.629</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>187.53 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 20:00:31.371</TD><TD>55.954</TD><TD>163.088</TD><TD>34.1</TD><TD>Ks=7.0 </TD><TD>530.477 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 19:57:43.660</TD><TD>56.625</TD><TD>161.302</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>195.622 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 19:49:39.156</TD><TD>56.623</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>202.397 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 19:47:11.305</TD><TD>56.630</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=4.2 </TD><TD>201.112 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 19:31:28.718</TD><TD>56.630</TD><TD>161.315</TD><TD>-0.9</TD><TD>Ks=4.1 </TD><TD>215.121 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 19:20:12.535</TD><TD>52.450</TD><TD>158.149</TD><TD>0.7</TD><TD>Ks=3.3 </TD><TD>230.558 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.22 19:13:56.278</TD><TD>56.623</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=4.4 </TD><TD>228.829 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 19:06:54.784</TD><TD>49.689</TD><TD>157.107</TD><TD>16.2</TD><TD>Ks=8.5 </TD><TD>560.704 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 18:51:40.644</TD><TD>51.868</TD><TD>159.262</TD><TD>15.5</TD><TD>Ks=5.9 </TD><TD>543.289 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 18:47:57.429</TD><TD>1.410</TD><TD>126.929</TD><TD>60.7</TD><TD>MPSP=5.3 </TD><TD>53.5262 min</TD><TD>&nbsp;</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.22 18:41:47.618</TD><TD>56.630</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>256.29 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 18:27:27.388</TD><TD>56.627</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>267.377 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 18:06:19.825</TD><TD>56.626</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>286.586 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 18:00:19.154</TD><TD>51.251</TD><TD>160.547</TD><TD>6.9</TD><TD>Ks=7.1 </TD><TD>585.914 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 17:32:16.886</TD><TD>53.747</TD><TD>161.208</TD><TD>15.8</TD><TD>Ks=6.9 </TD><TD>597.702 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 17:22:08.441</TD><TD>51.886</TD><TD>159.181</TD><TD>26.2</TD><TD>Ks=6.2 </TD><TD>597.026 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 17:21:38.269</TD><TD>56.624</TD><TD>161.302</TD><TD>-0.9</TD><TD>Ks=4.1 </TD><TD>323.112 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 16:45:35.864</TD><TD>52.958</TD><TD>162.664</TD><TD>61.4</TD><TD>Ks=7.6 </TD><TD>609.936 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 15:56:49.181</TD><TD>47.849</TD><TD>155.609</TD><TD>142.1</TD><TD>Ks=9.5 </TD><TD>635.497 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 15:56:13.561</TD><TD>52.464</TD><TD>158.224</TD><TD>4.2</TD><TD>Ks=3.4 </TD><TD>485.857 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.22 15:41:48.580</TD><TD>53.256</TD><TD>158.838</TD><TD>0.5</TD><TD>Ks=2.9 </TD><TD>528.557 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.22 15:10:13.046</TD><TD>56.630</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>445.749 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 14:31:37.648</TD><TD>-7.319</TD><TD>156.031</TD><TD>118.8</TD><TD>MS=4.2 MPLP=4.7 </TD><TD>742.973 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 14:17:06.512</TD><TD>56.628</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>495.408 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 14:00:28.580</TD><TD>52.459</TD><TD>158.165</TD><TD>2.4</TD><TD>Ks=3.3 </TD><TD>597.524 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.22 13:51:24.167</TD><TD>46.330</TD><TD>140.486</TD><TD>40.3</TD><TD>Ks=6.6 MPSP=3.0 Kp=5.7 </TD><TD>781.797 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 13:51:20.301</TD><TD>46.372</TD><TD>140.349</TD><TD>40.7</TD><TD>Ks=6.6 </TD><TD>35.1283 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 13:33:16.935</TD><TD>56.627</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>537.184 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 12:46:44.494</TD><TD>56.627</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>569.625 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 12:12:58.006</TD><TD>55.961</TD><TD>161.507</TD><TD>102.4</TD><TD>Ks=8.1 </TD><TD>848.6 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 12:07:24.938</TD><TD>40.554</TD><TD>144.912</TD><TD>30.0</TD><TD>Ks=9.1 MPSP=4.5 Kp=8.8 </TD><TD>8.35103 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 12:02:12.747</TD><TD>56.626</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>589.871 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 11:34:27.045</TD><TD>56.624</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>605.483 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 11:09:57.700</TD><TD>56.626</TD><TD>161.302</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>626.572 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 10:45:58.595</TD><TD>54.842</TD><TD>162.159</TD><TD>42.9</TD><TD>Ks=7.5 </TD><TD>844.673 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 10:45:09.382</TD><TD>56.625</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>647.294 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 10:36:27.701</TD><TD>56.626</TD><TD>161.309</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>654.622 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 10:24:35.830</TD><TD>56.314</TD><TD>162.886</TD><TD>18.9</TD><TD>Ks=7.5 </TD><TD>890.936 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 10:13:20.039</TD><TD>56.632</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>675.699 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 10:12:02.869</TD><TD>47.304</TD><TD>143.424</TD><TD>17.1</TD><TD>Ks=5.7 MPSP=3.2 Kp=4.6 </TD><TD>1025.02 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 10:12:01.282</TD><TD>47.505</TD><TD>142.204</TD><TD>4.4</TD><TD>Ks=6.2 Kr=7.8 ML=1.8 </TD><TD>74.4286 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 09:58:50.197</TD><TD>56.626</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>685.813 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 09:25:49.237</TD><TD>56.628</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>713.446 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 08:40:33.615</TD><TD>56.628</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>752.423 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 07:48:04.280</TD><TD>51.679</TD><TD>159.599</TD><TD>23.8</TD><TD>Ks=8.4 </TD><TD>1004.43 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 07:48:00.178</TD><TD>51.582</TD><TD>159.839</TD><TD>22.5</TD><TD>Ks=7.5 </TD><TD>4.89702 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 07:33:37.600</TD><TD>55.019</TD><TD>161.043</TD><TD>99.7</TD><TD>Ks=6.8 </TD><TD>1050.06 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 07:29:21.897</TD><TD>56.627</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>818.118 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 06:53:27.549</TD><TD>56.627</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=4.7 </TD><TD>850.408 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 06:41:06.543</TD><TD>55.282</TD><TD>162.383</TD><TD>70.0</TD><TD>Ks=9.4 </TD><TD>969.858 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 06:41:06.041</TD><TD>55.285</TD><TD>162.390</TD><TD>84.0</TD><TD>Ks=8.6 </TD><TD>3.93264 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.22 06:41:05.366</TD><TD>55.349</TD><TD>162.309</TD><TD>99.0</TD><TD>Ks=8.9 Kp=7.4 </TD><TD>3.97723 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.22 06:41:05.168</TD><TD>55.150</TD><TD>162.387</TD><TD>21.4</TD><TD>Ks=8.8 Kp=8.3 </TD><TD>9.7472 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.22 06:33:16.586</TD><TD>56.628</TD><TD>161.318</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>863.84 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 06:20:51.139</TD><TD>56.625</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>874.231 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 06:14:28.171</TD><TD>56.628</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>877.38 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 06:05:43.894</TD><TD>43.586</TD><TD>147.734</TD><TD>37.8</TD><TD>Ks=7.4 </TD><TD>4.85176 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 06:05:42.988</TD><TD>43.594</TD><TD>147.681</TD><TD>17.5</TD><TD>Ks=8.4 MPSP=4.5 Kp=7.3 </TD><TD>5.45019 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 06:05:39.466</TD><TD>44.078</TD><TD>147.939</TD><TD>19.7</TD><TD>Ks=8.1 Kp=7.3 MS=3.6 </TD><TD>7.19222 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.22 06:00:50.733</TD><TD>56.627</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>889.021 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 05:51:11.544</TD><TD>56.627</TD><TD>161.297</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>896.508 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 05:28:22.526</TD><TD>40.570</TD><TD>144.937</TD><TD>59.1</TD><TD>Ks=7.3 </TD><TD>6.39123 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 05:15:26.349</TD><TD>56.625</TD><TD>161.299</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>929.528 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 05:02:08.594</TD><TD>56.630</TD><TD>161.302</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>940.807 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 04:45:26.400</TD><TD>56.629</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>953.027 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.22 04:40:21.537</TD><TD>56.629</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>39.5244 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.22 04:21:51.916</TD><TD>56.626</TD><TD>161.299</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>54.1347 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.22 03:51:00.980</TD><TD>44.673</TD><TD>149.105</TD><TD>95.7</TD><TD>MPSP=4.9 Kp=8.9 </TD><TD>36.967 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 03:03:41.959</TD><TD>-0.234</TD><TD>-80.391</TD><TD>51.1</TD><TD>MS=5.3 </TD><TD>1308.35 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 03:03:41.959</TD><TD>-0.234</TD><TD>-80.391</TD><TD>51.1</TD><TD>MS=5.3 </TD><TD>245.034 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 03:03:41.669</TD><TD>0.495</TD><TD>-80.886</TD><TD>37.8</TD><TD>MS=5.3 </TD><TD>67.4388 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.22 02:09:32.710</TD><TD>53.351</TD><TD>158.725</TD><TD>-1.8</TD><TD>Ks=2.8 </TD><TD>1327.37 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.22 01:58:24.225</TD><TD>52.002</TD><TD>159.215</TD><TD>6.0</TD><TD>Ks=6.1 </TD><TD>1327.51 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 01:46:01.342</TD><TD>56.629</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=4.2 </TD><TD>174.911 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.22 01:23:23.293</TD><TD>56.627</TD><TD>161.302</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>194.478 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.22 01:13:50.549</TD><TD>56.630</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>197.908 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.22 01:01:37.555</TD><TD>56.628</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>207.674 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.22 00:46:19.821</TD><TD>53.490</TD><TD>159.064</TD><TD>164.2</TD><TD>Ks=7.5 Kp=7.2 </TD><TD>7.56965 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.22 00:46:19.105</TD><TD>53.503</TD><TD>159.077</TD><TD>164.6</TD><TD>Ks=7.5 </TD><TD>16.8149 min</TD><TD>!</TD><TD>anna</TD></TR>
+<TR><TD>2016.04.22 00:46:19.015</TD><TD>53.437</TD><TD>158.972</TD><TD>170.1</TD><TD>Ks=7.6 Kp=7.2 </TD><TD>7.63308 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.22 00:46:17.938</TD><TD>53.639</TD><TD>158.965</TD><TD>168.8</TD><TD>Ks=8.5 </TD><TD>25.8677 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.22 00:35:36.666</TD><TD>50.907</TD><TD>158.151</TD><TD>14.6</TD><TD>Ks=6.7 </TD><TD>1379.71 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.22 00:23:23.193</TD><TD>56.630</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>236.347 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.22 00:04:05.942</TD><TD>54.222</TD><TD>160.724</TD><TD>75.5</TD><TD>Ks=7.6 </TD><TD>1400.3 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.21 23:15:48.024</TD><TD>55.690</TD><TD>162.302</TD><TD>52.5</TD><TD>Ks=8.3 </TD><TD>325.166 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.21 23:15:47.809</TD><TD>55.675</TD><TD>162.524</TD><TD>0.0</TD><TD>Ks=8.0 Kp=6.5 </TD><TD>36.7698 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.21 23:15:46.516</TD><TD>55.817</TD><TD>162.357</TD><TD>71.9</TD><TD>MS20=3.9 </TD><TD>16.8081 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.21 23:15:38.433</TD><TD>55.240</TD><TD>163.446</TD><TD>0.0</TD><TD>MS20=3.8 </TD><TD>18.3761 min</TD><TD>&nbsp;</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.21 22:41:03.175</TD><TD>56.626</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=4.7 </TD><TD>259.53 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 21:37:19.021</TD><TD>49.719</TD><TD>156.830</TD><TD>16.1</TD><TD>Ks=8.3 </TD><TD>407.4 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.21 21:16:54.662</TD><TD>51.225</TD><TD>155.812</TD><TD>263.4</TD><TD>Ks=11.1 </TD><TD>12.589 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.21 21:16:53.279</TD><TD>51.165</TD><TD>155.843</TD><TD>269.6</TD><TD>MPSP=5.1 Kp=9.8 </TD><TD>10.8287 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.21 21:16:53.203</TD><TD>51.300</TD><TD>155.561</TD><TD>272.1</TD><TD>Kp=9.4 Ks=9.7 </TD><TD>3.32995 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.21 21:16:53.111</TD><TD>51.073</TD><TD>155.921</TD><TD>267.7</TD><TD>Ks=10.6 </TD><TD>67.9648 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.21 21:16:53.074</TD><TD>51.279</TD><TD>155.547</TD><TD>265.8</TD><TD>Ks=9.7 Kp=9.5 </TD><TD>3.29876 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.21 21:16:52.163</TD><TD>51.206</TD><TD>155.421</TD><TD>270.5</TD><TD>MPSP=4.3 </TD><TD>142.681 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.21 21:16:49.028</TD><TD>50.875</TD><TD>155.770</TD><TD>308.4</TD><TD>Kp=9.4 MS=3.4 </TD><TD>11.9995 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.21 20:27:48.556</TD><TD>46.552</TD><TD>150.648</TD><TD>184.3</TD><TD>MPSP=5.5 Kp=10.1 </TD><TD>11.2241 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.21 20:27:48.556</TD><TD>46.552</TD><TD>150.648</TD><TD>184.3</TD><TD>MPSP=5.5 Kp=10.3 </TD><TD>11.8907 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.21 20:27:46.726</TD><TD>46.300</TD><TD>151.002</TD><TD>196.8</TD><TD>Ks=7.9 MPSP=4.7 Kp=8.5 </TD><TD>183.055 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.21 20:27:46.052</TD><TD>46.215</TD><TD>151.271</TD><TD>164.0</TD><TD>MPSP=4.7 Kp=8.5 </TD><TD>19.3991 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.21 20:27:43.160</TD><TD>46.494</TD><TD>150.924</TD><TD>21.7</TD><TD>Ks=10.5 Kp=10.3 MS=4.6 </TD><TD>11.9473 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.21 20:27:42.686</TD><TD>46.650</TD><TD>150.988</TD><TD>30.4</TD><TD>MS20=3.8 </TD><TD>11.0886 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.21 20:27:41.785</TD><TD>46.538</TD><TD>151.188</TD><TD>24.3</TD><TD>MS20=3.3 </TD><TD>9.33691 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.21 19:39:23.237</TD><TD>56.169</TD><TD>160.871</TD><TD>18.4</TD><TD>Ks=5.4 </TD><TD>430.329 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 19:30:58.215</TD><TD>56.626</TD><TD>161.302</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>401.063 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 19:00:28.090</TD><TD>56.625</TD><TD>161.297</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>428.582 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 18:50:31.794</TD><TD>56.627</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>434.953 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 18:40:38.135</TD><TD>56.629</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=4.1 </TD><TD>442.331 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 18:29:46.029</TD><TD>52.908</TD><TD>158.939</TD><TD>93.0</TD><TD>Ks=5.6 </TD><TD>387.55 min</TD><TD>&nbsp;</TD><TD>ldlz</TD></TR>
+<TR><TD>2016.04.21 18:21:04.984</TD><TD>48.128</TD><TD>157.196</TD><TD>29.7</TD><TD>Ks=8.6 </TD><TD>382.817 min</TD><TD>&nbsp;</TD><TD>ldlz</TD></TR>
+<TR><TD>2016.04.21 18:20:20.610</TD><TD>48.798</TD><TD>157.226</TD><TD>30.6</TD><TD>Ks=8.4 </TD><TD>355.856 min</TD><TD>&nbsp;</TD><TD>ldlz</TD></TR>
+<TR><TD>2016.04.21 18:19:37.265</TD><TD>53.255</TD><TD>158.839</TD><TD>-1.4</TD><TD>Ks=1.9 </TD><TD>354.896 min</TD><TD>&nbsp;</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.21 18:18:50.685</TD><TD>53.256</TD><TD>158.836</TD><TD>-1.0</TD><TD>Ks=2.1 </TD><TD>351.772 min</TD><TD>&nbsp;</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.21 16:29:25.671</TD><TD>49.790</TD><TD>156.753</TD><TD>60.0</TD><TD>Ks=8.0 </TD><TD>439.855 min</TD><TD>&nbsp;</TD><TD>ldlz</TD></TR>
+<TR><TD>2016.04.21 16:09:49.234</TD><TD>54.298</TD><TD>158.454</TD><TD>2.2</TD><TD>Ks=6.4 </TD><TD>450.063 min</TD><TD>&nbsp;</TD><TD>ldlz</TD></TR>
+<TR><TD>2016.04.21 15:48:37.691</TD><TD>56.627</TD><TD>161.301</TD><TD>-0.9</TD><TD>Ks=4.1 </TD><TD>545.255 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 15:39:45.185</TD><TD>55.151</TD><TD>162.045</TD><TD>69.7</TD><TD>Ks=7.2 </TD><TD>465.43 min</TD><TD>&nbsp;</TD><TD>ldlz</TD></TR>
+<TR><TD>2016.04.21 14:28:36.290</TD><TD>-3.719</TD><TD>143.005</TD><TD>258.8</TD><TD>MPLP=6.0 </TD><TD>44.4785 min</TD><TD>&nbsp;</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.21 14:28:19.913</TD><TD>-3.615</TD><TD>142.955</TD><TD>97.0</TD><TD>MPLP=5.9 MPSP=6.0 </TD><TD>46.2181 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.21 14:28:15.418</TD><TD>-4.051</TD><TD>143.139</TD><TD>81.1</TD><TD>MS=4.6 MPLP=5.5 </TD><TD>40.1597 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.21 14:28:13.518</TD><TD>-4.077</TD><TD>143.184</TD><TD>68.5</TD><TD>MPLP=5.6 MS=4.4 </TD><TD>689.425 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.21 14:28:07.227</TD><TD>-3.949</TD><TD>142.299</TD><TD>12.8</TD><TD>MPSP=5.7 MPLP=5.7 </TD><TD>28.6462 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.21 14:28:07.227</TD><TD>-3.949</TD><TD>142.299</TD><TD>12.8</TD><TD>MPSP=5.7 MPLP=5.7 MS=4.4 </TD><TD>36.2129 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.21 14:28:06.425</TD><TD>-4.023</TD><TD>142.469</TD><TD>8.8</TD><TD>MS=4.2 MPSP=5.7 MPLP=4.6 </TD><TD>38.0429 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.21 14:28:06.425</TD><TD>-4.023</TD><TD>142.469</TD><TD>8.8</TD><TD>MPSP=5.7 </TD><TD>31.3929 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.21 12:36:40.553</TD><TD>55.938</TD><TD>163.340</TD><TD>19.1</TD><TD>Ks=9.4 </TD><TD>607.341 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.21 12:36:40.295</TD><TD>56.065</TD><TD>163.258</TD><TD>31.1</TD><TD>Ks=8.1 Kp=8.8 MS=3.3 </TD><TD>6.84508 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.21 12:36:39.566</TD><TD>56.153</TD><TD>163.330</TD><TD>48.9</TD><TD>Ks=8.7 MS20=2.3 </TD><TD>5.75722 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.21 12:36:37.567</TD><TD>55.893</TD><TD>163.496</TD><TD>0.0</TD><TD>MS20=3.9 </TD><TD>7.00721 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.21 12:24:17.748</TD><TD>57.089</TD><TD>159.878</TD><TD>15.1</TD><TD>Ks=7.5 </TD><TD>896.688 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.21 12:19:19.560</TD><TD>57.037</TD><TD>159.926</TD><TD>18.6</TD><TD>Ks=7.6 </TD><TD>880.957 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.21 11:22:03.058</TD><TD>56.625</TD><TD>161.296</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>729.232 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 11:21:14.407</TD><TD>51.972</TD><TD>159.061</TD><TD>4.9</TD><TD>Ks=5.8 </TD><TD>916.477 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.21 11:04:42.906</TD><TD>50.661</TD><TD>159.448</TD><TD>31.2</TD><TD>Ks=7.4 </TD><TD>913.018 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.21 10:55:03.609</TD><TD>52.109</TD><TD>159.218</TD><TD>15.5</TD><TD>Ks=4.9 </TD><TD>838.74 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.21 10:33:12.889</TD><TD>54.275</TD><TD>158.519</TD><TD>3.4</TD><TD>Ks=6.6 </TD><TD>719.002 min</TD><TD>&nbsp;</TD><TD>ldlz</TD></TR>
+<TR><TD>2016.04.21 09:58:27.268</TD><TD>53.869</TD><TD>161.458</TD><TD>12.6</TD><TD>Ks=5.7 </TD><TD>847.029 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.21 09:48:41.672</TD><TD>45.462</TD><TD>142.761</TD><TD>314.1</TD><TD>Ks=6.5 MPSP=3.9 Kp=7.6 </TD><TD>772.889 min</TD><TD>!</TD><TD>sakhalinFR</TD></TR>
+<TR><TD>2016.04.21 09:48:41.176</TD><TD>45.453</TD><TD>142.609</TD><TD>298.0</TD><TD>Ks=6.9 MPSP=4.0 Kp=7.9 </TD><TD>778.697 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.21 09:48:39.641</TD><TD>45.382</TD><TD>142.395</TD><TD>302.6</TD><TD>MPSP=3.9 Kp=7.8 MS=2.4 </TD><TD>39.4226 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.21 09:08:10.362</TD><TD>48.862</TD><TD>159.847</TD><TD>39.9</TD><TD>Ks=8.0 </TD><TD>910.161 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.21 09:00:02.724</TD><TD>55.732</TD><TD>164.033</TD><TD>51.6</TD><TD>Ks=9.6 </TD><TD>707.971 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.21 09:00:01.990</TD><TD>55.750</TD><TD>163.956</TD><TD>46.3</TD><TD>Ks=9.1 </TD><TD>5.26682 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.21 09:00:01.538</TD><TD>55.824</TD><TD>164.224</TD><TD>96.4</TD><TD>MS20=3.3 </TD><TD>6.1577 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.21 08:59:51.909</TD><TD>56.788</TD><TD>164.700</TD><TD>137.9</TD><TD>MPSP=4.2 Kp=7.6 </TD><TD>16.6515 min</TD><TD>&nbsp;</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.21 08:37:56.194</TD><TD>53.348</TD><TD>160.758</TD><TD>33.9</TD><TD>Ks=6.4 </TD><TD>902.497 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.21 08:31:32.345</TD><TD>48.948</TD><TD>142.078</TD><TD>0.0</TD><TD>Ks=3.9 </TD><TD>871.311 min</TD><TD>!</TD><TD>sakhalinFR</TD></TR>
+<TR><TD>2016.04.21 08:31:31.604</TD><TD>49.139</TD><TD>142.275</TD><TD>0.0</TD><TD>Ks=3.8 Kr=6.0 </TD><TD>7.55659 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.21 08:28:36.833</TD><TD>36.566</TD><TD>139.844</TD><TD>114.0</TD><TD>MS20=3.5 </TD><TD>9.93611 min</TD><TD>&nbsp;</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.21 08:27:37.683</TD><TD>56.627</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>853.205 min</TD><TD>!</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 08:27:37.683</TD><TD>56.627</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>852.572 min</TD><TD>!</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 08:20:36.450</TD><TD>56.627</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>850.576 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 08:01:30.670</TD><TD>56.625</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>864.639 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 07:35:33.562</TD><TD>56.627</TD><TD>161.309</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>886.791 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 07:12:34.943</TD><TD>54.298</TD><TD>158.432</TD><TD>3.2</TD><TD>Ks=6.8 </TD><TD>882.734 min</TD><TD>&nbsp;</TD><TD>ldlz</TD></TR>
+<TR><TD>2016.04.21 06:29:01.658</TD><TD>56.628</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>933.672 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 05:58:00.769</TD><TD>56.626</TD><TD>161.291</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>961.204 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 05:34:38.208</TD><TD>56.627</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>974.297 min</TD><TD>&nbsp;</TD><TD>LNPO</TD></TR>
+<TR><TD>2016.04.21 05:26:05.799</TD><TD>52.463</TD><TD>158.204</TD><TD>4.1</TD><TD>Ks=3.5 </TD><TD>1115.14 min</TD><TD>&nbsp;</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.21 04:28:53.742</TD><TD>56.628</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>40.421 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 01:08:02.788</TD><TD>56.626</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>223.054 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 01:00:11.629</TD><TD>51.981</TD><TD>-177.280</TD><TD>0.0</TD><TD>Ks=8.8 Kp=8.3 </TD><TD>3.48951 min</TD><TD>&nbsp;</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.21 00:37:57.715</TD><TD>42.899</TD><TD>145.306</TD><TD>32.7</TD><TD>Ks=6.9 </TD><TD>7.12141 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.21 00:24:25.870</TD><TD>56.627</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>259.735 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.21 00:02:45.916</TD><TD>56.627</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>275.518 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 23:40:22.421</TD><TD>56.628</TD><TD>161.313</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>246.176 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 23:29:00.827</TD><TD>54.277</TD><TD>158.479</TD><TD>4.2</TD><TD>Ks=6.8 </TD><TD>351.536 min</TD><TD>&nbsp;</TD><TD>ldlz</TD></TR>
+<TR><TD>2016.04.20 23:17:28.981</TD><TD>52.508</TD><TD>159.649</TD><TD>35.1</TD><TD>Ks=7.1 </TD><TD>392.2 min</TD><TD>&nbsp;</TD><TD>ldlz</TD></TR>
+<TR><TD>2016.04.20 23:16:46.315</TD><TD>51.027</TD><TD>158.457</TD><TD>31.3</TD><TD>Ks=6.7 </TD><TD>382.478 min</TD><TD>&nbsp;</TD><TD>ldlz</TD></TR>
+<TR><TD>2016.04.20 23:05:03.414</TD><TD>51.294</TD><TD>159.607</TD><TD>16.0</TD><TD>Ks=7.0 </TD><TD>408.41 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 23:04:32.664</TD><TD>56.626</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>276.672 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 22:50:56.208</TD><TD>56.627</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>285.947 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 22:19:08.023</TD><TD>56.627</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>312.5 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 21:24:26.726</TD><TD>52.243</TD><TD>159.159</TD><TD>77.8</TD><TD>Ks=6.7 </TD><TD>499.921 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 21:22:23.126</TD><TD>51.920</TD><TD>158.797</TD><TD>10.9</TD><TD>Ks=6.2 </TD><TD>487.431 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 21:19:48.574</TD><TD>56.626</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>355.357 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 20:58:26.346</TD><TD>43.556</TD><TD>146.048</TD><TD>115.5</TD><TD>MPSP=3.5 Kp=6.0 </TD><TD>5.87757 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 20:40:58.234</TD><TD>50.312</TD><TD>157.342</TD><TD>48.1</TD><TD>Ks=9.0 MPSP=3.9 Kp=6.7 </TD><TD>7.07942 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 20:40:56.987</TD><TD>50.390</TD><TD>157.489</TD><TD>47.0</TD><TD>Ks=9.2 </TD><TD>523.6 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 20:40:56.876</TD><TD>50.442</TD><TD>157.155</TD><TD>78.3</TD><TD>Ks=8.1 </TD><TD>4.35205 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.20 20:40:51.765</TD><TD>50.401</TD><TD>156.835</TD><TD>146.0</TD><TD>Ks=8.3 </TD><TD>5.4039 min</TD><TD>&nbsp;</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.20 20:32:10.803</TD><TD>54.251</TD><TD>158.469</TD><TD>3.2</TD><TD>Ks=5.6 </TD><TD>3323.1 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.20 20:23:23.450</TD><TD>52.637</TD><TD>159.444</TD><TD>91.4</TD><TD>Ks=6.3 </TD><TD>528.759 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 19:33:09.077</TD><TD>56.625</TD><TD>161.302</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>435.782 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 18:21:34.302</TD><TD>56.628</TD><TD>161.301</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>504.362 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 18:15:49.249</TD><TD>53.942</TD><TD>161.362</TD><TD>15.8</TD><TD>Ks=6.6 </TD><TD>576.529 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 17:17:22.414</TD><TD>51.254</TD><TD>158.376</TD><TD>29.7</TD><TD>Ks=7.1 </TD><TD>12.3264 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 17:17:21.904</TD><TD>51.320</TD><TD>158.240</TD><TD>48.6</TD><TD>Ks=8.0 </TD><TD>686.685 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 17:16:38.668</TD><TD>53.671</TD><TD>159.108</TD><TD>161.4</TD><TD>Ks=7.6 </TD><TD>697.172 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 17:10:32.363</TD><TD>51.327</TD><TD>158.186</TD><TD>75.4</TD><TD>Ks=10.1 MPSP=4.5 Kp=8.5 </TD><TD>5.89395 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 17:10:31.502</TD><TD>51.215</TD><TD>158.437</TD><TD>41.2</TD><TD>Ks=9.5 MPSP=4.5 Kp=8.5 </TD><TD>14.4083 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 17:10:31.089</TD><TD>51.526</TD><TD>158.412</TD><TD>0.0</TD><TD>Ks=9.7 Kp=7.7 </TD><TD>9.03184 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 17:10:30.892</TD><TD>51.351</TD><TD>158.206</TD><TD>56.6</TD><TD>Ks=10.3 </TD><TD>3.21847 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.20 17:10:30.122</TD><TD>51.284</TD><TD>158.341</TD><TD>55.9</TD><TD>Ks=10.2 Kp=7.7 </TD><TD>3.89796 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.20 17:10:29.961</TD><TD>51.261</TD><TD>158.417</TD><TD>47.6</TD><TD>Ks=10.5 </TD><TD>746.567 min</TD><TD>!</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.20 17:07:59.716</TD><TD>51.599</TD><TD>159.461</TD><TD>16.7</TD><TD>Ks=6.9 </TD><TD>726.605 min</TD><TD>&nbsp;</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.20 16:36:16.458</TD><TD>56.628</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>602.176 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 15:57:04.096</TD><TD>54.277</TD><TD>158.429</TD><TD>3.5</TD><TD>Ks=6.0 </TD><TD>3728.4 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.20 15:37:46.423</TD><TD>56.625</TD><TD>161.301</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>657.126 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 15:33:17.733</TD><TD>56.628</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>658.221 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 14:35:05.801</TD><TD>54.302</TD><TD>158.421</TD><TD>2.0</TD><TD>Ks=7.9 </TD><TD>864.553 min</TD><TD>&nbsp;</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.20 13:36:44.029</TD><TD>56.599</TD><TD>161.146</TD><TD>9.2</TD><TD>Ks=4.9 </TD><TD>689.166 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 13:36:28.193</TD><TD>52.464</TD><TD>158.209</TD><TD>4.2</TD><TD>Ks=2.9 </TD><TD>688.513 min</TD><TD>&nbsp;</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.20 12:19:44.292</TD><TD>38.023</TD><TD>141.707</TD><TD>52.5</TD><TD>MPSP=5.3 MS=5.2 </TD><TD>662.978 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 12:19:43.377</TD><TD>37.855</TD><TD>142.205</TD><TD>115.4</TD><TD>MS=5.2 MPSP=5.7 </TD><TD>11.4937 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 12:19:42.901</TD><TD>37.937</TD><TD>141.767</TD><TD>49.8</TD><TD>MPSP=5.3 MPLP=5.7 MS=5.2 MsLP=5.6 </TD><TD>681.252 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 12:19:35.633</TD><TD>37.690</TD><TD>142.237</TD><TD>12.9</TD><TD>MPSP=5.7 </TD><TD>6.72278 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.20 12:19:35.403</TD><TD>37.692</TD><TD>142.180</TD><TD>13.5</TD><TD>MPSP=5.5 MPLP=5.9 MS=5.4 </TD><TD>15.6766 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.20 12:19:34.793</TD><TD>37.682</TD><TD>142.232</TD><TD>7.2</TD><TD>MPSP=5.7 MS=5.4 </TD><TD>15.2701 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.20 12:19:34.784</TD><TD>37.682</TD><TD>142.234</TD><TD>7.9</TD><TD>MPSP=5.7 MS=5.4 </TD><TD>16.4869 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.20 12:19:34.781</TD><TD>37.682</TD><TD>142.234</TD><TD>8.0</TD><TD>MS=5.4 MPSP=5.7 MS20=5.1 </TD><TD>20.5703 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.20 12:19:34.781</TD><TD>37.682</TD><TD>142.234</TD><TD>8.0</TD><TD>MPSP=5.7 MS=5.4 </TD><TD>17.587 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.20 12:19:34.236</TD><TD>37.359</TD><TD>142.266</TD><TD>51.6</TD><TD>MPSP=5.2 </TD><TD>12.4627 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 12:19:31.960</TD><TD>37.344</TD><TD>142.256</TD><TD>19.2</TD><TD>MPSP=5.3 MS=5.4 </TD><TD>19.2673 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 12:19:30.840</TD><TD>37.438</TD><TD>142.364</TD><TD>0.0</TD><TD>MPSP=5.5 MPLP=5.9 </TD><TD>8.30266 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.20 12:10:25.185</TD><TD>52.952</TD><TD>159.919</TD><TD>92.0</TD><TD>Ks=6.7 </TD><TD>922.947 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 12:09:21.015</TD><TD>49.680</TD><TD>156.884</TD><TD>15.9</TD><TD>Ks=8.4 </TD><TD>934 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 11:59:17.003</TD><TD>51.728</TD><TD>159.344</TD><TD>17.8</TD><TD>Ks=7.0 </TD><TD>994.717 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 11:36:20.237</TD><TD>50.443</TD><TD>157.039</TD><TD>30.7</TD><TD>Ks=8.0 </TD><TD>938.879 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 11:33:30.265</TD><TD>-19.078</TD><TD>-177.059</TD><TD>373.8</TD><TD>MPLP=5.7 </TD><TD>29.3622 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 11:03:56.646</TD><TD>55.163</TD><TD>162.402</TD><TD>40.3</TD><TD>Ks=6.7 </TD><TD>1041.94 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 10:41:56.167</TD><TD>-5.428</TD><TD>153.553</TD><TD>61.7</TD><TD>MPSP=5.5 MPLP=5.7 </TD><TD>46.8305 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 10:41:54.912</TD><TD>-5.412</TD><TD>153.568</TD><TD>51.9</TD><TD>MPSP=5.5 </TD><TD>24.4848 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 10:35:35.098</TD><TD>56.625</TD><TD>161.301</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>849.998 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 10:32:33.010</TD><TD>54.812</TD><TD>160.853</TD><TD>38.0</TD><TD>Ks=6.1 </TD><TD>983.383 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 10:21:45.071</TD><TD>56.629</TD><TD>161.315</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>853.982 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 09:51:25.059</TD><TD>54.494</TD><TD>164.029</TD><TD>47.4</TD><TD>Ks=7.2 </TD><TD>1103.18 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 09:28:12.456</TD><TD>54.396</TD><TD>162.386</TD><TD>39.7</TD><TD>Ks=8.5 </TD><TD>755.892 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 08:33:48.531</TD><TD>0.600</TD><TD>-80.085</TD><TD>38.4</TD><TD>MS=5.7 </TD><TD>78.6411 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 08:33:45.953</TD><TD>-0.758</TD><TD>-81.499</TD><TD>33.0</TD><TD>MS=5.8 </TD><TD>111.167 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.20 08:33:45.507</TD><TD>0.420</TD><TD>-79.670</TD><TD>33.0</TD><TD>MS=5.8 </TD><TD>92.7082 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.20 08:33:45.499</TD><TD>0.426</TD><TD>-79.649</TD><TD>33.0</TD><TD>MS=5.8 </TD><TD>96.325 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.20 08:22:31.277</TD><TD>55.814</TD><TD>160.390</TD><TD>0.4</TD><TD>Ks=3.8 </TD><TD>948.895 min</TD><TD>&nbsp;</TD><TD>LNPO</TD></TR>
+<TR><TD>2016.04.20 08:15:36.557</TD><TD>55.809</TD><TD>160.399</TD><TD>0.8</TD><TD>Ks=3.9 </TD><TD>916.724 min</TD><TD>&nbsp;</TD><TD>LNPO</TD></TR>
+<TR><TD>2016.04.20 08:13:28.686</TD><TD>55.801</TD><TD>160.418</TD><TD>2.9</TD><TD>Ks=3.5 </TD><TD>904.805 min</TD><TD>&nbsp;</TD><TD>LNPO</TD></TR>
+<TR><TD>2016.04.20 07:12:32.827</TD><TD>-14.328</TD><TD>166.530</TD><TD>29.9</TD><TD>MsLP=5.7 MPLP=5.8 MS=4.8 MPSP=5.7 </TD><TD>1118.84 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 07:11:41.281</TD><TD>53.384</TD><TD>160.618</TD><TD>43.1</TD><TD>Ks=8.2 </TD><TD>1160.2 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 07:11:38.073</TD><TD>54.109</TD><TD>158.052</TD><TD>147.0</TD><TD>MPSP=3.6 Kp=6.7 </TD><TD>7.54878 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 06:51:08.712</TD><TD>53.338</TD><TD>160.602</TD><TD>36.1</TD><TD>Ks=6.3 </TD><TD>1198.2 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 06:00:34.118</TD><TD>56.629</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=4.1 </TD><TD>1010.25 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 05:40:46.733</TD><TD>52.219</TD><TD>177.239</TD><TD>20.7</TD><TD>Ks=11.6 </TD><TD>903.838 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 05:40:38.318</TD><TD>51.656</TD><TD>178.693</TD><TD>131.3</TD><TD>MS20=3.3 </TD><TD>11.7447 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.20 05:40:37.171</TD><TD>51.616</TD><TD>178.536</TD><TD>78.6</TD><TD>MS20=3.1 </TD><TD>11.4805 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.20 05:20:57.127</TD><TD>44.168</TD><TD>147.571</TD><TD>16.4</TD><TD>Kp=7.6 Ks=9.5 MS20=4.1 </TD><TD>10.8812 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 05:20:56.522</TD><TD>44.126</TD><TD>147.643</TD><TD>16.5</TD><TD>Ks=9.5 MS=2.5 </TD><TD>4.70796 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 05:20:53.777</TD><TD>44.033</TD><TD>146.654</TD><TD>99.0</TD><TD>MPSP=4.3 Kp=6.9 </TD><TD>9.23704 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 05:11:37.857</TD><TD>53.379</TD><TD>162.799</TD><TD>55.6</TD><TD>Ks=6.7 </TD><TD>1178.02 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 05:08:20.848</TD><TD>44.143</TD><TD>149.467</TD><TD>46.8</TD><TD>Ks=7.9 MPSP=3.9 Kp=7.3 MS=3.5 </TD><TD>1229.75 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 05:08:19.456</TD><TD>44.175</TD><TD>149.553</TD><TD>40.7</TD><TD>Ks=10.2 MPSP=4.9 Kp=9.5 </TD><TD>1702.26 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 05:08:13.383</TD><TD>44.868</TD><TD>149.500</TD><TD>10.2</TD><TD>Ks=9.9 MPSP=5.0 Kp=9.7 </TD><TD>5.92695 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 05:08:07.955</TD><TD>44.762</TD><TD>149.730</TD><TD>6.8</TD><TD>Ks=10.4 MS20=4.2 </TD><TD>12.9674 min</TD><TD>&nbsp;</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 04:53:21.760</TD><TD>56.628</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>1066.9 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 04:41:19.066</TD><TD>55.566</TD><TD>162.610</TD><TD>69.3</TD><TD>Ks=9.4 MS20=4.5 </TD><TD>15.5822 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 04:41:18.891</TD><TD>55.602</TD><TD>162.606</TD><TD>78.6</TD><TD>Kp=7.8 MPSP=4.2 Ks=9.5 MS=2.2 </TD><TD>18.2018 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 04:41:18.660</TD><TD>55.508</TD><TD>162.644</TD><TD>68.0</TD><TD>Ks=9.3 </TD><TD>36.0223 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.20 04:41:18.343</TD><TD>55.471</TD><TD>162.618</TD><TD>68.1</TD><TD>Ks=8.9 </TD><TD>4.94427 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.20 04:41:17.502</TD><TD>55.424</TD><TD>162.805</TD><TD>63.7</TD><TD>Ks=9.7 </TD><TD>6.47496 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.20 04:21:39.968</TD><TD>56.630</TD><TD>161.299</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>56.1339 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 04:03:33.308</TD><TD>56.628</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>68.9782 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 04:01:33.447</TD><TD>51.156</TD><TD>158.356</TD><TD>40.7</TD><TD>Ks=7.5 </TD><TD>1226.29 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 03:28:31.449</TD><TD>36.989</TD><TD>70.083</TD><TD>240.2</TD><TD>MPSP=5.6 </TD><TD>17.1592 min</TD><TD>&nbsp;</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 03:18:31.174</TD><TD>49.129</TD><TD>142.302</TD><TD>0.0</TD><TD>Kr=6.5 </TD><TD>7.44709 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 03:18:29.509</TD><TD>48.998</TD><TD>142.314</TD><TD>0.0</TD><TD>Ks=4.2 </TD><TD>1201.77 min</TD><TD>!</TD><TD>sakhalinFR</TD></TR>
+<TR><TD>2016.04.20 03:18:25.473</TD><TD>48.733</TD><TD>141.809</TD><TD>0.0</TD><TD>Ks=7.2 </TD><TD>29.0254 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 02:29:31.405</TD><TD>53.342</TD><TD>158.710</TD><TD>-1.9</TD><TD>Ks=2.0 </TD><TD>1311.44 min</TD><TD>&nbsp;</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.20 02:10:52.604</TD><TD>56.622</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>163.64 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 01:34:05.861</TD><TD>53.119</TD><TD>158.006</TD><TD>0.0</TD><TD>Ks=7.7 </TD><TD>12.169 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 01:34:03.027</TD><TD>52.694</TD><TD>159.537</TD><TD>30.8</TD><TD>Ks=7.7 Kp=7.3 </TD><TD>4.33288 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.20 01:34:02.846</TD><TD>52.855</TD><TD>159.572</TD><TD>50.0</TD><TD>Kr=9.6 </TD><TD>13.7859 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 01:34:02.784</TD><TD>52.691</TD><TD>159.541</TD><TD>35.2</TD><TD>Ks=8.2 </TD><TD>2.6036 min</TD><TD>!</TD><TD>oda</TD></TR>
+<TR><TD>2016.04.20 01:34:02.701</TD><TD>52.669</TD><TD>159.543</TD><TD>27.9</TD><TD>Ks=8.1 Kp=7.3 </TD><TD>2.13831 min</TD><TD>!</TD><TD>anna</TD></TR>
+<TR><TD>2016.04.20 01:34:02.666</TD><TD>52.663</TD><TD>159.537</TD><TD>32.7</TD><TD>Ks=8.2 Kp=7.3 </TD><TD>2.50556 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.20 01:34:01.748</TD><TD>52.719</TD><TD>159.577</TD><TD>53.6</TD><TD>Ks=8.4 </TD><TD>1206.14 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 01:11:05.093</TD><TD>56.636</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>218.565 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.20 00:50:59.564</TD><TD>48.213</TD><TD>152.448</TD><TD>195.0</TD><TD>MPSP=5.5 Kp=10.2 MS20=4.3 </TD><TD>51.5073 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 00:50:57.830</TD><TD>48.723</TD><TD>152.029</TD><TD>244.2</TD><TD>Ks=7.5 Kp=7.5 MPSP=3.9 </TD><TD>1480.24 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 00:50:57.830</TD><TD>48.723</TD><TD>152.029</TD><TD>244.2</TD><TD>Ks=8.2 MPSP=4.0 Kp=7.7 </TD><TD>1336.7 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 00:50:57.753</TD><TD>47.878</TD><TD>152.980</TD><TD>40.3</TD><TD>MPSP=5.6 Kp=10.5 </TD><TD>6.43744 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.20 00:50:57.077</TD><TD>49.127</TD><TD>151.558</TD><TD>142.5</TD><TD>Ks=9.8 </TD><TD>10.982 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.20 00:50:57.074</TD><TD>48.987</TD><TD>152.067</TD><TD>259.0</TD><TD>Kp=7.9 </TD><TD>9.69875 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.20 00:50:56.952</TD><TD>48.868</TD><TD>152.275</TD><TD>247.5</TD><TD>Kp=7.5 Ks=7.5 MPSP=3.9 </TD><TD>1481.98 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 00:50:55.991</TD><TD>48.564</TD><TD>152.662</TD><TD>273.1</TD><TD>MPSP=5.1 Kp=9.9 MS20=2.8 </TD><TD>12.4835 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.20 00:50:55.631</TD><TD>48.503</TD><TD>152.766</TD><TD>263.7</TD><TD>Ks=11.2 </TD><TD>42.6061 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.20 00:50:54.594</TD><TD>48.417</TD><TD>152.552</TD><TD>243.7</TD><TD>Ks=11.0 </TD><TD>17.3568 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.20 00:42:48.598</TD><TD>52.667</TD><TD>157.881</TD><TD>162.1</TD><TD>Ks=8.0 </TD><TD>1410.34 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.20 00:26:43.456</TD><TD>53.765</TD><TD>159.024</TD><TD>175.3</TD><TD>Ks=8.3 </TD><TD>1379.39 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.19 23:28:38.188</TD><TD>53.680</TD><TD>158.892</TD><TD>14.9</TD><TD>Ks=3.6 </TD><TD>83.3135 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.19 22:40:23.125</TD><TD>56.625</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>82.4979 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.19 22:29:17.899</TD><TD>56.627</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=4.5 </TD><TD>88.2183 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.19 21:43:05.767</TD><TD>50.346</TD><TD>156.345</TD><TD>98.0</TD><TD>Ks=7.4 </TD><TD>296.854 min</TD><TD>&nbsp;</TD><TD>ldlz</TD></TR>
+<TR><TD>2016.04.19 20:32:55.404</TD><TD>10.291</TD><TD>93.744</TD><TD>10.1</TD><TD>MPLP=5.6 MPSP=5.5 MS=4.6 </TD><TD>43.2099 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 17:17:36.843</TD><TD>8.043</TD><TD>126.332</TD><TD>100.0</TD><TD>MPSP=5.9 </TD><TD>15.4526 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.19 17:17:34.875</TD><TD>8.010</TD><TD>126.721</TD><TD>97.7</TD><TD>MPLP=5.1 </TD><TD>448.885 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 14:58:32.348</TD><TD>52.867</TD><TD>159.681</TD><TD>108.3</TD><TD>Ks=7.2 </TD><TD>702.511 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.19 14:43:19.459</TD><TD>56.384</TD><TD>162.948</TD><TD>0.0</TD><TD>Ks=7.2 </TD><TD>6.02567 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.19 14:43:19.151</TD><TD>56.475</TD><TD>162.848</TD><TD>16.5</TD><TD>Ks=8.4 </TD><TD>807.547 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.19 14:34:05.501</TD><TD>55.744</TD><TD>162.395</TD><TD>58.6</TD><TD>Ks=6.5 </TD><TD>708.925 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.19 13:28:36.271</TD><TD>52.860</TD><TD>159.685</TD><TD>7.3</TD><TD>Ks=5.0 </TD><TD>670.345 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.19 12:14:12.468</TD><TD>54.710</TD><TD>164.174</TD><TD>48.4</TD><TD>Ks=6.8 </TD><TD>754.659 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.19 12:07:40.829</TD><TD>56.628</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>574.336 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.19 11:47:03.381</TD><TD>32.880</TD><TD>130.713</TD><TD>14.7</TD><TD>MPSP=4.8 Kp=9.4 MS20=4.2 </TD><TD>17.677 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.19 11:47:03.287</TD><TD>32.743</TD><TD>130.704</TD><TD>20.0</TD><TD>MPSP=4.8 Kp=9.4 MsLP=5.6 </TD><TD>12.8119 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.19 11:47:02.946</TD><TD>32.655</TD><TD>130.523</TD><TD>29.2</TD><TD>MPSP=4.9 MS=4.7 </TD><TD>61.7176 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 10:40:51.298</TD><TD>-14.483</TD><TD>165.925</TD><TD>10.0</TD><TD>MPLP=5.7 MPSP=5.6 MS=4.8 </TD><TD>44.1784 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 10:05:36.504</TD><TD>35.928</TD><TD>140.999</TD><TD>58.8</TD><TD>MPSP=4.4 </TD><TD>877.158 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 10:05:30.399</TD><TD>36.086</TD><TD>140.999</TD><TD>40.1</TD><TD>Ks=9.5 MS20=4.2 </TD><TD>19.3767 min</TD><TD>&nbsp;</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.19 09:57:02.570</TD><TD>52.408</TD><TD>159.585</TD><TD>35.8</TD><TD>Ks=7.1 </TD><TD>858.39 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.19 09:13:33.506</TD><TD>51.787</TD><TD>159.389</TD><TD>23.3</TD><TD>Ks=7.5 </TD><TD>880.708 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.19 09:11:49.463</TD><TD>51.564</TD><TD>159.492</TD><TD>14.7</TD><TD>Ks=7.4 </TD><TD>868.059 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.19 08:52:16.437</TD><TD>32.711</TD><TD>130.521</TD><TD>29.2</TD><TD>MS20=4.9 MS=5.0 </TD><TD>19.7427 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.19 08:52:15.076</TD><TD>32.475</TD><TD>130.354</TD><TD>19.4</TD><TD>MPLP=5.4 MPSP=5.2 MS=5.3 </TD><TD>22.3321 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 08:52:15.067</TD><TD>32.473</TD><TD>130.379</TD><TD>20.0</TD><TD>MPSP=5.2 MS=5.3 MPLP=5.7 </TD><TD>933.166 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 08:52:13.374</TD><TD>32.517</TD><TD>130.517</TD><TD>41.8</TD><TD>MPSP=4.7 </TD><TD>11.4771 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.19 08:52:09.976</TD><TD>32.411</TD><TD>130.497</TD><TD>14.1</TD><TD>MPSP=4.9 MS20=4.3 MS=4.9 </TD><TD>15.0671 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.19 08:52:09.681</TD><TD>32.484</TD><TD>130.481</TD><TD>0.0</TD><TD>MS20=4.8 </TD><TD>16.5553 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.19 08:52:03.201</TD><TD>31.976</TD><TD>130.395</TD><TD>0.0</TD><TD>MPSP=4.9 </TD><TD>9.29664 min</TD><TD>&nbsp;</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.19 08:31:57.793</TD><TD>48.899</TD><TD>142.002</TD><TD>0.0</TD><TD>Ks=5.2 </TD><TD>871.903 min</TD><TD>!</TD><TD>sakhalinFR</TD></TR>
+<TR><TD>2016.04.19 08:31:57.770</TD><TD>49.090</TD><TD>141.901</TD><TD>0.0</TD><TD>Ks=5.5 </TD><TD>3.85382 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.19 08:31:57.573</TD><TD>49.043</TD><TD>141.902</TD><TD>0.0</TD><TD>Ks=5.0 </TD><TD>4.62378 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 08:06:49.175</TD><TD>56.627</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>807.464 min</TD><TD>&nbsp;</TD><TD>LNPO</TD></TR>
+<TR><TD>2016.04.19 07:24:39.220</TD><TD>36.446</TD><TD>138.134</TD><TD>0.0</TD><TD>Ks=4.3 </TD><TD>14.4297 min</TD><TD>&nbsp;</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.19 07:23:09.049</TD><TD>31.101</TD><TD>137.147</TD><TD>206.1</TD><TD>MPSP=5.3 </TD><TD>25.8325 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 07:23:08.750</TD><TD>30.723</TD><TD>138.566</TD><TD>349.4</TD><TD>MPSP=5.2 MS=4.5 </TD><TD>18.5875 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 07:23:08.041</TD><TD>31.064</TD><TD>137.089</TD><TD>215.3</TD><TD>MPSP=5.3 </TD><TD>24.9493 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 06:21:18.239</TD><TD>53.616</TD><TD>160.825</TD><TD>70.0</TD><TD>MPSP=4.4 Kp=8.4 Ks=8.6 </TD><TD>7.42935 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 06:21:17.812</TD><TD>53.835</TD><TD>160.750</TD><TD>59.1</TD><TD>Ks=9.6 Kp=8.3 </TD><TD>2.75312 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.19 06:21:17.213</TD><TD>53.720</TD><TD>160.887</TD><TD>62.4</TD><TD>Ks=9.9 </TD><TD>909.93 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.19 06:21:16.842</TD><TD>53.773</TD><TD>160.838</TD><TD>77.4</TD><TD>Ks=9.6 </TD><TD>2.76929 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.19 06:03:51.061</TD><TD>56.626</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=4.2 </TD><TD>921.449 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.19 05:51:44.030</TD><TD>53.353</TD><TD>158.714</TD><TD>-2.1</TD><TD>Ks=2.6 </TD><TD>928.466 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.19 05:39:38.302</TD><TD>56.629</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>940.895 min</TD><TD>!</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.19 05:39:38.237</TD><TD>56.628</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>18.246 min</TD><TD>!</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.19 05:25:44.512</TD><TD>-55.928</TD><TD>-29.506</TD><TD>29.4</TD><TD>MS=6.2 </TD><TD>107.208 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.19 05:25:43.574</TD><TD>-55.406</TD><TD>-27.746</TD><TD>50.3</TD><TD>MS=5.8 </TD><TD>138.557 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.19 05:25:42.837</TD><TD>-55.409</TD><TD>-27.195</TD><TD>51.8</TD><TD>MS=6.3 </TD><TD>110.319 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 05:25:40.814</TD><TD>-55.490</TD><TD>-27.358</TD><TD>0.0</TD><TD>MS=6.2 </TD><TD>113.536 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.19 05:25:38.692</TD><TD>-54.352</TD><TD>-26.964</TD><TD>36.2</TD><TD>MS=5.8 </TD><TD>135.488 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.19 05:25:30.223</TD><TD>-56.549</TD><TD>-30.109</TD><TD>0.0</TD><TD>MS=6.3 </TD><TD>120.363 min</TD><TD>&nbsp;</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.19 05:07:30.102</TD><TD>36.405</TD><TD>141.151</TD><TD>0.0</TD><TD>Ks=8.0 Kp=7.7 </TD><TD>11.7983 min</TD><TD>&nbsp;</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.19 02:46:54.626</TD><TD>26.516</TD><TD>130.335</TD><TD>19.7</TD><TD>MPSP=5.1 MPLP=5.3 MS=4.2 </TD><TD>25.8062 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 02:27:37.490</TD><TD>56.627</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>164.392 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.19 02:02:35.507</TD><TD>33.299</TD><TD>138.809</TD><TD>252.0</TD><TD>MPSP=4.6 MPLP=5.1 </TD><TD>39.6915 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 02:02:02.839</TD><TD>52.457</TD><TD>158.177</TD><TD>3.1</TD><TD>Ks=3.1 </TD><TD>183.603 min</TD><TD>!</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.19 02:02:02.568</TD><TD>52.456</TD><TD>158.221</TD><TD>4.7</TD><TD>Ks=3.2 </TD><TD>1152.51 min</TD><TD>!</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.19 01:38:24.291</TD><TD>52.889</TD><TD>160.174</TD><TD>33.3</TD><TD>Ks=5.6 </TD><TD>1266.86 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.19 01:36:31.306</TD><TD>41.727</TD><TD>144.332</TD><TD>47.9</TD><TD>Ks=8.7 MPSP=4.0 Kp=7.5 </TD><TD>7.12823 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 01:34:57.598</TD><TD>56.631</TD><TD>161.315</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>203.623 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.19 01:28:42.321</TD><TD>50.963</TD><TD>157.174</TD><TD>125.0</TD><TD>Ks=8.9 </TD><TD>1268.21 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.19 01:28:40.702</TD><TD>50.423</TD><TD>157.915</TD><TD>21.9</TD><TD>Ks=8.4 MPSP=4.4 Kp=7.9 </TD><TD>9.12163 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.19 01:21:09.052</TD><TD>56.627</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>211.649 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.19 00:46:43.489</TD><TD>52.250</TD><TD>158.824</TD><TD>113.1</TD><TD>Ks=6.4 </TD><TD>1271.61 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.19 00:28:38.526</TD><TD>52.575</TD><TD>159.738</TD><TD>40.8</TD><TD>Ks=6.6 </TD><TD>1311.67 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.18 23:53:35.112</TD><TD>51.642</TD><TD>159.168</TD><TD>58.3</TD><TD>Ks=6.6 </TD><TD>222.981 min</TD><TD>&nbsp;</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.18 23:50:09.418</TD><TD>52.518</TD><TD>158.213</TD><TD>2.0</TD><TD>Ks=2.5 </TD><TD>181.676 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.18 23:27:47.638</TD><TD>56.624</TD><TD>161.302</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>69.556 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 23:20:06.257</TD><TD>56.628</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>70.1457 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 23:03:09.071</TD><TD>49.141</TD><TD>158.257</TD><TD>31.2</TD><TD>Ks=8.0 </TD><TD>335.632 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.18 22:43:57.657</TD><TD>52.060</TD><TD>159.231</TD><TD>20.8</TD><TD>Ks=6.3 </TD><TD>252.189 min</TD><TD>&nbsp;</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.18 21:51:48.700</TD><TD>56.629</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>151.555 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 21:42:57.501</TD><TD>55.609</TD><TD>162.647</TD><TD>49.8</TD><TD>Ks=7.2 </TD><TD>382.008 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.18 21:29:33.665</TD><TD>56.627</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>127.406 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.18 21:24:09.040</TD><TD>46.659</TD><TD>141.780</TD><TD>13.3</TD><TD>Ks=5.5 </TD><TD>297.433 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 21:24:07.527</TD><TD>46.627</TD><TD>141.661</TD><TD>4.1</TD><TD>Ks=6.7 MPSP=2.8 Kp=4.8 Kr=7.3 ML=1.8 </TD><TD>130.991 min</TD><TD>!</TD><TD>sakhalinFR</TD></TR>
+<TR><TD>2016.04.18 21:24:06.198</TD><TD>46.634</TD><TD>141.566</TD><TD>7.7</TD><TD>Ks=5.4 </TD><TD>7.28003 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 20:50:56.208</TD><TD>41.698</TD><TD>142.782</TD><TD>58.6</TD><TD>Ks=8.9 </TD><TD>5.01319 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 20:32:46.085</TD><TD>42.130</TD><TD>142.885</TD><TD>56.4</TD><TD>Ks=7.6 </TD><TD>4.9319 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 20:32:45.555</TD><TD>42.240</TD><TD>143.080</TD><TD>64.2</TD><TD>MS20=3.3 </TD><TD>8.12408 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.18 20:32:44.489</TD><TD>42.198</TD><TD>142.975</TD><TD>60.8</TD><TD>MPSP=4.3 Kp=8.2 </TD><TD>300.592 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 20:30:06.249</TD><TD>53.292</TD><TD>158.709</TD><TD>-2.1</TD><TD>Ks=2.2 </TD><TD>120.879 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.18 20:05:17.012</TD><TD>51.299</TD><TD>160.265</TD><TD>80.0</TD><TD>Ks=8.1 </TD><TD>11.8165 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 20:05:13.967</TD><TD>51.146</TD><TD>160.667</TD><TD>82.2</TD><TD>Ks=9.8 </TD><TD>465.701 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.18 19:47:54.152</TD><TD>53.337</TD><TD>162.059</TD><TD>62.2</TD><TD>Ks=7.1 </TD><TD>451.664 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.18 19:40:07.168</TD><TD>55.603</TD><TD>161.784</TD><TD>80.2</TD><TD>Ks=7.0 </TD><TD>439.847 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.18 18:47:22.936</TD><TD>56.629</TD><TD>161.302</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>236.151 min</TD><TD>&nbsp;</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.18 17:07:32.043</TD><TD>53.250</TD><TD>158.846</TD><TD>-1.1</TD><TD>Ks=2.0 </TD><TD>331.216 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.18 16:36:18.454</TD><TD>56.630</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>401.626 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 16:31:55.687</TD><TD>56.626</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>400.205 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 16:27:12.212</TD><TD>49.515</TD><TD>156.736</TD><TD>6.7</TD><TD>Ks=8.7 </TD><TD>556.113 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.18 16:08:57.937</TD><TD>53.636</TD><TD>160.307</TD><TD>66.3</TD><TD>Ks=6.4 </TD><TD>488.718 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.18 15:49:35.342</TD><TD>56.626</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>390.011 min</TD><TD>&nbsp;</TD><TD>LNPO</TD></TR>
+<TR><TD>2016.04.18 13:59:58.402</TD><TD>56.628</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>493.96 min</TD><TD>&nbsp;</TD><TD>LNPO</TD></TR>
+<TR><TD>2016.04.18 13:37:53.502</TD><TD>50.344</TD><TD>157.265</TD><TD>57.7</TD><TD>Ks=7.2 </TD><TD>658.958 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.18 13:06:20.713</TD><TD>-19.337</TD><TD>169.402</TD><TD>152.8</TD><TD>MPSP=6.1 </TD><TD>22.7714 min</TD><TD>&nbsp;</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.18 13:06:12.547</TD><TD>-19.105</TD><TD>169.357</TD><TD>70.0</TD><TD>MPSP=6.5 MPLP=5.9 MS=5.2 </TD><TD>50.7742 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.18 13:06:12.441</TD><TD>-19.024</TD><TD>168.982</TD><TD>65.0</TD><TD>MPSP=6.5 MPLP=5.9 </TD><TD>35.8426 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.18 13:06:11.148</TD><TD>-19.373</TD><TD>168.948</TD><TD>59.1</TD><TD>MPLP=6.7 MPSP=6.7 MS=5.4 </TD><TD>47.1809 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 13:06:10.992</TD><TD>-19.347</TD><TD>169.474</TD><TD>70.0</TD><TD>MPSP=6.5 MPLP=5.9 MS=5.2 </TD><TD>55.5501 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.18 13:06:09.097</TD><TD>-19.485</TD><TD>169.443</TD><TD>70.5</TD><TD>MS=5.1 MPSP=6.1 </TD><TD>43.2984 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.18 13:06:09.094</TD><TD>-19.486</TD><TD>169.440</TD><TD>71.7</TD><TD>MPSP=6.1 </TD><TD>33.9984 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.18 13:06:08.725</TD><TD>-19.486</TD><TD>169.361</TD><TD>61.0</TD><TD>MPLP=6.2 MPSP=6.7 MS=5.2 </TD><TD>50.8713 min</TD><TD>!</TD><TD></TD></TR>
+<TR><TD>2016.04.18 13:06:08.117</TD><TD>-19.809</TD><TD>169.281</TD><TD>62.0</TD><TD>MPSP=6.7 MPLP=6.7 </TD><TD>20.1647 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 13:06:08.036</TD><TD>-19.591</TD><TD>169.413</TD><TD>68.8</TD><TD>MPLP=6.2 MPSP=6.7 MS=5.2 </TD><TD>49.2661 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.18 13:06:07.701</TD><TD>-19.958</TD><TD>169.425</TD><TD>72.0</TD><TD>MPLP=6.4 MS=5.3 MPSP=6.6 </TD><TD>53.155 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 13:06:04.482</TD><TD>-19.593</TD><TD>169.265</TD><TD>38.1</TD><TD>MPSP=6.7 </TD><TD>21.0086 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.18 13:05:59.790</TD><TD>-19.563</TD><TD>169.379</TD><TD>0.0</TD><TD>MPSP=6.7 </TD><TD>16.0202 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.18 12:28:53.645</TD><TD>56.625</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>580.289 min</TD><TD>&nbsp;</TD><TD>LNPO</TD></TR>
+<TR><TD>2016.04.18 12:17:12.904</TD><TD>56.630</TD><TD>161.314</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>621.852 min</TD><TD>!</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 12:17:12.784</TD><TD>56.635</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>624.637 min</TD><TD>!</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 12:12:50.814</TD><TD>56.630</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>634.886 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 11:58:32.829</TD><TD>56.629</TD><TD>161.309</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>601.103 min</TD><TD>!</TD><TD>LNPO</TD></TR>
+<TR><TD>2016.04.18 11:58:32.827</TD><TD>56.632</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>542.953 min</TD><TD>!</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 11:42:04.823</TD><TD>33.189</TD><TD>131.552</TD><TD>63.1</TD><TD>MPSP=5.1 MS=4.8 </TD><TD>12.8863 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.18 11:42:03.469</TD><TD>33.070</TD><TD>131.439</TD><TD>59.5</TD><TD>MS=4.8 MPSP=5.1 MPLP=5.0 </TD><TD>17.3255 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.18 11:41:57.726</TD><TD>33.245</TD><TD>131.279</TD><TD>31.6</TD><TD>MPSP=5.7 MS=5.4 </TD><TD>22.0879 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.18 11:41:56.207</TD><TD>33.104</TD><TD>131.275</TD><TD>30.5</TD><TD>MPSP=5.7 MS=5.4 </TD><TD>23.6132 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.18 11:41:54.310</TD><TD>32.780</TD><TD>130.954</TD><TD>29.0</TD><TD>MPLP=5.7 MS=5.6 MPSP=5.6 </TD><TD>713.128 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 11:41:54.068</TD><TD>33.019</TD><TD>131.117</TD><TD>0.0</TD><TD>MPSP=5.7 MS=5.4 MS20=5.2 </TD><TD>24.6155 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.18 11:41:53.745</TD><TD>32.257</TD><TD>131.017</TD><TD>86.5</TD><TD>MPSP=5.3 </TD><TD>16.4042 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.18 11:41:53.473</TD><TD>32.724</TD><TD>130.815</TD><TD>13.3</TD><TD>MPSP=5.7 </TD><TD>15.1754 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.18 11:41:53.394</TD><TD>32.693</TD><TD>130.833</TD><TD>14.9</TD><TD>MPSP=5.7 MS=5.4 MS20=5.2 </TD><TD>22.4434 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.18 11:41:51.751</TD><TD>32.704</TD><TD>130.870</TD><TD>10.0</TD><TD>MPSP=5.8 MPLP=5.7 MS=5.8 </TD><TD>18.0875 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 11:38:40.319</TD><TD>-31.706</TD><TD>-70.622</TD><TD>50.0</TD><TD>MPKIKPSP=5.7 </TD><TD>76.7447 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 10:42:12.751</TD><TD>56.628</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>616.054 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 10:14:58.060</TD><TD>54.703</TD><TD>164.152</TD><TD>51.4</TD><TD>Ks=8.2 </TD><TD>776.832 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.18 10:13:20.840</TD><TD>52.849</TD><TD>160.261</TD><TD>13.2</TD><TD>Ks=6.0 </TD><TD>733.136 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.18 10:06:12.358</TD><TD>51.075</TD><TD>157.736</TD><TD>62.6</TD><TD>Ks=7.9 </TD><TD>22.7107 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.18 10:06:11.715</TD><TD>50.996</TD><TD>157.871</TD><TD>42.8</TD><TD>Ks=8.4 </TD><TD>728.271 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.18 08:26:19.601</TD><TD>48.847</TD><TD>142.152</TD><TD>0.0</TD><TD>Ks=4.5 Kr=6.6 </TD><TD>9.23997 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 08:24:46.492</TD><TD>42.957</TD><TD>144.902</TD><TD>45.8</TD><TD>Ks=8.2 </TD><TD>4.19179 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 08:15:15.454</TD><TD>56.629</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>753.492 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 08:11:26.166</TD><TD>56.633</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>754.664 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 08:09:29.488</TD><TD>48.909</TD><TD>142.031</TD><TD>0.0</TD><TD>Ks=5.1 Kr=6.8 </TD><TD>3.62519 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 08:09:28.904</TD><TD>49.237</TD><TD>142.231</TD><TD>0.0</TD><TD>Ks=5.4 MPSP=4.2 </TD><TD>4.36827 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 08:03:33.217</TD><TD>54.959</TD><TD>163.079</TD><TD>42.6</TD><TD>Ks=6.3 </TD><TD>1045.7 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.18 08:00:01.612</TD><TD>56.628</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>763.09 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 06:51:31.524</TD><TD>56.630</TD><TD>161.314</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>820.708 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 06:04:01.032</TD><TD>56.629</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>866.149 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 05:29:21.741</TD><TD>42.752</TD><TD>144.730</TD><TD>38.4</TD><TD>Ks=8.6 </TD><TD>7.15432 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.18 05:15:40.424</TD><TD>56.626</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>910.01 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 05:13:32.690</TD><TD>56.631</TD><TD>161.314</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>910.605 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 03:55:58.667</TD><TD>56.627</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>14.7722 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 03:13:26.838</TD><TD>56.627</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>10.1527 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 03:05:52.400</TD><TD>56.628</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>11.3767 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 02:41:48.078</TD><TD>56.627</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>31.2487 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 02:22:26.735</TD><TD>56.627</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>46.6544 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 02:15:05.708</TD><TD>56.630</TD><TD>161.317</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>51.3049 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 01:27:11.239</TD><TD>56.628</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>92.3293 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.18 01:15:27.899</TD><TD>56.629</TD><TD>161.309</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>101.802 min</TD><TD>&nbsp;</TD><TD>LDMH</TD></TR>
+<TR><TD>2016.04.18 01:01:51.906</TD><TD>52.689</TD><TD>160.146</TD><TD>70.7</TD><TD>Ks=6.1 </TD><TD>1233.3 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.18 00:48:20.678</TD><TD>32.900</TD><TD>130.475</TD><TD>20.0</TD><TD>MPSP=4.1 </TD><TD>1336.64 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.17 22:46:54.991</TD><TD>56.628</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>49.2335 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 22:34:47.185</TD><TD>56.624</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>58.6302 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 22:20:26.690</TD><TD>56.631</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>70.9552 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 22:19:00.594</TD><TD>56.630</TD><TD>161.318</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>71.0568 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 22:12:47.879</TD><TD>56.628</TD><TD>161.315</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>75.9687 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 22:03:16.374</TD><TD>56.624</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>83.7938 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 21:42:19.215</TD><TD>54.210</TD><TD>162.367</TD><TD>44.9</TD><TD>Ks=7.1 </TD><TD>380.463 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.17 21:28:06.439</TD><TD>53.302</TD><TD>160.449</TD><TD>63.8</TD><TD>Ks=8.6 Kp=7.0 </TD><TD>3.10934 min</TD><TD>!</TD><TD>anna</TD></TR>
+<TR><TD>2016.04.17 21:28:05.973</TD><TD>53.657</TD><TD>160.298</TD><TD>16.1</TD><TD>Ks=8.5 </TD><TD>2.90045 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.17 21:28:05.757</TD><TD>53.562</TD><TD>160.416</TD><TD>49.4</TD><TD>Ks=8.5 Kp=6.8 </TD><TD>4.22071 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.17 21:28:04.907</TD><TD>53.360</TD><TD>160.589</TD><TD>20.4</TD><TD>Ks=8.4 </TD><TD>11.0682 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.17 21:28:04.740</TD><TD>53.567</TD><TD>160.436</TD><TD>38.2</TD><TD>MPSP=4.1 Kp=7.9 Ks=8.2 </TD><TD>15.421 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.17 21:28:03.751</TD><TD>53.477</TD><TD>160.717</TD><TD>52.6</TD><TD>Ks=9.5 </TD><TD>305.937 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.17 21:19:27.071</TD><TD>56.628</TD><TD>161.301</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>125.399 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 21:03:43.432</TD><TD>56.630</TD><TD>161.313</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>138.993 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 20:53:32.560</TD><TD>55.209</TD><TD>161.899</TD><TD>86.1</TD><TD>Ks=7.6 </TD><TD>377.657 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.17 20:47:27.361</TD><TD>56.626</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>153.527 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 20:36:39.417</TD><TD>56.630</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>162.943 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 20:28:41.421</TD><TD>56.631</TD><TD>161.313</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>169.676 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 20:02:09.235</TD><TD>55.062</TD><TD>162.207</TD><TD>23.8</TD><TD>Ks=7.6 </TD><TD>168.329 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.17 19:54:36.500</TD><TD>56.624</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=4.6 </TD><TD>192.492 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 19:36:15.114</TD><TD>56.630</TD><TD>161.314</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>208.215 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 19:18:50.074</TD><TD>56.627</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>223.932 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 19:06:18.609</TD><TD>56.629</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>231.223 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 18:29:18.121</TD><TD>56.627</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>266.181 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 18:14:42.501</TD><TD>56.627</TD><TD>161.301</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>272.658 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 17:26:06.445</TD><TD>56.627</TD><TD>161.299</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>318.893 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 16:12:24.451</TD><TD>56.630</TD><TD>161.312</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>385.326 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 14:48:01.202</TD><TD>56.624</TD><TD>161.301</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>462.963 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 14:15:31.113</TD><TD>53.807</TD><TD>160.133</TD><TD>79.3</TD><TD>Ks=6.7 </TD><TD>454.298 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.17 14:02:06.563</TD><TD>56.629</TD><TD>161.309</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>811.907 min</TD><TD>!</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.17 14:02:06.523</TD><TD>56.627</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>506.658 min</TD><TD>!</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 13:56:07.053</TD><TD>56.636</TD><TD>161.298</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>508.899 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 13:40:07.373</TD><TD>56.627</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>519.944 min</TD><TD>!</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 13:40:07.370</TD><TD>56.628</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>518.477 min</TD><TD>!</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 13:26:30.698</TD><TD>56.626</TD><TD>161.301</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>529.205 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 12:57:40.158</TD><TD>56.631</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>555.831 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 11:42:38.110</TD><TD>56.626</TD><TD>161.293</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>949.981 min</TD><TD>!</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.17 11:42:37.903</TD><TD>56.625</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>576.485 min</TD><TD>!</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 11:34:45.695</TD><TD>56.629</TD><TD>161.317</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>582.372 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 09:26:04.722</TD><TD>55.263</TD><TD>162.223</TD><TD>83.8</TD><TD>Ks=9.8 Kp=8.2 </TD><TD>4.07129 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.17 09:26:04.139</TD><TD>55.217</TD><TD>162.387</TD><TD>76.6</TD><TD>Ks=9.5 </TD><TD>737.881 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.17 09:26:03.873</TD><TD>55.300</TD><TD>162.270</TD><TD>92.8</TD><TD>Ks=9.7 </TD><TD>4.70212 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.17 09:26:02.381</TD><TD>55.133</TD><TD>163.036</TD><TD>0.0</TD><TD>Ks=9.2 Kp=7.4 </TD><TD>11.2436 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.17 08:26:26.709</TD><TD>48.970</TD><TD>142.158</TD><TD>0.0</TD><TD>Ks=2.9 </TD><TD>958.688 min</TD><TD>&nbsp;</TD><TD>sakhalinFR</TD></TR>
+<TR><TD>2016.04.17 07:59:31.392</TD><TD>56.627</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>761.493 min</TD><TD>!</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 07:59:31.318</TD><TD>56.627</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>1171.96 min</TD><TD>!</TD><TD>lnpo</TD></TR>
+<TR><TD>2016.04.17 07:42:30.436</TD><TD>56.629</TD><TD>161.301</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>776.426 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 07:31:04.299</TD><TD>-23.481</TD><TD>-174.603</TD><TD>33.0</TD><TD>MPLP=5.7 MS=4.9 </TD><TD>49.2617 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.17 07:31:03.979</TD><TD>-23.523</TD><TD>-174.082</TD><TD>33.0</TD><TD>MPSP=6.2 </TD><TD>37.3503 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.17 07:31:03.901</TD><TD>-23.537</TD><TD>-174.840</TD><TD>33.0</TD><TD>MPLP=5.7 MS=4.9 </TD><TD>48.5683 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.17 07:31:03.179</TD><TD>-23.425</TD><TD>-174.801</TD><TD>21.1</TD><TD>MPLP=6.6 MS=5.7 </TD><TD>34.697 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.17 07:30:58.866</TD><TD>-23.767</TD><TD>-173.929</TD><TD>16.7</TD><TD>MPLP=6.4 MS=5.4 MPSP=6.4 </TD><TD>1212.39 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.17 06:50:09.449</TD><TD>53.256</TD><TD>158.832</TD><TD>-0.4</TD><TD>Ks=2.4 </TD><TD>943.959 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.17 06:03:47.608</TD><TD>56.628</TD><TD>161.314</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>871.057 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 05:04:20.484</TD><TD>56.627</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>927.492 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 03:56:13.352</TD><TD>56.627</TD><TD>161.309</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>39.6441 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 03:08:49.546</TD><TD>56.628</TD><TD>161.301</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>84.9909 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 03:05:15.572</TD><TD>52.475</TD><TD>158.146</TD><TD>2.3</TD><TD>Ks=2.9 </TD><TD>1151.12 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.17 03:04:09.303</TD><TD>52.478</TD><TD>158.241</TD><TD>6.1</TD><TD>Ks=3.0 </TD><TD>1144.19 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.17 03:03:28.480</TD><TD>52.463</TD><TD>158.156</TD><TD>2.9</TD><TD>Ks=4.4 </TD><TD>1139.98 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.17 01:06:44.558</TD><TD>56.628</TD><TD>161.298</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>201.524 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.17 00:25:30.438</TD><TD>56.639</TD><TD>161.312</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>236.026 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 23:58:44.171</TD><TD>0.685</TD><TD>-79.384</TD><TD>39.6</TD><TD>MS=7.3 </TD><TD>88.8638 min</TD><TD>&nbsp;</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.16 23:58:37.680</TD><TD>0.353</TD><TD>-79.654</TD><TD>29.4</TD><TD>MS=7.4 </TD><TD>79.1887 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.16 23:58:37.031</TD><TD>0.422</TD><TD>-80.407</TD><TD>0.0</TD><TD>MS=7.1 </TD><TD>70.5828 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.16 23:58:34.920</TD><TD>0.466</TD><TD>79.906</TD><TD>18.0</TD><TD>MPLP=5.7 </TD><TD>111.951 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.16 23:58:34.124</TD><TD>-0.775</TD><TD>-80.088</TD><TD>16.0</TD><TD>MPKIKPSP=6.6 MS=7.3 </TD><TD>1655.65 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.16 23:58:31.983</TD><TD>0.168</TD><TD>79.791</TD><TD>18.0</TD><TD>MPLP=5.7 </TD><TD>91.4003 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.16 23:58:31.248</TD><TD>-0.209</TD><TD>-80.616</TD><TD>18.6</TD><TD>MS=6.7 </TD><TD>264.196 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.16 23:43:51.142</TD><TD>56.630</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>28.0976 min</TD><TD>!</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 23:43:51.142</TD><TD>56.630</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>32.5476 min</TD><TD>!</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 23:23:49.435</TD><TD>56.626</TD><TD>161.298</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>14.9094 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 23:11:29.555</TD><TD>56.628</TD><TD>161.313</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>23.9907 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 22:13:47.618</TD><TD>52.530</TD><TD>159.191</TD><TD>43.9</TD><TD>Ks=7.5 </TD><TD>365.29 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.16 22:13:16.064</TD><TD>56.627</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>51.8656 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 21:51:14.111</TD><TD>56.626</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>71.6481 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 21:09:16.997</TD><TD>0.402</TD><TD>97.683</TD><TD>38.8</TD><TD>MS=4.8 MPSP=5.5 </TD><TD>76.1834 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.16 20:45:51.612</TD><TD>56.627</TD><TD>161.309</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>127.323 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 20:28:35.108</TD><TD>42.809</TD><TD>142.073</TD><TD>126.2</TD><TD>Ks=7.1 MPSP=4.3 Kp=7.6 </TD><TD>340.098 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.16 19:46:47.971</TD><TD>32.487</TD><TD>130.907</TD><TD>12.9</TD><TD>MS=4.4 MPSP=4.9 </TD><TD>375.484 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.16 19:41:37.858</TD><TD>56.629</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>187.702 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 19:26:34.360</TD><TD>56.626</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>200.177 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 19:12:03.781</TD><TD>56.629</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>211.27 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 18:40:27.310</TD><TD>56.629</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>241.078 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 18:27:51.866</TD><TD>56.631</TD><TD>161.316</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>251.469 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 17:51:41.472</TD><TD>53.753</TD><TD>160.856</TD><TD>21.2</TD><TD>Ks=9.4 Kp=8.1 </TD><TD>3.77546 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.16 17:51:41.412</TD><TD>53.678</TD><TD>160.933</TD><TD>67.1</TD><TD>Ks=9.5 </TD><TD>4.20979 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.16 17:51:40.935</TD><TD>53.661</TD><TD>161.107</TD><TD>40.3</TD><TD>Ks=10.3 </TD><TD>590.301 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.16 17:24:50.915</TD><TD>52.397</TD><TD>159.561</TD><TD>20.4</TD><TD>Ks=7.7 </TD><TD>598.618 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.16 16:56:09.889</TD><TD>56.626</TD><TD>161.300</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>340.702 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 16:51:08.542</TD><TD>56.628</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=4.2 </TD><TD>343.191 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 16:19:58.573</TD><TD>52.462</TD><TD>159.552</TD><TD>34.5</TD><TD>Ks=6.9 </TD><TD>554.757 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.16 16:18:36.241</TD><TD>52.396</TD><TD>159.584</TD><TD>24.9</TD><TD>Ks=8.5 </TD><TD>517.246 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.16 16:18:35.999</TD><TD>52.425</TD><TD>159.429</TD><TD>3.6</TD><TD>Ks=7.2 Kp=6.3 </TD><TD>10.9167 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.16 16:17:40.081</TD><TD>52.432</TD><TD>159.558</TD><TD>25.6</TD><TD>Ks=7.2 </TD><TD>491.482 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.16 16:09:15.952</TD><TD>55.001</TD><TD>166.437</TD><TD>33.0</TD><TD>Ks=9.5 </TD><TD>2.06745 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.16 16:09:15.877</TD><TD>55.190</TD><TD>166.555</TD><TD>0.0</TD><TD>Ks=8.4 Kp=8.3 </TD><TD>3.90204 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.16 16:09:15.350</TD><TD>54.940</TD><TD>165.879</TD><TD>48.4</TD><TD>Ks=10.0 </TD><TD>5.91082 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.16 16:09:14.641</TD><TD>54.684</TD><TD>165.880</TD><TD>30.5</TD><TD>Ks=10.7 </TD><TD>383.289 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.16 16:09:13.433</TD><TD>54.817</TD><TD>166.115</TD><TD>53.3</TD><TD>Ks=10.1 MS20=3.6 </TD><TD>13.3428 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.16 16:09:13.433</TD><TD>54.817</TD><TD>166.115</TD><TD>53.3</TD><TD>Ks=10.1 </TD><TD>10.5761 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.16 15:56:13.762</TD><TD>53.860</TD><TD>159.079</TD><TD>162.5</TD><TD>Ks=7.7 </TD><TD>631.587 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.16 14:46:32.931</TD><TD>51.797</TD><TD>-175.787</TD><TD>0.0</TD><TD>Ks=10.3 Kp=7.3 </TD><TD>4.35114 min</TD><TD>&nbsp;</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.16 14:39:30.707</TD><TD>56.630</TD><TD>161.313</TD><TD>-0.9</TD><TD>Ks=4.5 </TD><TD>470.888 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 14:18:18.227</TD><TD>56.624</TD><TD>161.296</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>485.096 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 14:17:43.572</TD><TD>52.560</TD><TD>159.547</TD><TD>11.7</TD><TD>Ks=5.8 </TD><TD>748.157 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.16 14:09:36.666</TD><TD>56.623</TD><TD>161.295</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>492.372 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 13:50:06.253</TD><TD>50.758</TD><TD>157.633</TD><TD>44.8</TD><TD>Ks=11.3 MPSP=5.0 Kp=9.1 MS20=3.1 </TD><TD>9.4791 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.16 13:50:06.163</TD><TD>50.752</TD><TD>157.636</TD><TD>44.6</TD><TD>MPSP=4.8 </TD><TD>5.49728 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.16 13:50:06.061</TD><TD>50.762</TD><TD>157.569</TD><TD>56.5</TD><TD>MPSP=4.8 </TD><TD>9.71565 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.16 13:50:05.512</TD><TD>51.300</TD><TD>156.895</TD><TD>0.0</TD><TD>Ks=11.5 Kp=9.3 </TD><TD>11.6581 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.16 13:50:04.823</TD><TD>50.858</TD><TD>157.473</TD><TD>67.5</TD><TD>Ks=11.3 Kp=8.9 </TD><TD>3.15294 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.16 13:50:04.084</TD><TD>50.820</TD><TD>157.497</TD><TD>69.2</TD><TD>Ks=11.7 Mc=4.5 </TD><TD>454.432 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.16 13:50:03.410</TD><TD>50.756</TD><TD>157.694</TD><TD>55.3</TD><TD>Ks=11.4 Kp=8.9 MS20=2.9 </TD><TD>3.72649 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.16 13:35:39.194</TD><TD>56.630</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>514.797 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 13:25:38.493</TD><TD>56.112</TD><TD>161.613</TD><TD>87.2</TD><TD>Ks=8.9 </TD><TD>774.542 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.16 13:25:38.410</TD><TD>55.989</TD><TD>161.620</TD><TD>93.1</TD><TD>Ks=8.4 </TD><TD>6.00983 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.16 13:25:37.715</TD><TD>56.012</TD><TD>161.623</TD><TD>100.3</TD><TD>Ks=8.2 </TD><TD>5.87141 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.16 12:45:55.400</TD><TD>56.627</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>561.727 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 12:36:29.735</TD><TD>56.627</TD><TD>161.309</TD><TD>-0.9</TD><TD>Ks=3.9 </TD><TD>568.371 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 11:23:24.585</TD><TD>56.628</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>640.057 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 10:55:47.547</TD><TD>22.438</TD><TD>121.878</TD><TD>10.0</TD><TD>MPSP=5.6 MS=4.6 </TD><TD>32.9075 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.16 09:58:47.385</TD><TD>56.626</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>705.11 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 08:57:45.981</TD><TD>56.630</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>764.384 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 08:54:58.226</TD><TD>52.038</TD><TD>160.664</TD><TD>49.5</TD><TD>Ks=7.8 </TD><TD>1029.55 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.16 08:38:36.234</TD><TD>48.921</TD><TD>142.145</TD><TD>0.0</TD><TD>Ks=3.5 </TD><TD>2373.15 min</TD><TD>&nbsp;</TD><TD>sakhalinFR</TD></TR>
+<TR><TD>2016.04.16 08:36:24.886</TD><TD>56.626</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>783.985 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 08:29:24.744</TD><TD>48.974</TD><TD>142.248</TD><TD>0.0</TD><TD>Ks=3.7 </TD><TD>2378.69 min</TD><TD>&nbsp;</TD><TD>sakhalinFR</TD></TR>
+<TR><TD>2016.04.16 08:05:33.716</TD><TD>56.627</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>812.071 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 07:37:08.175</TD><TD>56.632</TD><TD>161.309</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>838.147 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 07:01:58.035</TD><TD>32.305</TD><TD>130.998</TD><TD>33.0</TD><TD>MPSP=5.4 MS=5.2 </TD><TD>18.6994 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.16 07:01:57.001</TD><TD>32.335</TD><TD>130.479</TD><TD>35.1</TD><TD>MPSP=5.3 MPLP=5.4 </TD><TD>12.9333 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.16 07:01:56.757</TD><TD>32.354</TD><TD>130.556</TD><TD>37.7</TD><TD>MS20=4.4 </TD><TD>9.30404 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.16 07:01:55.872</TD><TD>32.328</TD><TD>130.482</TD><TD>18.0</TD><TD>MPSP=5.3 </TD><TD>10.2521 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.16 07:01:55.159</TD><TD>32.476</TD><TD>130.689</TD><TD>15.0</TD><TD>MS20=4.4 </TD><TD>7.29734 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.16 06:46:14.396</TD><TD>56.628</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>886.46 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 06:23:09.950</TD><TD>56.115</TD><TD>160.541</TD><TD>12.1</TD><TD>Ks=5.2 </TD><TD>959.234 min</TD><TD>&nbsp;</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.16 06:05:24.002</TD><TD>-26.105</TD><TD>-70.303</TD><TD>54.7</TD><TD>MS=6.0 </TD><TD>89.5833 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.16 05:35:33.677</TD><TD>56.625</TD><TD>161.302</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>942.939 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 05:11:29.953</TD><TD>56.627</TD><TD>161.307</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>963.151 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 04:19:21.935</TD><TD>56.626</TD><TD>161.309</TD><TD>-0.9</TD><TD>Ks=4.2 </TD><TD>1029.8 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 04:12:32.987</TD><TD>56.626</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>1033.75 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 03:51:37.213</TD><TD>56.628</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>3.34644 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 03:32:36.556</TD><TD>50.672</TD><TD>156.911</TD><TD>127.9</TD><TD>Ks=9.1 </TD><TD>72.7741 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.16 03:03:29.132</TD><TD>56.627</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>32.6145 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 02:26:50.361</TD><TD>56.628</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>21.7106 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.16 02:12:57.321</TD><TD>53.759</TD><TD>160.489</TD><TD>24.4</TD><TD>Ks=8.5 </TD><TD>2.91131 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.16 02:12:57.291</TD><TD>53.701</TD><TD>160.653</TD><TD>40.9</TD><TD>Ks=8.8 </TD><TD>45.5785 min</TD><TD>!</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.16 02:12:56.151</TD><TD>53.762</TD><TD>160.605</TD><TD>21.1</TD><TD>Ks=8.4 Kp=6.5 </TD><TD>3.36414 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.16 00:48:33.173</TD><TD>32.682</TD><TD>131.036</TD><TD>69.5</TD><TD>MPSP=5.7 MS=5.1 </TD><TD>17.7638 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.16 00:48:32.369</TD><TD>32.806</TD><TD>130.672</TD><TD>72.5</TD><TD>MS20=4.3 </TD><TD>10.6772 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.16 00:48:28.456</TD><TD>32.458</TD><TD>130.722</TD><TD>77.8</TD><TD>MPSP=5.4 </TD><TD>14.4091 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.16 00:48:15.608</TD><TD>31.743</TD><TD>130.489</TD><TD>4.9</TD><TD>MS20=4.5 </TD><TD>12.7065 min</TD><TD>&nbsp;</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.16 00:03:12.568</TD><TD>56.625</TD><TD>161.299</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>159.174 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 23:55:44.718</TD><TD>51.327</TD><TD>-177.733</TD><TD>0.0</TD><TD>Ks=10.1 </TD><TD>5.83802 min</TD><TD>&nbsp;</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.15 23:40:50.141</TD><TD>56.631</TD><TD>161.313</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>23.2643 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 22:41:42.411</TD><TD>56.625</TD><TD>161.315</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>19.2765 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 22:29:55.263</TD><TD>42.760</TD><TD>145.029</TD><TD>45.9</TD><TD>MPSP=3.6 Kp=6.4 </TD><TD>6.64561 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 22:29:26.233</TD><TD>56.626</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>29.7794 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 22:23:52.354</TD><TD>32.656</TD><TD>130.617</TD><TD>14.1</TD><TD>MPSP=5.3 </TD><TD>291.077 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 22:11:44.964</TD><TD>33.385</TD><TD>132.117</TD><TD>50.1</TD><TD>MS=4.6 </TD><TD>20.5006 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.15 22:11:40.366</TD><TD>33.172</TD><TD>131.282</TD><TD>32.5</TD><TD>MPSP=5.0 MS=5.0 </TD><TD>303.794 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 22:11:40.124</TD><TD>33.265</TD><TD>131.483</TD><TD>57.4</TD><TD>MS=4.8 MS20=4.6 </TD><TD>24.1479 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.15 22:11:34.746</TD><TD>33.058</TD><TD>130.982</TD><TD>7.6</TD><TD>MPSP=5.0 MS=5.1 </TD><TD>309.238 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 22:06:56.856</TD><TD>56.629</TD><TD>161.313</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>50.5524 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 21:34:03.131</TD><TD>55.665</TD><TD>165.945</TD><TD>15.8</TD><TD>Ks=6.9 </TD><TD>296.731 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.15 20:43:14.134</TD><TD>54.452</TD><TD>166.212</TD><TD>15.6</TD><TD>Ks=7.1 </TD><TD>341.314 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.15 18:55:51.328</TD><TD>32.919</TD><TD>131.006</TD><TD>28.4</TD><TD>MPSP=5.7 MS=5.9 </TD><TD>14.6112 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 18:55:47.076</TD><TD>32.626</TD><TD>130.967</TD><TD>17.9</TD><TD>MPSP=5.1 MS=5.0 </TD><TD>14.5654 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.15 18:03:11.448</TD><TD>32.719</TD><TD>130.682</TD><TD>50.0</TD><TD>MPSP=5.4 </TD><TD>411.526 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 18:03:08.791</TD><TD>33.049</TD><TD>131.089</TD><TD>15.0</TD><TD>MPSP=5.9 MS=5.9 </TD><TD>28.5868 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 18:03:04.701</TD><TD>32.540</TD><TD>130.847</TD><TD>16.3</TD><TD>MPSP=5.1 MS=5.4 </TD><TD>12.0383 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.15 17:04:09.323</TD><TD>55.166</TD><TD>160.211</TD><TD>-0.5</TD><TD>Ks=5.0 </TD><TD>369.311 min</TD><TD>&nbsp;</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.15 16:46:00.655</TD><TD>32.968</TD><TD>131.182</TD><TD>60.0</TD><TD>MPSP=6.1 </TD><TD>64.5057 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 16:45:54.132</TD><TD>32.658</TD><TD>130.894</TD><TD>45.2</TD><TD>MPSP=5.4 MS=6.3 </TD><TD>14.5311 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.15 16:45:53.587</TD><TD>32.790</TD><TD>130.669</TD><TD>31.3</TD><TD>MPSP=6.2 </TD><TD>460.59 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 16:45:53.130</TD><TD>32.407</TD><TD>130.743</TD><TD>64.3</TD><TD>MPSP=6.3 </TD><TD>12.6645 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 16:25:11.760</TD><TD>32.607</TD><TD>131.122</TD><TD>92.4</TD><TD>MPLP=6.2 </TD><TD>10.9707 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.15 16:25:09.734</TD><TD>32.896</TD><TD>130.638</TD><TD>65.7</TD><TD>MPLP=7.3 MPSP=6.6 MS=7.6 MS20=7.4 </TD><TD>20.6544 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.15 16:25:07.386</TD><TD>32.780</TD><TD>131.048</TD><TD>0.0</TD><TD>MS=7.7 MPLP=7.2 MPSP=6.6 MS20=7.4 </TD><TD>23.0269 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.15 16:25:06.613</TD><TD>32.604</TD><TD>130.929</TD><TD>66.7</TD><TD>MPSP=6.1 </TD><TD>10.4564 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.15 16:25:06.554</TD><TD>32.623</TD><TD>130.906</TD><TD>66.5</TD><TD>MPSP=6.1 MS=7.1 </TD><TD>24.3574 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.15 16:25:06.554</TD><TD>32.623</TD><TD>130.906</TD><TD>66.5</TD><TD>MPSP=6.1 MS=6.9 </TD><TD>20.4241 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.15 16:25:02.304</TD><TD>32.473</TD><TD>130.811</TD><TD>10.0</TD><TD>MPLP=8.0 MS=7.8 MPSP=6.8 </TD><TD>187.278 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 16:25:02.304</TD><TD>32.473</TD><TD>130.811</TD><TD>10.0</TD><TD>MPSP=6.8 MPLP=8.0 MS=7.6 </TD><TD>13.4616 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 16:25:01.536</TD><TD>32.415</TD><TD>131.822</TD><TD>0.0</TD><TD>MPLP=7.3 MPSP=6.6 </TD><TD>8.44105 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.15 15:24:07.093</TD><TD>56.627</TD><TD>161.302</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>442.432 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 14:57:43.782</TD><TD>53.019</TD><TD>160.130</TD><TD>50.3</TD><TD>Ks=7.1 </TD><TD>515.637 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.15 14:44:44.640</TD><TD>56.630</TD><TD>161.309</TD><TD>-0.9</TD><TD>Ks=4.5 </TD><TD>476.589 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 14:24:25.199</TD><TD>55.065</TD><TD>162.372</TD><TD>49.4</TD><TD>Ks=7.4 </TD><TD>706.747 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.15 14:11:29.758</TD><TD>13.474</TD><TD>-92.513</TD><TD>50.0</TD><TD>MS=5.4 </TD><TD>65.2374 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 14:11:25.836</TD><TD>13.783</TD><TD>-91.935</TD><TD>17.5</TD><TD>MPSP=6.6 MPLP=5.7 </TD><TD>62.8861 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.15 13:14:02.256</TD><TD>51.935</TD><TD>159.122</TD><TD>44.4</TD><TD>Ks=5.9 </TD><TD>604.796 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.15 12:28:33.915</TD><TD>56.626</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>607.951 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 11:33:34.734</TD><TD>56.627</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>658.421 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 10:57:03.052</TD><TD>55.349</TD><TD>166.411</TD><TD>29.1</TD><TD>Ks=6.3 </TD><TD>837.199 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.15 09:44:45.655</TD><TD>54.591</TD><TD>164.090</TD><TD>40.8</TD><TD>Ks=7.8 </TD><TD>897.756 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.15 09:43:01.318</TD><TD>56.206</TD><TD>161.561</TD><TD>93.6</TD><TD>Ks=7.6 </TD><TD>890.095 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.15 08:58:14.409</TD><TD>53.707</TD><TD>161.033</TD><TD>24.8</TD><TD>Ks=6.9 </TD><TD>853.127 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.15 08:54:38.406</TD><TD>-13.799</TD><TD>166.988</TD><TD>33.0</TD><TD>MPSP=5.7 MS=4.8 </TD><TD>1191.11 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 08:36:48.972</TD><TD>56.629</TD><TD>161.317</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>827.234 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 08:21:36.936</TD><TD>48.913</TD><TD>142.109</TD><TD>0.0</TD><TD>Ks=4.2 </TD><TD>3821.9 min</TD><TD>&nbsp;</TD><TD>sakhalinFR</TD></TR>
+<TR><TD>2016.04.15 08:02:07.427</TD><TD>56.628</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>855.993 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 07:25:32.787</TD><TD>51.990</TD><TD>158.739</TD><TD>43.4</TD><TD>Ks=6.5 </TD><TD>1004.85 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.15 07:08:37.142</TD><TD>56.628</TD><TD>161.299</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>907.181 min</TD><TD>!</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 07:08:37.142</TD><TD>56.628</TD><TD>161.299</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>907.398 min</TD><TD>!</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 06:53:25.789</TD><TD>56.629</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>919.554 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 06:25:23.674</TD><TD>56.627</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>943.889 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 06:18:37.676</TD><TD>53.813</TD><TD>159.052</TD><TD>175.0</TD><TD>Ks=7.6 </TD><TD>975.822 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.15 06:07:31.778</TD><TD>51.330</TD><TD>158.218</TD><TD>57.1</TD><TD>Ks=6.9 </TD><TD>976.12 min</TD><TD>&nbsp;</TD><TD>lkrp</TD></TR>
+<TR><TD>2016.04.15 04:50:15.121</TD><TD>2.677</TD><TD>127.408</TD><TD>100.0</TD><TD>MPSP=5.8 </TD><TD>65.7313 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.15 04:50:11.887</TD><TD>1.907</TD><TD>126.921</TD><TD>97.2</TD><TD>MS=4.6 </TD><TD>50.2685 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 04:50:11.886</TD><TD>1.905</TD><TD>126.918</TD><TD>96.4</TD><TD>MS=4.6 </TD><TD>44.9852 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 04:50:11.886</TD><TD>1.905</TD><TD>126.918</TD><TD>96.4</TD><TD>MS=4.6 </TD><TD>46.0686 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 04:50:11.630</TD><TD>1.949</TD><TD>126.947</TD><TD>99.8</TD><TD>MS=4.6 </TD><TD>1308.77 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 04:20:23.175</TD><TD>56.633</TD><TD>161.313</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>16.3304 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 03:43:05.019</TD><TD>-14.818</TD><TD>166.401</TD><TD>40.0</TD><TD>MPSP=5.6 MPLP=6.1 MS=4.9 </TD><TD>51.0663 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 03:43:01.931</TD><TD>-14.525</TD><TD>166.291</TD><TD>10.0</TD><TD>MPLP=6.1 MS=4.8 MPSP=5.5 </TD><TD>1370.07 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 03:33:29.610</TD><TD>56.624</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=4.0 </TD><TD>13.0232 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 02:31:59.019</TD><TD>56.630</TD><TD>161.315</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>17.2997 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 01:59:56.289</TD><TD>51.299</TD><TD>133.126</TD><TD>0.0</TD><TD>Ks=5.8 MPSP=4.6 </TD><TD>2.7285 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.15 01:55:10.970</TD><TD>56.630</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>79.5672 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 00:47:18.376</TD><TD>56.630</TD><TD>161.298</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>145.444 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 00:15:41.160</TD><TD>56.627</TD><TD>161.305</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>169.447 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.15 00:08:07.768</TD><TD>56.629</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>173.971 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 23:16:08.450</TD><TD>56.628</TD><TD>161.308</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>45.2425 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 23:15:09.031</TD><TD>-7.744</TD><TD>128.109</TD><TD>173.4</TD><TD>MPLP=5.7 MS=5.0 </TD><TD>40.6495 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 23:15:07.345</TD><TD>-7.696</TD><TD>128.673</TD><TD>170.2</TD><TD>MPSP=6.2 </TD><TD>23.3776 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 22:29:31.161</TD><TD>51.165</TD><TD>160.496</TD><TD>50.2</TD><TD>Ks=7.7 </TD><TD>345.714 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.14 22:23:28.432</TD><TD>-14.146</TD><TD>166.265</TD><TD>10.0</TD><TD>MPSP=6.0 </TD><TD>25.3428 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 21:50:36.276</TD><TD>-14.949</TD><TD>166.894</TD><TD>167.5</TD><TD>MPSP=5.4 MPLP=6.0 </TD><TD>17.9287 min</TD><TD>&nbsp;</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.14 21:50:26.981</TD><TD>-14.642</TD><TD>166.770</TD><TD>29.4</TD><TD>MPSP=6.1 </TD><TD>15.767 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 21:50:26.689</TD><TD>-14.042</TD><TD>166.872</TD><TD>9.9</TD><TD>MS=5.7 </TD><TD>46.4052 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 21:50:26.410</TD><TD>-14.001</TD><TD>167.033</TD><TD>10.7</TD><TD>MPSP=6.1 MsLP=6.6 MS=5.4 </TD><TD>39.3932 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 21:50:25.888</TD><TD>-14.710</TD><TD>166.396</TD><TD>10.0</TD><TD>MPLP=6.8 MPSP=6.4 MS=6.1 </TD><TD>43.4185 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 21:50:24.824</TD><TD>-14.612</TD><TD>166.399</TD><TD>56.0</TD><TD>MPLP=6.4 MPSP=5.8 MS=5.9 </TD><TD>46.0029 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.14 21:50:24.133</TD><TD>-14.982</TD><TD>167.103</TD><TD>42.0</TD><TD>MS=6.0 MPSP=5.8 MPLP=6.4 </TD><TD>45.8311 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.14 21:50:17.960</TD><TD>-14.973</TD><TD>167.100</TD><TD>0.0</TD><TD>MPLP=6.4 </TD><TD>21.3507 min</TD><TD>&nbsp;</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.14 21:25:22.486</TD><TD>56.628</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>48.1419 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 21:01:56.216</TD><TD>56.628</TD><TD>161.303</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>69.7964 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 20:40:59.256</TD><TD>56.628</TD><TD>161.312</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>87.3291 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 20:10:39.806</TD><TD>32.463</TD><TD>130.857</TD><TD>70.0</TD><TD>MS=4.4 MPSP=5.2 </TD><TD>546.42 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 19:00:31.831</TD><TD>53.698</TD><TD>161.137</TD><TD>40.3</TD><TD>Ks=7.9 </TD><TD>592.319 min</TD><TD>&nbsp;</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.14 18:29:44.388</TD><TD>55.518</TD><TD>162.430</TD><TD>73.1</TD><TD>Ks=7.5 </TD><TD>593.894 min</TD><TD>&nbsp;</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.14 18:29:17.714</TD><TD>36.388</TD><TD>141.948</TD><TD>28.7</TD><TD>MPSP=4.6 MS=4.0 </TD><TD>638.221 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 18:17:09.532</TD><TD>54.827</TD><TD>162.475</TD><TD>25.9</TD><TD>Ks=8.4 </TD><TD>595.074 min</TD><TD>&nbsp;</TD><TD>lsbl</TD></TR>
+<TR><TD>2016.04.14 17:45:56.727</TD><TD>56.628</TD><TD>161.304</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>250.888 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 16:57:18.802</TD><TD>56.626</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>297.903 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 16:53:00.378</TD><TD>32.383</TD><TD>131.060</TD><TD>13.9</TD><TD>MPSP=4.9 MS=4.7 </TD><TD>434.41 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 15:34:11.487</TD><TD>32.179</TD><TD>131.323</TD><TD>0.0</TD><TD>MPSP=4.9 </TD><TD>8.95854 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 15:32:08.512</TD><TD>52.825</TD><TD>158.956</TD><TD>89.5</TD><TD>Ks=6.6 </TD><TD>720.325 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.14 15:25:41.676</TD><TD>34.541</TD><TD>138.449</TD><TD>133.4</TD><TD>MPSP=6.1 MS20=4.4 </TD><TD>12.1054 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 15:25:39.456</TD><TD>34.222</TD><TD>138.782</TD><TD>261.5</TD><TD>MPSP=4.8 </TD><TD>10.7924 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.14 15:25:38.932</TD><TD>34.306</TD><TD>138.282</TD><TD>285.3</TD><TD>MS20=4.7 Ks=10.1 </TD><TD>13.8345 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 15:25:38.281</TD><TD>34.117</TD><TD>138.520</TD><TD>255.0</TD><TD>MS20=4.4 MPSP=6.0 </TD><TD>727.045 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 15:25:37.260</TD><TD>34.223</TD><TD>138.447</TD><TD>282.9</TD><TD>MPSP=4.5 </TD><TD>8.36233 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.14 15:25:36.850</TD><TD>34.128</TD><TD>138.417</TD><TD>286.1</TD><TD>MPSP=5.8 Kp=11.1 </TD><TD>6.20249 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 15:03:53.066</TD><TD>32.959</TD><TD>130.885</TD><TD>128.0</TD><TD>MPLP=5.3 MPSP=5.0 MS=5.5 </TD><TD>16.4989 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.14 15:03:53.066</TD><TD>32.959</TD><TD>130.885</TD><TD>128.0</TD><TD>MPLP=5.3 MPSP=5.0 MS=6.0 </TD><TD>20.5656 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.14 15:03:50.044</TD><TD>32.584</TD><TD>130.964</TD><TD>8.7</TD><TD>MPLP=6.3 MPSP=5.9 MS=6.2 </TD><TD>14.2493 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 15:03:43.141</TD><TD>32.321</TD><TD>130.745</TD><TD>61.3</TD><TD>MS20=5.9 MS=5.7 MPSP=5.5 </TD><TD>20.4976 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.14 15:03:42.555</TD><TD>32.520</TD><TD>131.023</TD><TD>20.0</TD><TD>MPSP=5.9 MS20=5.7 </TD><TD>14.5907 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 15:03:42.155</TD><TD>32.367</TD><TD>130.663</TD><TD>20.0</TD><TD>MPSP=5.8 Kp=10.6 </TD><TD>7.68074 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 15:03:41.709</TD><TD>32.371</TD><TD>130.672</TD><TD>20.0</TD><TD>MPSP=5.9 Kp=11.3 MS=5.9 </TD><TD>10.7215 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 15:03:38.045</TD><TD>32.363</TD><TD>130.861</TD><TD>0.0</TD><TD>MPSP=5.5 </TD><TD>10.5326 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.14 14:43:42.798</TD><TD>32.840</TD><TD>131.047</TD><TD>14.0</TD><TD>MPSP=5.4 MS=4.6 </TD><TD>13.4534 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 14:43:39.963</TD><TD>33.125</TD><TD>130.663</TD><TD>11.0</TD><TD>MPSP=4.5 MS20=4.4 </TD><TD>15.6839 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 14:28:13.168</TD><TD>32.914</TD><TD>130.597</TD><TD>20.0</TD><TD>MPSP=4.5 MS=4.1 </TD><TD>15.8139 min</TD><TD>&nbsp;</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 13:41:05.280</TD><TD>56.628</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>489.462 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 13:38:48.354</TD><TD>32.870</TD><TD>130.577</TD><TD>10.0</TD><TD>MPSP=5.1 MS=4.8 </TD><TD>17.1608 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 13:38:42.763</TD><TD>33.054</TD><TD>130.784</TD><TD>9.2</TD><TD>MPSP=4.7 Kp=8.4 MPLP=4.5 MsLP=5.6 MS=4.4 </TD><TD>12.4873 min</TD><TD>&nbsp;</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 13:17:09.977</TD><TD>56.626</TD><TD>161.298</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>511.467 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 13:07:43.539</TD><TD>32.893</TD><TD>130.908</TD><TD>87.2</TD><TD>MS=5.5 MPSP=5.8 </TD><TD>17.091 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 13:07:33.824</TD><TD>32.740</TD><TD>130.978</TD><TD>15.8</TD><TD>MPSP=5.9 MS=5.4 </TD><TD>16.8196 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 13:07:33.689</TD><TD>32.903</TD><TD>130.256</TD><TD>26.7</TD><TD>MPSP=5.3 MS=5.2 MsLP=6.2 </TD><TD>11.2885 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 13:07:29.494</TD><TD>32.825</TD><TD>130.613</TD><TD>0.0</TD><TD>MPSP=5.3 </TD><TD>21.8418 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.14 13:07:29.352</TD><TD>32.247</TD><TD>130.600</TD><TD>35.1</TD><TD>MPSP=5.4 MPLP=5.6 MsLP=6.2 </TD><TD>8.41079 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 13:07:26.149</TD><TD>32.386</TD><TD>130.368</TD><TD>0.0</TD><TD>MPSP=5.4 </TD><TD>12.1808 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.14 12:50:25.659</TD><TD>56.626</TD><TD>161.306</TD><TD>-0.9</TD><TD>Ks=3.6 </TD><TD>535.972 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 12:42:16.469</TD><TD>32.315</TD><TD>130.511</TD><TD>10.0</TD><TD>MPSP=4.9 </TD><TD>819.809 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 12:41:16.841</TD><TD>53.936</TD><TD>161.459</TD><TD>20.2</TD><TD>Ks=7.2 </TD><TD>857.119 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.14 12:26:58.927</TD><TD>34.028</TD><TD>131.887</TD><TD>127.2</TD><TD>MS=6.1 </TD><TD>32.1012 min</TD><TD>&nbsp;</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.14 12:26:53.893</TD><TD>33.384</TD><TD>131.656</TD><TD>150.8</TD><TD>MS=6.1 MPSP=5.6 MS20=6.0 </TD><TD>42.5184 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.14 12:26:53.886</TD><TD>33.448</TD><TD>131.595</TD><TD>152.8</TD><TD>MPSP=5.6 MS=6.1 </TD><TD>20.7019 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.14 12:26:40.062</TD><TD>32.937</TD><TD>130.759</TD><TD>58.8</TD><TD>MPSP=6.2 MPLP=6.4 MS=6.3 </TD><TD>21.2323 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 12:26:34.011</TD><TD>32.814</TD><TD>130.193</TD><TD>33.2</TD><TD>MPLP=6.1 MPSP=6.0 MS=5.3 MsLP=6.5 </TD><TD>26.8665 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 12:26:32.802</TD><TD>32.801</TD><TD>130.755</TD><TD>10.0</TD><TD>MPLP=6.4 MPSP=6.2 MS=6.3 </TD><TD>984.403 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 12:26:30.443</TD><TD>32.937</TD><TD>130.469</TD><TD>0.0</TD><TD>MS=6.1 </TD><TD>33.5593 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.14 12:26:28.530</TD><TD>32.710</TD><TD>130.459</TD><TD>4.7</TD><TD>MsLP=6.0 </TD><TD>18.7745 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 12:17:11.325</TD><TD>-14.049</TD><TD>166.760</TD><TD>52.0</TD><TD>MPSP=6.4 MS=6.2 MPLP=5.6 </TD><TD>81.0612 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 12:17:07.422</TD><TD>-14.018</TD><TD>166.780</TD><TD>20.0</TD><TD>MS=6.0 </TD><TD>83.143 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 12:17:06.656</TD><TD>56.629</TD><TD>161.311</TD><TD>-0.9</TD><TD>Ks=3.8 </TD><TD>566.606 min</TD><TD>!</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 12:17:04.666</TD><TD>-14.147</TD><TD>166.261</TD><TD>2.2</TD><TD>MPSP=6.3 MPLP=6.4 MS=5.8 </TD><TD>44.2556 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 12:17:03.887</TD><TD>-14.726</TD><TD>166.402</TD><TD>10.0</TD><TD>MPLP=6.5 MPSP=5.9 MS=5.9 </TD><TD>966.019 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 12:17:02.300</TD><TD>-14.688</TD><TD>167.138</TD><TD>15.2</TD><TD>MPSP=5.8 MPLP=5.9 </TD><TD>56.8283 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.14 12:17:02.300</TD><TD>-14.688</TD><TD>167.138</TD><TD>15.2</TD><TD>MPLP=5.9 MPSP=5.8 MS=6.4 </TD><TD>64.7783 min</TD><TD>!</TD><TD>kamchatka1</TD></TR>
+<TR><TD>2016.04.14 12:17:00.316</TD><TD>-14.612</TD><TD>167.083</TD><TD>0.0</TD><TD>MPLP=5.9 MS=6.2 MPSP=5.7 </TD><TD>59.9947 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.14 12:16:58.819</TD><TD>-14.689</TD><TD>167.539</TD><TD>0.0</TD><TD>MPLP=5.9 MS=6.2 </TD><TD>55.4363 min</TD><TD>!</TD><TD>kamchatka</TD></TR>
+<TR><TD>2016.04.14 11:58:18.079</TD><TD>35.550</TD><TD>139.488</TD><TD>22.3</TD><TD>Ks=8.0 MPSP=4.3 Kp=8.2 </TD><TD>810.882 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 11:44:25.924</TD><TD>54.502</TD><TD>160.626</TD><TD>70.0</TD><TD>Ks=7.4 </TD><TD>891.101 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.14 11:28:47.248</TD><TD>55.454</TD><TD>165.548</TD><TD>20.1</TD><TD>Kp=7.2 MPSP=3.7 Ks=7.6 MS=2.4 </TD><TD>5.64586 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 11:28:47.119</TD><TD>55.525</TD><TD>165.869</TD><TD>33.0</TD><TD>Ks=9.0 </TD><TD>823.531 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.14 11:14:53.139</TD><TD>43.881</TD><TD>147.006</TD><TD>63.2</TD><TD>Ks=7.0 </TD><TD>6.68101 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 11:09:39.107</TD><TD>43.732</TD><TD>147.903</TD><TD>33.0</TD><TD>Ks=5.1 </TD><TD>14.4315 min</TD><TD>&nbsp;</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 09:21:04.623</TD><TD>56.626</TD><TD>161.310</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>741.423 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 09:03:21.285</TD><TD>55.664</TD><TD>166.202</TD><TD>30.4</TD><TD>Ks=7.9 </TD><TD>917.879 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.14 08:57:32.985</TD><TD>55.519</TD><TD>165.975</TD><TD>38.8</TD><TD>Ks=8.7 </TD><TD>907.034 min</TD><TD>!</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.14 08:57:32.625</TD><TD>54.901</TD><TD>165.678</TD><TD>0.0</TD><TD>Ks=8.9 </TD><TD>5.07291 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 08:00:30.483</TD><TD>56.629</TD><TD>161.302</TD><TD>-0.9</TD><TD>Ks=3.5 </TD><TD>820.742 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 07:54:26.220</TD><TD>55.087</TD><TD>162.322</TD><TD>51.1</TD><TD>Ks=6.5 </TD><TD>915.063 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.14 07:36:25.672</TD><TD>52.464</TD><TD>158.260</TD><TD>4.8</TD><TD>Ks=3.8 </TD><TD>926.889 min</TD><TD>&nbsp;</TD><TD>lnzr</TD></TR>
+<TR><TD>2016.04.14 07:30:37.280</TD><TD>49.389</TD><TD>156.438</TD><TD>29.5</TD><TD>Ks=8.7 </TD><TD>921.679 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.14 07:27:28.119</TD><TD>49.198</TD><TD>140.346</TD><TD>0.0</TD><TD>Ks=4.9 Kr=7.1 </TD><TD>2.58134 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 07:27:27.963</TD><TD>49.197</TD><TD>140.369</TD><TD>0.0</TD><TD>Ks=5.1 MPSP=4.1 </TD><TD>3.9506 min</TD><TD>!</TD><TD>sakhalin</TD></TR>
+<TR><TD>2016.04.14 07:27:27.832</TD><TD>49.157</TD><TD>140.293</TD><TD>0.0</TD><TD>Ks=6.2 </TD><TD>4.03613 min</TD><TD>!</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 07:19:47.032</TD><TD>56.629</TD><TD>161.313</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>859.499 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 06:39:30.291</TD><TD>36.714</TD><TD>139.266</TD><TD>0.0</TD><TD>Ks=8.2 Kp=7.0 </TD><TD>9.6618 min</TD><TD>&nbsp;</TD><TD>Vladivostok</TD></TR>
+<TR><TD>2016.04.14 06:35:32.023</TD><TD>52.711</TD><TD>160.355</TD><TD>20.0</TD><TD>Ks=6.2 </TD><TD>963.75 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+<TR><TD>2016.04.14 06:34:13.492</TD><TD>56.631</TD><TD>161.313</TD><TD>-0.9</TD><TD>Ks=3.7 </TD><TD>903.375 min</TD><TD>&nbsp;</TD><TD>ldmh</TD></TR>
+<TR><TD>2016.04.14 05:30:57.529</TD><TD>54.712</TD><TD>162.561</TD><TD>8.7</TD><TD>Ks=6.2 </TD><TD>1000.77 min</TD><TD>&nbsp;</TD><TD>LLdv</TD></TR>
+</TABLE></BODY></HTML> 

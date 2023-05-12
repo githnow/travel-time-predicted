@@ -1,0 +1,14 @@
+LQ
+LR
+P
+PcP
+PcS
+PP
+pP 
+PPP
+PPS
+PS
+S
+SS
+-SSP
+SSS

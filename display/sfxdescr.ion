@@ -1,0 +1,8 @@
+Setup=display.exe
+TempMode
+Overwrite=1
+Title=%date% [%lat% %lon%] M=%mag% %depth%km
+License=Дисплей реального времени ---== %name% ==---
+{
+%date% [%lat% %lon%] M=%mag% %depth%km
+}

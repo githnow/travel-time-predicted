@@ -1,0 +1,361 @@
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+{
+0, 	"Compute travel times for all branches"
+1, 	"&Copy coordinates to Clipboard"
+2, 	"&Download data from server..."
+3, 	"Open SEISMO docfile"
+4, 	"Download"
+5, 	"Create 4 DISPLAY screens"
+6, 	"Create DISPLAY"
+7, 	"Not tested with Delta < 7 deg."
+8, 	"EQ Info"
+9, 	"Download:"
+10, 	" <-- Refresh                  Close --> "
+11, 	"time."
+12, 	"SeedLab"
+13, 	"Open with \"Dimas\""
+14, 	"R"
+15, 	"Refresh window"
+}
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+{
+16, 	"X"
+17, 	"Close window"
+18, 	"Choose TTT:"
+19, 	"Choose the travel times table"
+20, 	"dataan 95"
+21, 	"internal"
+22, 	"Usgs"
+23, 	"Plotting of travel times of waves"
+24, 	"Neic"
+25, 	"Seismo"
+26, 	"Show number of Seismo (press \"Refresh...\" button)"
+27, 	"Emsc"
+28, 	"Refresh in Fast mode (Test)"
+29, 	"Activate"
+30, 	"Event Counter"
+31, 	"Total of new events:"
+}
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+{
+32, 	"With magnitude > 4.8:"
+33, 	"Auto update Neic List with new events.\n\nSound alarm with magnitude > 4.8"
+34, 	"-Emsd- Kamchatka"
+35, 	"Travel Times"
+36, 	"Graph"
+37, 	"Filters"
+38, 	"Emsc"
+39, 	"-Emsd- Kamchatka"
+40, 	"Neic"
+41, 	"Enable"
+42, 	"Hide events with Magnitude less that:"
+43, 	"Delta [from]:      Magnitude [ < ]"
+44, 	"To apply changes press \"Refresh...\" button"
+45, 	"Whats new..."
+46, 	"Events Filter (Hide count: )"
+47, 	"Press the \"Refresh...\" button.\n\nWill be hidden the events:\n with M< 2.9 and Delta PET > 20 deg.\n with M< 4.0 and Delta PET > 50 deg."
+}
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+{
+48, 	"Consider the depth of Hipocenter"
+49, 	"Download travel times"
+50, 	"Current Version:"
+51, 	" "
+52, 	"Short description"
+53, 	"Print"
+54, 	"Print to the default printer"
+55, 	"Delta for Pet Station\nFormat as: 54.342 157.345"
+56, 	"< -- Choose Station"
+57, 	"&Refresh..."
+58, 	"Refresh List"
+59, 	"Exit"
+60, 	"Exit"
+61, 	"Refresh"
+62, 	"Refresh List"
+63, 	"Choose station for calculate travel times"
+}
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+{
+64, 	"Show mini-map"
+65, 	"Graph Travel Times"
+66, 	"Show controls ..."
+67, 	"1. Zoom In\n     region"
+68, 	"Left Mouse button click, and move down"
+69, 	"2. Zoom\n     Out"
+70, 	"Left Mouse button click, and move up"
+71, 	"For select wave - Left mouse button.\nRight mouse button click and move for browse the chart."
+72, 	"for select region."
+73, 	"Calc delta..."
+74, 	" Total (bytes):"
+75, 	"Open seismo directory"
+}
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+{
+80, 	"EQ - Time"
+}
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+{
+200, 	"Events Filter (Hide count:"
+201, 	"Input Query"
+202, 	"Display Name"
+203, 	"Line 1/2"
+204, 	"Line 2/2"
+205, 	"Event Description:"
+206, 	"Create the Training display is canceled"
+207, 	"Please wait."
+}
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+{
+208, 	"Cancel"
+209, 	"File is downloaded:"
+210, 	"Close"
+211, 	"Download"
+212, 	"You must be refresh gdg."
+213, 	"Could not determine the duration of the event."
+214, 	"sec."
+215, 	"min."
+216, 	"deg. "
+217, 	"km."
+218, 	"<-- Hide"
+219, 	"Description file is not found"
+220, 	"Click to event for description"
+}
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+{
+224, 	"Training display"
+225, 	"Create one sfx-file"
+226, 	"Create one executeble file. It have run under any folder"
+}
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+{
+240, 	"Dimas"
+241, 	"DataAn95"
+242, 	"Request PET"
+243, 	"eReport"
+244, 	"!"
+245, 	"SEISMO"
+}
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+{
+320, 	"Run Dimas"
+321, 	"Run DataAn95"
+322, 	"Request data for Pet Station (DataAn95)"
+323, 	"Run eReport"
+324, 	"Open \"!\" folder"
+325, 	"Open \"Seismo\" directory"
+326,  "file is not found"
+327,  "Open PET with DataAn 95"
+328,  "Open PET with Dimas"
+329,  "Open with Dimas"
+}
+
+STRINGTABLE
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+{
+336, 	"Fill coordinates from..."
+337, 	"Clear position"
+338, 	"Position"
+339, 	"Delta"
+}
+
+STRINGTABLE
+LANGUAGE LANG_RUSSIAN, 0x1
+{
+2000, 	"Compute travel times for all branches"
+2001, 	"С&копировать координаты"
+2002, 	"Загрузить данные с сервера..."
+2003, 	"Открыть файл SEISMO в Word"
+2004, 	"Загрузить"
+2005, 	"Создать 4 экрана DISPLAY"
+2006, 	"Создать DISPLAY"
+2007, 	"Не проверено для Delta < 7 гр."
+2008, 	"EQ Info"
+2009, 	"Будет загружено:"
+2010, 	" <-- Обновить              Закрыть --> "
+2011, 	"time."
+2012, 	"SeedLab"
+2013, 	"Открыть в Dimas"
+2014, 	"R"
+2015, 	"Обновить окно"
+}
+
+STRINGTABLE
+LANGUAGE LANG_RUSSIAN, 0x1
+{
+2016, 	"X"
+2017, 	"Закрыть окно"
+2018, 	"Выбор годографа:"
+2019, 	" "
+2020, 	"dataan 95"
+2021, 	"внутр."
+2022, 	"Usgs"
+2023, 	"Показать годограф"
+2024, 	"Neic"
+2025, 	"Seismo"
+2026, 	"Показывать № Seismo (нажать \"Обновить...\")"
+2027, 	"Emsc"
+2028, 	"Оп режим (ТЕСТ)"
+2029, 	"Активировать"
+2030, 	"Счетчик событий"
+2031, 	"Всего новых событий:"
+}
+
+STRINGTABLE
+LANGUAGE LANG_RUSSIAN, 0x1
+{
+2032, 	"С магнитудой > 4.8:"
+2033, 	"Автоматическое обновление данных NEIC при появлении новых событий.\n\nМузыка - при магнитуде > 4,8"
+2034, 	"Камчатка -emsd-"
+2035, 	"Годограф"
+2036, 	"График"
+2037, 	"Фильтры"
+2038, 	"Emsc"
+2039, 	"Камчатка -emsd-"
+2040, 	"Neic"
+2041, 	"Включить"
+2042, 	"Не загружать землетрясения с МАГНИТУДОЙ меньше указанной:"
+2043, 	"Дельта [ от ]:      Магнитуда [ < ]"
+2044, 	"Для применения изменений нажать кнопку \"Обновить...\""
+2045, 	"Что нового..."
+2046, 	"Фильтр событий USGS (скрыто: )"
+2047, 	"Нажать \"Обновить...\".\n\nБудут скрыты события:\n с M< 2.9 с Delta PET > 20 град.\n с M< 4.0 с Delta PET > 50 град."
+}
+
+STRINGTABLE
+LANGUAGE LANG_RUSSIAN, 0x1
+{
+2048, 	"Учесть глубину до очага"
+2049, 	"Загружать годограф"
+2050, 	"Текущая версия:"
+2051, 	" "
+2052, 	"Краткое описание из \"Инструкции\""
+2053, 	"Печать"
+2054, 	"Печать на принтере по умолчанию"
+2055, 	"Дельта для станции PET\nФормат записи: 54.342 157.345"
+2056, 	"< -- Выбор станции"
+2057, 	"&Обновить..."
+2058, 	"Обновить список"
+2059, 	"Выход"
+2060, 	"Выход"
+2061, 	"Обновить"
+2062, 	"Обновить список"
+2063, 	"Выбор станции для расчета годографа"
+}
+
+STRINGTABLE
+LANGUAGE LANG_RUSSIAN, 0x1
+{
+2064, 	"Показывать мини карту"
+2065, 	"Graph Travel Times"
+2066, 	"Показать управление ..."
+2067, 	"1. Увеличить\n     область"
+2068, 	"Нажать левую кнопку мыши, тянуть вниз для"
+2069, 	"2. Уменьшить\n     масштаб"
+2070, 	"Нажать левую кнопку мыши, тянуть вверх."
+2071, 	"Выбрать волну - левая кнопка мыши.\nПеремещение по графику с зажатой правой кнопкой мыши."
+2072, 	"выделения нужного региона."
+2073, 	"Вычислить дельту..."
+2074, 	" Передано (байт):"
+2075, 	"Открыть каталог SEISMO"
+}
+
+STRINGTABLE
+LANGUAGE LANG_RUSSIAN, 0x1
+{
+2080, 	"Время в очаге"
+}
+
+STRINGTABLE
+LANGUAGE LANG_RUSSIAN, 0x1
+{
+2200, 	"Фильтр событий USGS (скрыто:"
+2201, 	"Ввод значения"
+2202, 	"Имя дисплея:"
+2203, 	"Строка 1/2"
+2204, 	"Строка 2/2"
+2205, 	"Описание события:"
+2206, 	"Создание тренировочного дисплея отменено"
+2207, 	"Обновляю."
+}
+
+STRINGTABLE
+LANGUAGE LANG_RUSSIAN, 0x1
+{
+2208, 	"Прервать"
+2209, 	"Файл загружен:"
+2210, 	"Закрыть"
+2211, 	"Загрузить"
+2212, 	"Необходимо обновить годограф."
+2213, 	"Не удалось определить длительность события."
+2214, 	"сек."
+2215, 	"мин."
+2216, 	"гр. "
+2217, 	"км."
+2218, 	"<-- Скрыть"
+2219, 	"Файл описания не найден"
+2220, 	"Для описания щелкнуть по нужному событию"
+}
+
+STRINGTABLE
+LANGUAGE LANG_RUSSIAN, 0x1
+{
+2224, 	"Дисплей реального времени"
+2225, 	"Создать один файл"
+2226, 	"Создать один исполняемый файл. Может запускаться из любой папки"
+}
+
+STRINGTABLE
+LANGUAGE LANG_RUSSIAN, 0x1
+{
+2240, 	"Dimas"
+2241, 	"DataAn95"
+2242, 	"Запрос PET"
+2243, 	"eReport"
+2244, 	"Бюллетень"
+2245, 	"Ежедневное"
+}
+
+STRINGTABLE
+LANGUAGE LANG_RUSSIAN, 0x1
+{
+2320, 	"Запустить Dimas"
+2321, 	"Запустить DataAn95"
+2322, 	"Запросить данные по станции PET для DataAn95"
+2323, 	"Запустить eReport"
+2324, 	"Открыть папку \"Бюллетень\""
+2325, 	"Открыть папку \"Ежедневное\""
+2326,   "Файл не найден"
+2327,   "Открыть PET в DataAn 95"
+2328,   "Открыть PET в Dimas"
+2329,   "Открыть в Dimas"
+}
+
+STRINGTABLE
+LANGUAGE LANG_RUSSIAN, 0x1
+{
+2336, 	"Заполнить координаты из..."
+2337, 	"Очистить точку"
+2338, 	"Точка"
+2339, 	"Дельта"
+}
