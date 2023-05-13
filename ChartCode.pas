@@ -74,10 +74,10 @@ begin
  if Panel1.Height = 20 then
    begin
      while Panel1.Height < 146{92} do begin sleep(1); Panel1.Height := Panel1.Height + 6; Application.ProcessMessages; end;
-     Label1.Caption := LoadStr(Lang+218); {'<-- Скрыть'}
+     Label1.Caption := LoadStr(Lang+218); {'<-- РЎРєСЂС‹С‚СЊ'}
     end else begin
      while Panel1.Height > 20 do begin Panel1.Height := Panel1.Height - 6; Application.ProcessMessages; end;
-     Label1.Caption := LoadStr(Lang+66); {'Показать управление ...'}
+     Label1.Caption := LoadStr(Lang+66); {'РџРѕРєР°Р·Р°С‚СЊ СѓРїСЂР°РІР»РµРЅРёРµ ...'}
    end;
 
 

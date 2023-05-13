@@ -6,7 +6,7 @@ uses
   Classes, ComObj, ActiveX, DateUtils, Windows, Forms;
 
 type
-  TMyThread = class(TThread) //Новый класс
+  TMyThread = class(TThread) //РќРѕРІС‹Р№ РєР»Р°СЃСЃ
   private
     // answer: Integer;
     procedure TerminateThread(Sender: TObject);
@@ -34,7 +34,7 @@ begin
   c:=0;
 end;
 
-//Процедура для вывода информации из потока
+//РџСЂРѕС†РµРґСѓСЂР° РґР»СЏ РІС‹РІРѕРґР° РёРЅС„РѕСЂРјР°С†РёРё РёР· РїРѕС‚РѕРєР°
 procedure TMyThread.ShowResult;
   var FileName  : string;
       Data,Focus: string;
@@ -119,10 +119,10 @@ begin
   if FileExists(SeisPath+'~$'+ExtractFileName(FileName)) then exit;
 
  c1 := gettickcount;
-  try      // Проверка на доступ к файлу
+  try      // РџСЂРѕРІРµСЂРєР° РЅР° РґРѕСЃС‚СѓРї Рє С„Р°Р№Р»Сѓ
     assignfile(fopen,FileName);
     reset(fopen);
-   except  // Выход, если  что-то не так
+   except  // Р’С‹С…РѕРґ, РµСЃР»Рё  С‡С‚Рѕ-С‚Рѕ РЅРµ С‚Р°Рє
     Exit;
    end;
   closefile(fopen);
@@ -153,7 +153,7 @@ end;
 
 
 
-//Длинная процедура
+//Р”Р»РёРЅРЅР°СЏ РїСЂРѕС†РµРґСѓСЂР°
 procedure TMyThread.Execute;
   var SR: TSearchRec;
 begin
@@ -188,7 +188,7 @@ function GetW(Str: string; WordNmbr: Byte): string;
 var
   SWord: string;
   StrLen, N: Byte;
-const Sep=' ';  // Разделитель - Пробел
+const Sep=' ';  // Р Р°Р·РґРµР»РёС‚РµР»СЊ - РџСЂРѕР±РµР»
 begin
   StrLen := SizeOf(Str);
   N := 1;

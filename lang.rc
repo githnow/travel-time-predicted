@@ -177,6 +177,13 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 337, 	"Clear position"
 338, 	"Position"
 339, 	"Delta"
+340, 	"Settings"
+341, 	"Neic (week)"
+342, 	"Neic (month)"
+343, 	"Stations Editor..."
+344, 	"Station,Coordinates"
+345, 	"Travel Times font"
+346, 	"EQ-List font"
 }
 
 STRINGTABLE
@@ -358,4 +365,11 @@ LANGUAGE LANG_RUSSIAN, 0x1
 2337, 	"Очистить точку"
 2338, 	"Точка"
 2339, 	"Дельта"
+2340, 	"Настройки"
+2341, 	"Neic (неделя)"
+2342, 	"Neic (месяц)"
+2343, 	"Редактор станций..."
+2344, 	"Станция,Координаты"
+2345, 	"Шрифт для годографа"
+2346, 	"Шрифт для списка"
 }

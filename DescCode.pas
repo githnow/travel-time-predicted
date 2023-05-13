@@ -18,8 +18,8 @@ type
     procedure FormActivate(Sender: TObject);
     procedure LoadInfo(eqlat,eqlon,eqdep:string);
   private
-    procedure WMWINDOWPOSCHANGING(var Msg: TWMWINDOWPOSCHANGING);  // Прилипание к краям
-  //  message   WM_WINDOWPOSCHANGING;                                // Прилипание к краям
+    procedure WMWINDOWPOSCHANGING(var Msg: TWMWINDOWPOSCHANGING);    // РџСЂРёР»РёРїР°РЅРёРµ Рє РєСЂР°СЏРј
+  //  message   WM_WINDOWPOSCHANGING;                                // РџСЂРёР»РёРїР°РЅРёРµ Рє РєСЂР°СЏРј
     { Private declarations }
   public
     
@@ -31,7 +31,7 @@ var
 
 implementation
 
-uses TTCode;
+uses TTCode, TTP_Language;
 
 {$R *.dfm}
 function TstFloat(Str: String): string;
@@ -107,29 +107,29 @@ begin
   try
    case Delta of
       0..9  :   reInfo.Lines.Text := '';     //  Delta 0-9
-     10..25 :   reInfo.Lines.LoadFromFile(AppPath+'data\10-25_'+sLang+'.rtf');
-     26..40 :   reInfo.Lines.LoadFromFile(AppPath+'data\26-40_'+sLang+'.rtf');
-     41..84 :   reInfo.Lines.LoadFromFile(AppPath+'data\40-84_'+sLang+'.rtf');
-     85..105:   reInfo.Lines.LoadFromFile(AppPath+'data\84-105_'+sLang+'.rtf');
-    106..128:   reInfo.Lines.LoadFromFile(AppPath+'data\105-128_'+sLang+'.rtf');
-    129..143:   reInfo.Lines.LoadFromFile(AppPath+'data\129-143_'+sLang+'.rtf');
-    144..160:   reInfo.Lines.LoadFromFile(AppPath+'data\144-160_'+sLang+'.rtf');
-    161..180:   reInfo.Lines.LoadFromFile(AppPath+'data\161-180_'+sLang+'.rtf');
+     10..25 :   reInfo.Lines.LoadFromFile(AppPath+'data\10-25_'  +Lang2W+'.rtf');
+     26..40 :   reInfo.Lines.LoadFromFile(AppPath+'data\26-40_'  +Lang2W+'.rtf');
+     41..84 :   reInfo.Lines.LoadFromFile(AppPath+'data\40-84_'  +Lang2W+'.rtf');
+     85..105:   reInfo.Lines.LoadFromFile(AppPath+'data\84-105_' +Lang2W+'.rtf');
+    106..128:   reInfo.Lines.LoadFromFile(AppPath+'data\105-128_'+Lang2W+'.rtf');
+    129..143:   reInfo.Lines.LoadFromFile(AppPath+'data\129-143_'+Lang2W+'.rtf');
+    144..160:   reInfo.Lines.LoadFromFile(AppPath+'data\144-160_'+Lang2W+'.rtf');
+    161..180:   reInfo.Lines.LoadFromFile(AppPath+'data\161-180_'+Lang2W+'.rtf');
    end;
-  if (Delta>=115) and (Delta<=120) then reInfoWarning.Lines.LoadFromFile(AppPath+'data\w115-120_'+sLang+'.rtf');
+  if (Delta>=115) and (Delta<=120) then reInfoWarning.Lines.LoadFromFile(AppPath+'data\w115-120_'+Lang2W+'.rtf');
   except
-   reInfo.Lines.Text := LoadStr(Lang+219);{'Файл описания не найден'}
+   reInfo.Lines.Text := GetStrl(219);{'Р¤Р°Р№Р» РѕРїРёСЃР°РЅРёСЏ РЅРµ РЅР°Р№РґРµРЅ'}
   end;
 
-  if (Delta>114) and (Delta<116) and (Depth>=80) and (Depth<=300) then reInfoWarning.Lines.LoadFromFile(AppPath+'data\w115(80-300)_'+sLang+'.rtf');
-  if (Delta>=35) and (Delta<=40) and (Depth>=80) and (Depth<=300) then reInfoWarning.Lines.LoadFromFile(AppPath+'data\w35-40(80-300)_'+sLang+'.rtf');
-  if (Delta>=60) and (Delta<=80) and (Depth>=80) then reInfoWarning.Lines.LoadFromFile(AppPath+'data\w60-80(80-)_'+sLang+'.rtf');
+  if (Delta>114) and (Delta<116) and (Depth>=80) and (Depth<=300) then reInfoWarning.Lines.LoadFromFile(AppPath+'data\w115(80-300)_'+Lang2W+'.rtf');
+  if (Delta>=35) and (Delta<=40) and (Depth>=80) and (Depth<=300) then reInfoWarning.Lines.LoadFromFile(AppPath+'data\w35-40(80-300)_'+Lang2W+'.rtf');
+  if (Delta>=60) and (Delta<=80) and (Depth>=80) then reInfoWarning.Lines.LoadFromFile(AppPath+'data\w60-80(80-)_'+Lang2W+'.rtf');
   if reInfoWarning.Lines.Count > 1 then reInfoWarning.Visible := True else reInfoWarning.Visible := False;
 
 end;
 
 procedure TDescWnd.WMWINDOWPOSCHANGING(var Msg: TWMWINDOWPOSCHANGING);
-  var                 // Прилипание к краям
+  var                 // РџСЂРёР»РёРїР°РЅРёРµ Рє РєСЂР°СЏРј
     Desk: TRect;
     Marg : Word;
 begin
@@ -168,7 +168,7 @@ end;
 procedure TDescWnd.FormCreate(Sender: TObject);
 begin
   Tag:=1;
-  reInfo.Lines.Add(LoadStr(Lang+220));{'Для описания щелкнуть по нужному событию')}
+  reInfo.Lines.Add(GetStrl(220));{'Р”Р»СЏ РѕРїРёСЃР°РЅРёСЏ С‰РµР»РєРЅСѓС‚СЊ РїРѕ РЅСѓР¶РЅРѕРјСѓ СЃРѕР±С‹С‚РёСЋ')}
 end;
 
 procedure TDescWnd.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
@@ -178,7 +178,7 @@ end;
 
 procedure TDescWnd.FormResize(Sender: TObject);
 begin
-reInfo.Refresh;
+  reInfo.Refresh;
 end;
 
 procedure TDescWnd.FormActivate(Sender: TObject);

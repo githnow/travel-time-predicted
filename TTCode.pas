@@ -10,7 +10,7 @@ uses
   error_off, DownloadSeed, ShellApi, DownloadFile, RzForms, Spin, Buttons,
   RzCmboBx, IniFiles, DateUtils, JvComponentBase, JvThread, JvThreadDialog,
   JvMTComponents, JvThreadTimer, JvExComCtrls, JvComCtrls, TeeProcs,
-  TeEngine, Chart, Series, ThreadSEISMO;
+  TeEngine, Chart, Series, ThreadSEISMO, Grids, ValEdit, RzSpnEdt, Clipbrd;
 
 type
   TMF = class(TForm)
@@ -115,22 +115,7 @@ type
     chkDepth: TCheckBox;
     OpenSEISMO: TMenuItem;
     TabSheet2: TRzTabSheet;
-    gbNeic: TGroupBox;
-    gbEmsc: TGroupBox;
-    gbEmsd: TGroupBox;
-    cbFilterNeic: TCheckBox;
-    Label10: TLabel;
-    Label11: TLabel;
-    Bevel1: TBevel;
-    SpinEdit1: TSpinEdit;
-    SpinEdit2: TSpinEdit;
-    Label12: TLabel;
-    SpinEdit3: TSpinEdit;
-    SpinEdit4: TSpinEdit;
-    SpinEdit5: TSpinEdit;
-    SpinEdit6: TSpinEdit;
     cbSeismo: TCheckBox;
-    cbFilter: TCheckBox;
     Button4: TButton;
     radUsgs: TRadioButton;
     CheckBox1: TCheckBox;
@@ -177,8 +162,6 @@ type
     ChOneFileCreateDisplay: TCheckBox;
     Bevel2: TBevel;
     SaveExeDlg: TSaveDialog;
-    bNeicMonth: TButton;
-    Button5: TButton;
     ThreadJapan: TJvThread;
     TbJapan: TRzTabSheet;
     RzTabbedListBox2: TRzTabbedListBox;
@@ -217,6 +200,56 @@ type
     Label2: TLabel;
     Label14: TLabel;
     FontDialog1: TFontDialog;
+    ValueStationEditor: TValueListEditor;
+    lStEditor: TLabel;
+    cbLang: TComboBox;
+    RzPanelInfoUSGS: TRzPanel;
+    cbFilter: TCheckBox;
+    gbLanguageSelect: TGroupBox;
+    SettingsPageControl: TRzPageControl;
+    tsSetMain: TRzTabSheet;
+    ImageList3: TImageList;
+    tsSetPath: TRzTabSheet;
+    tsSetView: TRzTabSheet;
+    tsSetDebug: TRzTabSheet;
+    gbFontsSelect: TGroupBox;
+    tsSetPages: TRzTabSheet;
+    tsSetFilter: TRzTabSheet;
+    StaticText4: TStaticText;
+    gbLocalPath: TGroupBox;
+    gbURLs: TGroupBox;
+    leEmsc: TLabeledEdit;
+    leNeic: TLabeledEdit;
+    leEmsd: TLabeledEdit;
+    bApplyURLs: TButton;
+    bNeicMonth: TButton;
+    bNeicWeek: TButton;
+    bDefURLs: TButton;
+    leSeismoPath: TLabeledEdit;
+    bBrowseSeismo: TRzBitBtn;
+    bApplySeismo: TRzBitBtn;
+    gbNeic: TGroupBox;
+    lNeicFilter1: TLabel;
+    Bevel1: TBevel;
+    lNeicFilter2: TLabel;
+    cbFilterNeic: TCheckBox;
+    seDeltaNeic1: TSpinEdit;
+    seDeltaNeic2: TSpinEdit;
+    seDeltaNeic3: TSpinEdit;
+    gbEmsc: TGroupBox;
+    gbEmsd: TGroupBox;
+    lFillter1: TLabel;
+    seMagNeic1: TRzSpinEdit;
+    seMagNeic2: TRzSpinEdit;
+    seMagNeic3: TRzSpinEdit;
+    Label15: TLabel;
+    bApplyFilterNeic: TButton;
+    N3: TMenuItem;
+    CopyLineToClipboard: TMenuItem;
+    MemoErrors: TMemo;
+    Button5: TButton;
+    Label10: TLabel;
+    cbEmscType: TComboBox;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure outMemoClick(Sender: TObject);
@@ -256,7 +289,9 @@ type
     procedure SpinButton1UpClick(Sender: TObject);
     procedure SeedOpenClick(Sender: TObject);
     procedure GroupBox1MouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
-    procedure RzEQListDrawItem(Control: TWinControl; Index: Integer; Rect: TRect; State: TOwnerDrawState);
+    procedure RzEQListDrawItem  (Control: TWinControl; Index: Integer; Rect: TRect; State: TOwnerDrawState);
+    procedure EQListEmscDrawItem(Control: TWinControl; Index: Integer; Rect: TRect; State: TOwnerDrawState);
+    procedure EQListEmsdDrawItem(Control: TWinControl; Index: Integer; Rect: TRect; State: TOwnerDrawState);
     procedure ChCreateDisplayClick(Sender: TObject);
     procedure Edit7Exit(Sender: TObject);
     procedure ThreadListFinish(Sender: TObject);
@@ -310,7 +345,6 @@ type
     procedure eDot2LonEnter(Sender: TObject);
     procedure eDot2LonExit(Sender: TObject);
     procedure OpenSEISMOPathClick(Sender: TObject);
-    procedure EQListEmscDrawItem(Control: TWinControl; Index: Integer; Rect: TRect; State: TOwnerDrawState);
     procedure PageChange(Sender: TObject);
     procedure BtnCom1Click(Sender: TObject);
     procedure BtnCom2Click(Sender: TObject);
@@ -328,7 +362,7 @@ type
     procedure TimeLabClick(Sender: TObject);
     procedure Edit8Change(Sender: TObject);
     procedure ChOneFileCreateDisplayClick(Sender: TObject);
-    procedure Button5Click(Sender: TObject);
+    procedure bNeicWeekClick(Sender: TObject);
     procedure bNeicMonthClick(Sender: TObject);
     procedure EQListEmsdContextPopup(Sender: TObject; MousePos: TPoint; var Handled: Boolean);
     procedure OpenWithDimasClick(Sender: TObject);
@@ -345,6 +379,28 @@ type
     procedure rtb2_clearClick(Sender: TObject);
     procedure Label2Click(Sender: TObject);
     procedure Label14Click(Sender: TObject);
+    procedure lStEditorClick(Sender: TObject);
+    procedure lStEditorMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+    procedure lStEditorMouseLeave(Sender: TObject);
+    procedure lStEditorMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+    procedure lStEditorMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+    procedure cbLangChange(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure cbFilterClick(Sender: TObject);
+    procedure bApplyURLsClick(Sender: TObject);
+    procedure leNeicChange(Sender: TObject);
+    procedure leEmscChange(Sender: TObject);
+    procedure leEmsdChange(Sender: TObject);
+    procedure bDefURLsClick(Sender: TObject);
+    procedure bBrowseSeismoClick(Sender: TObject);
+    procedure bApplySeismoClick(Sender: TObject);
+    procedure leSeismoPathChange(Sender: TObject);
+    procedure bApplyFilterNeicClick(Sender: TObject);
+    procedure CopyLineToClipboardClick(Sender: TObject);
+    procedure RichEdit1SaveClipboard(Sender: TObject; NumObjects,
+      NumChars: Integer; var SaveClipboard: Boolean);
+    procedure Button5Click(Sender: TObject);
+    procedure Label10Click(Sender: TObject);
     //procedure StatUpdate;
   private
     URL: string;
@@ -354,8 +410,8 @@ type
     chArray: array of double;
     Mapping: boolean;
     MouseDownPoint: TPoint;
-    FEQListEmscWndProc: TWndMethod;                  //  Убираем полосу
-    seedURL, seedFile,SeedDate: string;      //  Файлы для выгрузки из базы /сохранения/
+    FEQListEmscWndProc: TWndMethod;                  //  РЈР±РёСЂР°РµРј РїРѕР»РѕСЃСѓ
+    seedURL, seedFile,SeedDate: string;      //  Р¤Р°Р№Р»С‹ РґР»СЏ РІС‹РіСЂСѓР·РєРё РёР· Р±Р°Р·С‹ /СЃРѕС…СЂР°РЅРµРЅРёСЏ/
     tSeedSec, RichDelta: string;
     SeedSec: integer;
     TimeSec: integer;
@@ -364,6 +420,7 @@ type
     slRow, svCol: integer;
     SelDepth: boolean;
     GdgName : shortstring;
+    DefStation: shortstring;
     b1,b2,b3,b4,b5,b6: string;
     FileURL : string;
     procedure Parse_USGS;
@@ -376,7 +433,7 @@ type
     procedure ShowMap(Sender: TObject);
     procedure CheckCSV;
     procedure CreateDisplay(DiskFile: string);
-    procedure PlotChar(Depth{ Дельта }: double; EQTime{ Время в очаге }: TDateTime);
+    procedure PlotChar(Depth{ Р”РµР»СЊС‚Р° }: double; EQTime{ Р’СЂРµРјСЏ РІ РѕС‡Р°РіРµ }: TDateTime);
     function StLat(StBoxLine: string): string;
     function StLon(StBoxLine: string): string;
     function FilterLineEmsc_2(Stri: string): string;
@@ -386,7 +443,7 @@ type
     procedure fill_coord2(Hint: string);
     { Private declarations }
   public
-     FShowHoriz: Boolean;    //  Убираем полосу прокрутки с ListView
+     FShowHoriz: Boolean;    //  РЈР±РёСЂР°РµРј РїРѕР»РѕСЃСѓ РїСЂРѕРєСЂСѓС‚РєРё СЃ ListView
      FShowVert: Boolean;
      function  TstFloat(Str: String): string;
      function  ExtractNumbers(Str: String): integer;
@@ -400,6 +457,8 @@ type
      function  DownloadFilebf(const FileURL, BeforeString: String; FileName: String): Cardinal;
      procedure ErrorFound(Sender: TObject; E: Exception);
      procedure ChangeLanguage;
+     procedure ValuesLoad;
+     procedure ValuesSave;
      procedure GetFile(fromDateTime: TDateTime; Seconds: Integer);
      procedure RunTskP(var hProcess: Cardinal; FileName: string; Parameters: string; Directory: string; ShowCmd: Integer);
     { Public declarations }
@@ -407,21 +466,21 @@ type
 
  TEMSC=record
    List:     TStringList;
-   TempFile: string;
+   URLFile,TempFile: string;
    event,btype,eqlat,eqlon,eqdep,eqdate,eqtim,bmag,eqPlace: string;
  end;
 
  TUSGS=record
    List:     TStringList;
-   TempFile: string;
+   URLFile,TempFile: string;
    event,btype,eqlat,eqlon,eqdep,eqdate,eqtim,bmag,eqPlace,seisdate: string;
    seispos: integer;
  end;
 
  TEMSD=record
    List:     TStringList;
-   TempFile: string;
-   event,btype,eqlat,eqlon,eqdep,eqdate,eqtim,bmag,eqPlace: string;
+   URLFile,TempFile: string;
+   event,btype,operator,eqlat,eqlon,eqdep,eqdate,eqtim,bmag,eqPlace: string;
  end;
 
 var
@@ -437,11 +496,11 @@ var
   sLang,CurVersion: shortstring;
   TotalBytes: cardinal;
 
-procedure SysLg(L: String);   // ведение лога
+procedure SysLg(L: String);   // РІРµРґРµРЅРёРµ Р»РѕРіР°
 
 implementation
 
-uses ChartCode, DescCode, VersionInfo;
+uses FileCtrl, ChartCode, DescCode, VersionInfo, TTP_Language;
 
 {$R *.dfm}
 {$R lang.res}
@@ -450,7 +509,7 @@ function TempPath: string; var Buffer: array[0..1023] of Char;
 begin SetString(Result, Buffer, GetTempPath(Sizeof(Buffer) - 1, Buffer)); end;
 
 procedure SysLg(L: String);
-  var LogName: TFilename; f: TextFile;    // Ведем лог событий
+  var LogName: TFilename; f: TextFile;    // Р’РµРґРµРј Р»РѕРі СЃРѕР±С‹С‚РёР№
 begin
   Exit;
   LogName := AppPath+'ttpwork.log';
@@ -469,25 +528,25 @@ begin
   SysLg(Sender.ClassName+': '+E.Message);
 end;
 
-procedure TMF.PlotChar(Depth{ Дельта }: double; EQTime{ Время в очаге }: TDateTime);
+procedure TMF.PlotChar(Depth{ Р”РµР»СЊС‚Р° }: double; EQTime{ Р’СЂРµРјСЏ РІ РѕС‡Р°РіРµ }: TDateTime);
   type
       s = TLineSeries;
   var
       c: array of s;
-      WavesPath: string;                  { Путь к таблицам волн }
-      WaveList: TStringList;              { Список "разрешенных" волн. Файл 'incfile.scm' }
-      fArPlot: Array of double;              { Массив для построения графика годографов }
-      M: Array of array of double;        { Динамический Массив для текущего файла из списка WaveList }
-      sl, sv, MText: TStringList;         { Формирование массива }
-      ds: string;                         { Формирование массива }
+      WavesPath: string;                  { РџСѓС‚СЊ Рє С‚Р°Р±Р»РёС†Р°Рј РІРѕР»РЅ }
+      WaveList: TStringList;              { РЎРїРёСЃРѕРє "СЂР°Р·СЂРµС€РµРЅРЅС‹С…" РІРѕР»РЅ. Р¤Р°Р№Р» 'incfile.scm' }
+      fArPlot: Array of double;              { РњР°СЃСЃРёРІ РґР»СЏ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РіСЂР°С„РёРєР° РіРѕРґРѕРіСЂР°С„РѕРІ }
+      M: Array of array of double;        { Р”РёРЅР°РјРёС‡РµСЃРєРёР№ РњР°СЃСЃРёРІ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ С„Р°Р№Р»Р° РёР· СЃРїРёСЃРєР° WaveList }
+      sl, sv, MText: TStringList;         { Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР° }
+      ds: string;                         { Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР° }
       i,j, x1,x2, y1,y2, x,y,n: integer;  
-      Tx,Tx1,Tx2: double;                 { Расчетное,итоговое(Tx) и промежуточные(Tx1,Tx2) времена }
-      n1,n2,n3  : double;                 { Вычисление Tx -ов }
+      Tx,Tx1,Tx2: double;                 { Р Р°СЃС‡РµС‚РЅРѕРµ,РёС‚РѕРіРѕРІРѕРµ(Tx) Рё РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅС‹Рµ(Tx1,Tx2) РІСЂРµРјРµРЅР° }
+      n1,n2,n3  : double;                 { Р’С‹С‡РёСЃР»РµРЅРёРµ Tx -РѕРІ }
       Xitem, Yitem: double;               { Xitem == Depth, Yitem == Delta }
       delta: integer;
-      eqLat, eqLon: double;               { Координаты }
-      eqTim: string;                      { Время от очага }
-      WvList: TStringList;                { Список волн только с данными (сек > 0) ---> Вывод данных }
+      eqLat, eqLon: double;               { РљРѕРѕСЂРґРёРЅР°С‚С‹ }
+      eqTim: string;                      { Р’СЂРµРјСЏ РѕС‚ РѕС‡Р°РіР° }
+      WvList: TStringList;                { РЎРїРёСЃРѕРє РІРѕР»РЅ С‚РѕР»СЊРєРѕ СЃ РґР°РЅРЅС‹РјРё (СЃРµРє > 0) ---> Р’С‹РІРѕРґ РґР°РЅРЅС‹С… }
      // S: TLineSeries;
       pl: integer;
   const incfile: string = 'inclist.scm';
@@ -501,7 +560,7 @@ begin
     end;
   
   WaveList := TStringList.Create;
-  WaveList.LoadFromFile(WavesPath + incfile);  { Заполняем список "разрешенных" волн с файла incfile }
+  WaveList.LoadFromFile(WavesPath + incfile);  { Р—Р°РїРѕР»РЅСЏРµРј СЃРїРёСЃРѕРє "СЂР°Р·СЂРµС€РµРЅРЅС‹С…" РІРѕР»РЅ СЃ С„Р°Р№Р»Р° incfile }
   if (WaveList.Count < 1) then
     begin
       ShowMessage('No waves list found.');
@@ -511,7 +570,7 @@ begin
   {TxList  := TStringList.Create;}
   WvList  := TStringList.Create;
   sl      := TStringList.Create;  sv      := TStringList.Create;
-  MText   := TStringList.Create;  //  Создаем списки для работы
+  MText   := TStringList.Create;  //  РЎРѕР·РґР°РµРј СЃРїРёСЃРєРё РґР»СЏ СЂР°Р±РѕС‚С‹
 
   ChartWnd.Chart.RemoveAllSeries;
   ChartWnd.Chart.Title.Text.Clear;
@@ -521,8 +580,8 @@ begin
   for n := 0 to WaveList.Count -1 do
     begin
       if FileExists(WavesPath+WaveList.Strings[n]+'.scm')
-           and (GetFileSize(WavesPath+WaveList.Strings[n]+'.scm') > 20) then begin    //  Если файл из списка разрешенных
-{ ### ФОРМИРУЕМ МАССИВ ИЗ ФАЙЛА ### --->> }                             //  нашелся --> обрабатываем его.
+           and (GetFileSize(WavesPath+WaveList.Strings[n]+'.scm') > 20) then begin    //  Р•СЃР»Рё С„Р°Р№Р» РёР· СЃРїРёСЃРєР° СЂР°Р·СЂРµС€РµРЅРЅС‹С…
+{ ### Р¤РћР РњРР РЈР•Рњ РњРђРЎРЎРР’ РР— Р¤РђР™Р›Рђ ### --->> }                             //  РЅР°С€РµР»СЃСЏ --> РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј РµРіРѕ.
         sl.Clear;
 		    sv.Clear;
 		    MText.Clear;
@@ -548,9 +607,9 @@ begin
                   M[i,j] := -1;
                 end;
               end;
-          end;  { <<--- ### МАССИВ ГОТОВ ### }
+          end;  { <<--- ### РњРђРЎРЎРР’ Р“РћРўРћР’ ### }
 
-     Xitem := Depth;   // Определяем столбец
+     Xitem := Depth;   // РћРїСЂРµРґРµР»СЏРµРј СЃС‚РѕР»Р±РµС†
      x1:=0; x2:=0;
      x :=-1;
      i:=0;
@@ -596,7 +655,7 @@ begin
             inc(j);
           end;
 
-        if (y = -1) and (x <> -1) then   //  x в таблице,   y не в таблице
+        if (y = -1) and (x <> -1) then   //  x РІ С‚Р°Р±Р»РёС†Рµ,   y РЅРµ РІ С‚Р°Р±Р»РёС†Рµ
           begin
             if (y1 = 0) or (y2 > slRow-1)
               or (M[y1,x] = -1) or (M[y2,x] = -1) then Tx:=-1
@@ -607,9 +666,9 @@ begin
               Tx := (n1*n2*n3)+M[y1,x];
             end;
           end;
-        if (y <> -1) and (x <> -1) then Tx := M[y,x]; //  x,y в таблице
+        if (y <> -1) and (x <> -1) then Tx := M[y,x]; //  x,y РІ С‚Р°Р±Р»РёС†Рµ
 
-        if (y= -1) and (x= -1) then   //  x,y не в таблице
+        if (y= -1) and (x= -1) then   //  x,y РЅРµ РІ С‚Р°Р±Р»РёС†Рµ
           begin
             if (x1 = 0) or (x2 > svCol-1) or (y1 = 0) or (y2 > slRow-1)
               or (M[y1,x1]=-1) or (M[y2,x1]=-1) or (M[y1,x2]=-1) or (M[y2,x2]=-1) then Tx:=-1
@@ -628,7 +687,7 @@ begin
              Tx := (n1*n2*n3)+Tx1;
             end;
           end;
-        if (y <> -1) and (x= -1) then   //  x не в таблице,   y в таблице
+        if (y <> -1) and (x= -1) then   //  x РЅРµ РІ С‚Р°Р±Р»РёС†Рµ,   y РІ С‚Р°Р±Р»РёС†Рµ
           begin
             if (x1 = 0) or (x2 > svCol-1) or (M[y,x1]=-1) or (M[y,x2]=-1) then Tx:=-1
              else begin
@@ -668,7 +727,7 @@ end;
 
 
 
-{ **** Дополняет строку пробелами слева до указанной длины и плюс '0' после точки. **** }
+{ **** Р”РѕРїРѕР»РЅСЏРµС‚ СЃС‚СЂРѕРєСѓ РїСЂРѕР±РµР»Р°РјРё СЃР»РµРІР° РґРѕ СѓРєР°Р·Р°РЅРЅРѕР№ РґР»РёРЅС‹ Рё РїР»СЋСЃ '0' РїРѕСЃР»Рµ С‚РѕС‡РєРё. **** }
 function PADL0(Src: string; Lg: Integer): string;
 begin
   if pos(DecimalSeparator,Src) = length(src) - 1 then Src := Src + '0';
@@ -677,28 +736,28 @@ begin
   while Length(Result) < Lg do
     Result := ' ' + Result;
 end;
-{ **** Дополняет строку пробелами слева до указанной длины. **** }
+{ **** Р”РѕРїРѕР»РЅСЏРµС‚ СЃС‚СЂРѕРєСѓ РїСЂРѕР±РµР»Р°РјРё СЃР»РµРІР° РґРѕ СѓРєР°Р·Р°РЅРЅРѕР№ РґР»РёРЅС‹. **** }
 function PADL(Src: string; Lg: Integer): string;
 begin
   Result := Src;
   while Length(Result) < Lg do
     Result := ' ' + Result;
 end;
-{ **** Дополняет строку пробелами справа до указанной длины. **** }
+{ **** Р”РѕРїРѕР»РЅСЏРµС‚ СЃС‚СЂРѕРєСѓ РїСЂРѕР±РµР»Р°РјРё СЃРїСЂР°РІР° РґРѕ СѓРєР°Р·Р°РЅРЅРѕР№ РґР»РёРЅС‹. **** }
 function PADR(Src: string; Lg: Integer): string;
 begin
   Result := Src;
   while Length(Result) < Lg do
     Result := Result + ' ';
 end;
-{ **** Дополняет строку нулями слева до указанной длины. **** }
+{ **** Р”РѕРїРѕР»РЅСЏРµС‚ СЃС‚СЂРѕРєСѓ РЅСѓР»СЏРјРё СЃР»РµРІР° РґРѕ СѓРєР°Р·Р°РЅРЅРѕР№ РґР»РёРЅС‹. **** }
 function PAD0(Src: string; Lg: Integer): string;
 begin
   Result := Src;
   while Length(Result) < Lg do
     Result := '0' + Result;
 end;
-{ **** Ждем завершения процесса. **** }
+{ **** Р–РґРµРј Р·Р°РІРµСЂС€РµРЅРёСЏ РїСЂРѕС†РµСЃСЃР°. **** }
 function ShellExecuteWait(const FileName, Parameters, Directory: String; ShowCmd: Integer): Boolean;
 var
   SEInfo: TShellExecuteInfo;
@@ -831,8 +890,8 @@ begin
 end;
 
 function TMF.DecDateTime(SeedUsgsEqDate: String; DecSeconds: Integer): string;
-  var stdate: TDateTime; //  Отнимаем от времени SeedUsgsEqDate в формате
-begin       //  'yyyy-mm-dd-hh-nn-ss' указанное количество секунд DecSeconds.
+  var stdate: TDateTime; //  РћС‚РЅРёРјР°РµРј РѕС‚ РІСЂРµРјРµРЅРё SeedUsgsEqDate РІ С„РѕСЂРјР°С‚Рµ
+begin       //  'yyyy-mm-dd-hh-nn-ss' СѓРєР°Р·Р°РЅРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРµРєСѓРЅРґ DecSeconds.
  stdate := EncodeDateTime(
    {yyyy} StrToInt(copy(SeedUsgsEqDate,1,4)),
    { mm } StrToInt(copy(SeedUsgsEqDate,6,2)),
@@ -850,7 +909,7 @@ begin
   if FindFirst(FileName, faAnyFile, SearchRec) = 0 then
     Result:=SearchRec.Size
   else
-    Result:=-1; {возвращаем ошибку, число меньше нуля}
+    Result:=-1; {РІРѕР·РІСЂР°С‰Р°РµРј РѕС€РёР±РєСѓ, С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ РЅСѓР»СЏ}
 end;
 
 function TMF.DeltaPetF(Lat,Lon: double): double;
@@ -914,12 +973,12 @@ function TMF.DeltaABF(fLat1,fLon1,fLat2,fLon2: double): double;
       dist: double;
 begin
   Result := -1;  R := 6372795;
-	//перевод коордитат в радианы
+	//РїРµСЂРµРІРѕРґ РєРѕРѕСЂРґРёС‚Р°С‚ РІ СЂР°РґРёР°РЅС‹
   lat1 := (fLat1*pi) / 180;
   lat2 := (fLat2*pi) / 180;
   lon1 := (fLon1*pi) / 180;
   lon2 := (fLon2*pi) / 180;
-	//вычисление косинусов и синусов широт и разницы долгот
+	//РІС‹С‡РёСЃР»РµРЅРёРµ РєРѕСЃРёРЅСѓСЃРѕРІ Рё СЃРёРЅСѓСЃРѕРІ С€РёСЂРѕС‚ Рё СЂР°Р·РЅРёС†С‹ РґРѕР»РіРѕС‚
 	cl1 := cos(lat1);
 	cl2 := cos(lat2);
 	sl1 := sin(lat1);
@@ -927,12 +986,12 @@ begin
 	delta := lon2 - lon1;
 	cdelta := cos(delta);
 	sdelta := sin(delta);
-	//вычисления длины большого круга
+	//РІС‹С‡РёСЃР»РµРЅРёСЏ РґР»РёРЅС‹ Р±РѕР»СЊС€РѕРіРѕ РєСЂСѓРіР°
 	y := sqrt((cl2*sdelta*cl2*sdelta)+(cl1*sl2-sl1*cl2*cdelta)*(cl1*sl2-sl1*cl2*cdelta));
 	x := sl1 * sl2 + cl1 * cl2 * cdelta;
 	ad := arctan2(y,x);
-	dist := ad * R; //расстояние между двумя координатами в метрах
-  Result := dist/1000/111;  // град.
+	dist := ad * R; //СЂР°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ РґРІСѓРјСЏ РєРѕРѕСЂРґРёРЅР°С‚Р°РјРё РІ РјРµС‚СЂР°С…
+  Result := dist/1000/111;  // РіСЂР°Рґ.
 end;
 
 function TMF.DownloadFilebf(const FileURL, BeforeString: String; FileName: String): Cardinal;
@@ -949,7 +1008,7 @@ var
   aupStream: TMemoryStream;
   cLine,posi,i,j: cardinal;
 begin
-  {SysLg('DownloadFile: Загрузка файла '+FileURL+#13#10+' в файл '+FileName);}
+  {SysLg('DownloadFile: Р—Р°РіСЂСѓР·РєР° С„Р°Р№Р»Р° '+FileURL+#13#10+' РІ С„Р°Р№Р» '+FileName);}
   Result := 0;
   AupList := TStringList.Create;
   aupStream := TMemoryStream.Create;
@@ -967,7 +1026,7 @@ begin
       fSize := 0;
       if (length(ExtractFileExt(FileURL)) = 4) and (ExtractFileExt(FileURL) <> '.txt') then
         begin
-          HttpQueryInfo(hFile, HTTP_QUERY_CONTENT_LENGTH, @dwBuffer, dwBufferLen, dwIndex);         // Запрос размера файла
+          HttpQueryInfo(hFile, HTTP_QUERY_CONTENT_LENGTH, @dwBuffer, dwBufferLen, dwIndex);         // Р—Р°РїСЂРѕСЃ СЂР°Р·РјРµСЂР° С„Р°Р№Р»Р°
           FileSize := strtoint(PChar(@dwBuffer));
         end else FileSize := 55000;    }
       repeat
@@ -989,7 +1048,7 @@ begin
         {pCentLoad := trunc(100 * fSize / FileSize); }
       until (BufferLen = 0) or (BeforeString = fLine) or (posi = 1);
         //aupList.Add('i='+inttostr(i)+'     posi='+inttostr(posi));            //aupList.SaveToFile(FileName+'.str');
-      if pos('ОШИБКА',AupList.Text) < 0 then                                    // Продолжаем, если страница загружена правильно (без ошибки контроля доступа и пр.)
+      if pos('РћРЁРР‘РљРђ',AupList.Text) < 0 then                                    // РџСЂРѕРґРѕР»Р¶Р°РµРј, РµСЃР»Рё СЃС‚СЂР°РЅРёС†Р° Р·Р°РіСЂСѓР¶РµРЅР° РїСЂР°РІРёР»СЊРЅРѕ (Р±РµР· РѕС€РёР±РєРё РєРѕРЅС‚СЂРѕР»СЏ РґРѕСЃС‚СѓРїР° Рё РїСЂ.)
       if posi = 1 then
         begin
           for j:=0 to i do resList.Add(AupList.Strings[j]);
@@ -1009,7 +1068,7 @@ begin
     //end;
     InternetCloseHandle(hSession);
   end;
-  SysLg('------------: Загрузка завершена. Размер файла: '+IntToStr(fSize)+ 'байт');
+  SysLg('------------: Р—Р°РіСЂСѓР·РєР° Р·Р°РІРµСЂС€РµРЅР°. Р Р°Р·РјРµСЂ С„Р°Р№Р»Р°: '+IntToStr(fSize)+ 'Р±Р°Р№С‚');
   TotalBytes := TotalBytes + Result;
   StatUpdate;
   if i = 1 then Result := 1;
@@ -1025,7 +1084,7 @@ var
   BufferLen, fSize: LongWord;
   f: File;
 begin
-  SysLg('DownloadFile: Загрузка файла '+FileURL+#13#10+' в файл '+FileName);
+  SysLg('DownloadFile: Р—Р°РіСЂСѓР·РєР° С„Р°Р№Р»Р° '+FileURL+#13#10+' РІ С„Р°Р№Р» '+FileName);
   Result := 0;
   hSession := InternetOpen(' msie 6'{STEROID Download'}, INTERNET_OPEN_TYPE_PRECONFIG, nil, nil, 0);
   pCentLoad := 100;
@@ -1039,7 +1098,7 @@ begin
       fSize := 0;
       if (length(ExtractFileExt(FileURL)) = 4) and (ExtractFileExt(FileURL) <> '.txt') and (ExtractFileExt(FileURL) <> '.csv') then
         begin
-          HttpQueryInfo(hFile, HTTP_QUERY_CONTENT_LENGTH, @dwBuffer, dwBufferLen, dwIndex);         // Запрос размера файла
+          HttpQueryInfo(hFile, HTTP_QUERY_CONTENT_LENGTH, @dwBuffer, dwBufferLen, dwIndex);         // Р—Р°РїСЂРѕСЃ СЂР°Р·РјРµСЂР° С„Р°Р№Р»Р°
           FileSize := strtoint(PChar(@dwBuffer));
         end else FileSize := 55000;
       repeat
@@ -1054,21 +1113,21 @@ begin
     end;
     InternetCloseHandle(hSession);
   end;
-  SysLg('------------: Загрузка завершена. Размер файла: '+IntToStr(fSize)+ 'байт');
+  SysLg('------------: Р—Р°РіСЂСѓР·РєР° Р·Р°РІРµСЂС€РµРЅР°. Р Р°Р·РјРµСЂ С„Р°Р№Р»Р°: '+IntToStr(fSize)+ 'Р±Р°Р№С‚');
   TotalBytes := TotalBytes + Result;
   StatUpdate;
 end;
 
 procedure TMF.StatUpdate;
 begin
-  StaticText2.Caption := LoadStr(Lang+74) +' '+ IntToStr(TotalBytes);
+  StaticText2.Caption := GetStrl(74) +' '+ IntToStr(TotalBytes);
 end;
 
 function GetWord(Str: string; WordNmbr: Byte): string;
 var
   SWord: string;
   StrLen, N: Byte;
-const Sep=' ';  // Разделитель - Пробел
+const Sep=' ';  // Р Р°Р·РґРµР»РёС‚РµР»СЊ - РџСЂРѕР±РµР»
 begin
   StrLen := SizeOf(Str);
   N := 1;
@@ -1126,12 +1185,12 @@ function FilterLine(Stri: string): string;
   var      i, j: LongInt;
 begin
   while pos('&nbsp;',stri) > 0 do
-    begin   { Удаляем в линии все &nbsp; заменяя их пробелом }
+    begin   { РЈРґР°Р»СЏРµРј РІ Р»РёРЅРёРё РІСЃРµ &nbsp; Р·Р°РјРµРЅСЏСЏ РёС… РїСЂРѕР±РµР»РѕРј }
       insert(' ',stri, pos('&nbsp;',stri));
       delete(stri, pos('&nbsp;',stri), 6);
     end;
   while (pos('<',stri) > 0) and (pos('>',stri) > 1) do
-    begin   { Удаляем теги </tag> с их содержимым }
+    begin   { РЈРґР°Р»СЏРµРј С‚РµРіРё </tag> СЃ РёС… СЃРѕРґРµСЂР¶РёРјС‹Рј }
       i:=pos('<',stri);
       j:=pos('>',stri);
       delete(stri,i,j-i+1);
@@ -1355,14 +1414,14 @@ end;
 function FilterLineEmsd(Stri: string): string;
   var
         ndt : TDateTime;
-        mg,dt,tm,lt,ln,dp,mt{MagType}: shortstring;
+        mg,dt,tm,lt,ln,dp,mt{MagType},op: shortstring;
         sp: shortstring; nsp: cardinal;
   const del = ',';
 begin
   if pos('<TR><TD>',stri) = 1 then delete(stri,1,8);
 
   while pos('</TD><TD>',stri) > 0 do
-    begin   { Удаляем в линии все &nbsp; заменяя их пробелом }
+    begin   { РЈРґР°Р»СЏРµРј РІ Р»РёРЅРёРё РІСЃРµ &nbsp; Р·Р°РјРµРЅСЏСЏ РёС… РїСЂРѕР±РµР»РѕРј }
       insert(',',stri, pos('</TD><TD>',stri));
       delete(stri, pos('</TD><TD>',stri), 9);
     end;
@@ -1374,6 +1433,7 @@ begin
   dp := copy(stri,1,pos(del,stri)-1);   delete(Stri,1,pos(del,stri));
   mg := copy(stri,1,pos(del,stri)-1);   delete(Stri,1,pos(del,stri));
   mt := copy(stri,1,pos(del,stri)-1);   delete(Stri,1,pos(del,stri));
+  delete(Stri,1,pos(del,stri));       op := copy(stri,1,pos('<',stri)-1);
   ndt := EncodeDateTime(StrToInt(copy(dt,1,4)),StrToInt(copy(dt,6,2)),StrToInt(copy(dt,9,2)),StrToInt(copy(dt,12,2)),
                         StrToInt(copy(dt,15,2)),StrToInt(copy(dt,18,2)),StrToInt(copy(dt,21,3)));
   dt:=FormatDateTime('yyyy/mm/dd',ndt);
@@ -1395,9 +1455,13 @@ begin
       dp := copy(sp,1,length(sp)-1)+dp;
     end else
   dp:=sp+dp;
+  op := AnsiUpperCase(op);
+  if op = 'KAMCHATKA1' then op := PADR(':KAM1',7) else if op = 'KAMCHATKA' then op := PADR(':KAM ',7)
+    else if op = 'VLADIVOSTOK' then op:='VLADIVS' else if op = 'SAKHALIN' then op := PADR('SAKH',7)
+      else op:=PADR(copy(op,1,7),7);
 
-  result := '       '+' '+dt+' '+tm+  lt+ln+ dp+'  '+  mg;   // +mt;
- //                      дата   время коорд   глубина  магнитуда
+  result := {'       '}op+' '+dt+' '+tm+  lt+ln+ dp+'  '+  mg;   // +mt;
+ //                      РґР°С‚Р°   РІСЂРµРјСЏ РєРѕРѕСЂРґ   РіР»СѓР±РёРЅР°  РјР°РіРЅРёС‚СѓРґР°
 end;
 
 function GetDescription(FileName: string): string;
@@ -1447,19 +1511,37 @@ begin
 end;
 
 
-
-function TMF.StLat(StBoxLine: string): string;
-begin  // Получение Lat из Value-списка (( lat=51.882300 lon=-176.684000 ))
+(*
+function TMF.StLatOld(StBoxLine: string): string;
+begin  // РџРѕР»СѓС‡РµРЅРёРµ Lat РёР· Value-СЃРїРёСЃРєР° (( lat=51.882300 lon=-176.684000 ))
+  Result := '0';
   if pos('lat=',StBoxLine)>0 then
     Result:=TstFloat(copy(StBoxLine,5,pos(' ',StBoxLine)-5));
 end;
-
-function TMF.StLon(StBoxLine: string): string;  var i: integer;
-begin  // Получение Lon из Value-списка (( lat=51.882300 lon=-176.684000 ))
+function TMF.StLonOld(StBoxLine: string): string;  var i: integer;
+begin  // РџРѕР»СѓС‡РµРЅРёРµ Lon РёР· Value-СЃРїРёСЃРєР° (( lat=51.882300 lon=-176.684000 ))
+  Result := '0';
   i := pos('lon=',StBoxLine);
   if i > 1 then
     Result:=TstFloat(copy(StBoxLine,i+4,length(StBoxLine){-i}));
+end;       *)
+
+function TMF.StLat(StBoxLine: string): string;
+begin  // РџРѕР»СѓС‡РµРЅРёРµ Lat РёР· Value-СЃРїРёСЃРєР° ADK= (( 51.882300;-176.684000 ))
+  Result := '0';
+  if pos(';',StBoxLine) > 0 then
+    Result:=TstFloat(copy(StBoxLine,1,pos(';',StBoxLine)-1));
 end;
+
+function TMF.StLon(StBoxLine: string): string;  var i: integer;
+begin  // РџРѕР»СѓС‡РµРЅРёРµ Lon РёР· Value-СЃРїРёСЃРєР° ADK= (( 51.882300;-176.684000 ))
+  Result := '0';
+  i := pos(';',StBoxLine);
+  if i > 1 then
+    Result:=TstFloat(copy(StBoxLine,i+1,length(StBoxLine)-pos(';',StBoxLine)));
+end;
+
+
 
 function CompareFiles(const FirstFile, SecondFile: string): Boolean;
 var
@@ -1468,11 +1550,11 @@ begin
   Result := False;
   f1 := TMemoryStream.Create;
   f2 := TMemoryStream.Create;
-  try   //загружаем файлы...
+  try   //Р·Р°РіСЂСѓР¶Р°РµРј С„Р°Р№Р»С‹...
     f1.LoadFromFile(FirstFile);
     f2.LoadFromFile(SecondFile);
-    if f1.Size = f2.Size then //сравниваем по размеру...
-    Result := CompareMem(f1.Memory, f2.memory, f1.Size);         //двоичное сравнение в памяти
+    if f1.Size = f2.Size then //СЃСЂР°РІРЅРёРІР°РµРј РїРѕ СЂР°Р·РјРµСЂСѓ...
+    Result := CompareMem(f1.Memory, f2.memory, f1.Size);         //РґРІРѕРёС‡РЅРѕРµ СЃСЂР°РІРЅРµРЅРёРµ РІ РїР°РјСЏС‚Рё
   finally
     f2.Free;
     f1.Free;
@@ -1494,8 +1576,8 @@ end;
 procedure TMF.ShowMap(Sender: TObject);   // (TabSheet: cardinal=0,1..)
   var SelLine, i: integer;
       PicFile: string;
-      i_latmap,i_lonmap: integer;   // Цифровое  значение координат карты
-      s_latmap,s_lonmap: string;    // Строковое значение координат карты
+      i_latmap,i_lonmap: integer;   // Р¦РёС„СЂРѕРІРѕРµ  Р·РЅР°С‡РµРЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РєР°СЂС‚С‹
+      s_latmap,s_lonmap: string;    // РЎС‚СЂРѕРєРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РєР°СЂС‚С‹
 begin
   if not Mapping then exit;
   Panel1.Visible := Mapping;
@@ -1589,16 +1671,17 @@ end;
 
 
 procedure TMF.FormCreate(Sender: TObject);
+  var i: integer;
 begin
   AppPath := ExtractFilePath(Application.ExeName);
-  Application.OnException := ErrorFound;
+ // Application.OnException := ErrorFound;
   StaticText1.Caption := ' ' + FileVersionInfo(Application.ExeName, vsFileVersion);
   ForceDirectories(AppPath+'pics');
   ForceDirectories(AppPath+'data\cache');
   USGS.TempFile := AppPath +'data\' + 'neic.tmp'; {TempPath}         /////////////////////
   EMSC.TempFile := AppPath +'data\' + 'emsc.tmp'; {TempPath}         /////////////////////
   EMSD.TempFile := AppPath +'data\' + 'emsd.tmp'; {TempPath}         /////////////////////
-  SysLg('FormCreate: Создание формы');
+  SysLg('FormCreate: РЎРѕР·РґР°РЅРёРµ С„РѕСЂРјС‹');
   eqList := TStringList.Create;
   eqList.Clear;
   TmpList := TStringList.Create;
@@ -1611,8 +1694,12 @@ begin
   Page.ActivePage := TbNeic;
   StaticText3.Left := RichEdit1.Width  - StaticText3.Width - 10;
   StaticText3.Top  := RichEdit1.Top + 10;
-  RzP.Height := 161;
-   {  // Отрисовка панели на экране, не на форме
+  with RzP do begin
+    Height := 161;
+    Left := 632;
+    Top  := 224;
+  end;
+   {  // РћС‚СЂРёСЃРѕРІРєР° РїР°РЅРµР»Рё РЅР° СЌРєСЂР°РЅРµ, РЅРµ РЅР° С„РѕСЂРјРµ
    h := GetDesktopWindow();
    b := TPanel.Create(Owner);
    Panel2.Parent := MF;
@@ -1630,42 +1717,43 @@ procedure TMF.Parse_USGS;
       Line,Line2, ListToText: string;
       SelLine,SearchLine: string;
       USGS_FileSize: cardinal;
-      i_latmap,i_lonmap: integer;   // Цифровое  значение координат карты
-      s_latmap,s_lonmap: string;    // Строковое значение координат карты
+      i_latmap,i_lonmap: integer;   // Р¦РёС„СЂРѕРІРѕРµ  Р·РЅР°С‡РµРЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РєР°СЂС‚С‹
+      s_latmap,s_lonmap: string;    // РЎС‚СЂРѕРєРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РєР°СЂС‚С‹
 //      MyThread: TMyThread;
      {cbFilter}   DeltaPetFNow,MagnitudeNow: double;   ShowResult: boolean;  HideCount: cardinal;
   const map='MAP  ';
-//  FileURL: string = 'http://earthquake.usgs.gov/earthquakes/feed/csv/2.5/week';
   label _SimpleUpdate;
 begin
 //  if FileURL = '' then FileURL := 'http://earthquake.usgs.gov/earthquakes/feed/csv/2.5/week';
-  if FileURL = '' then FileURL := 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.csv';
+  if USGS.URLFile = '' then USGS.URLFile := 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.csv';
   if simpleupdate then begin
       simpleupdate := false;
       goto _simpleupdate;
     end;
   tmpList.Clear;
   if (Refresh.Tag = 1) or (not FileExists(USGS.TempFile)) then USGS_FileSize :=
-      DownloadFile(FileURL, USGS.TempFile);
+      DownloadFile(USGS.URLFile, USGS.TempFile);
 
   if FileExists(USGS.TempFile) then tmpList.LoadFromFile(USGS.TempFile) else Exit;
   if (USGS_FileSize < 3000) and (Refresh.Tag = 1) then
     begin
       if RzEQList.Count > 30 then RzEQList.Clear;
-      RzEQList.Add(FileURL);
+      RzEQList.Add(USGS.URLFile);
       RzEQList.Add('ERROR List:');
       RzEQList.Add('The 05 -Code ' + formatdatetime('dd.mm.yy hh:nn:ss',now)+ '     Check Network Connection.');
       RzEQList.Add('-----------');
       Exit;
     end;
 
-_SimpleUpdate: { Обновление без перезагрузки списка (при редактировании местоположения события и быстрого обновления) }
+_SimpleUpdate: { РћР±РЅРѕРІР»РµРЅРёРµ Р±РµР· РїРµСЂРµР·Р°РіСЂСѓР·РєРё СЃРїРёСЃРєР° (РїСЂРё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРё РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёСЏ СЃРѕР±С‹С‚РёСЏ Рё Р±С‹СЃС‚СЂРѕРіРѕ РѕР±РЅРѕРІР»РµРЅРёСЏ) }
 
-  SelLine :=  copy(RzEQList.SelectedItem,1,30);  //  Сохраняем выделение строки после Обновления
+  SelLine :=  copy(RzEQList.SelectedItem,1,30);  //  РЎРѕС…СЂР°РЅСЏРµРј РІС‹РґРµР»РµРЅРёРµ СЃС‚СЂРѕРєРё РїРѕСЃР»Рµ РћР±РЅРѕРІР»РµРЅРёСЏ
   RzEQList.Items.BeginUpdate;
-  RzEQList.Clear;
-  tmpList.LoadFromFile(USGS.TempFile);
-  SysLg('ParseUSGS: Заполняем массив карт');
+  RzEQList.Clear;                                  //   <?xml version
+  tmpList.LoadFromFile(USGS.TempFile);              //  
+  if tmpList.Count > 0 then
+    if pos('time,latitude,longitude',tmpList.Strings[0]) <> 1 then exit;
+  SysLg('ParseUSGS: Р—Р°РїРѕР»РЅСЏРµРј РјР°СЃСЃРёРІ РєР°СЂС‚');
   HideCount := 0;
   for i:=1 to tmpList.Count - 1 do
     begin
@@ -1675,20 +1763,21 @@ _SimpleUpdate: { Обновление без перезагрузки списка (при редактировании местопол
         delete(Line2,1,pos(',',Line2)); USGS.eqlon := copy(Line2,1,pos(',',Line2)-1);
         delete(Line2,1,pos(',',Line2)); USGS.eqdep := copy(Line2,1,pos(',',Line2)-1);
         delete(Line2,1,pos(',',Line2)); USGS.bmag  := copy(Line2,1,pos(',',Line2)-1);
-      // v1.0.6 --> EQmaps[RzEQList.Count] := copy(Line,43,pos('.',Line)-43);    // Заполняем массив для карты = 120_25
+      // v1.0.6 --> EQmaps[RzEQList.Count] := copy(Line,43,pos('.',Line)-43);    // Р—Р°РїРѕР»РЅСЏРµРј РјР°СЃСЃРёРІ РґР»СЏ РєР°СЂС‚С‹ = 120_25
    { cbFilter }
      DeltaPetFNow := DeltaPetF(StrToFloat(TstFloat(USGS.eqlat)),StrToFloat(TstFloat(USGS.eqlon)));
      MagnitudeNow := StrToFloat(TstFloat(USGS.bmag));
-    { if (DeltaPetFNow > 20) and (MagnitudeNow < 2.9) then ShowResult := False else ShowResult := True;
-     if (DeltaPetFNow > 50) and (MagnitudeNow < 4.0) then ShowResult := False else ShowResult := True;   }
+    { if ((DeltaPetFNow > 20) and (MagnitudeNow < 2.9))
+       or ((DeltaPetFNow > 50) and (MagnitudeNow < 4.0)) then ShowResult := False else ShowResult := True; }
 
-     if ((DeltaPetFNow > 20) and (MagnitudeNow < 2.9))
-       or ((DeltaPetFNow > 50) and (MagnitudeNow < 4.0)) then ShowResult := False else ShowResult := True;
-
+     if ((DeltaPetFNow > seDeltaNeic1.Value) and (MagnitudeNow < seMagNeic1.Value))
+       or ((DeltaPetFNow > seDeltaNeic2.Value) and (MagnitudeNow < seMagNeic2.Value))
+        or ((DeltaPetFNow > seDeltaNeic3.Value) and (MagnitudeNow < seMagNeic3.Value))
+        then ShowResult := False else ShowResult := True;
 
      if not cbFilter.Checked then ShowResult := True;
      if ShowResult then begin
-      // Заполнение массива именами файлов карты
+      // Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° РёРјРµРЅР°РјРё С„Р°Р№Р»РѕРІ РєР°СЂС‚С‹
       USGS.eqlat := copy(USGS.eqlat,1,pos('.',USGS.eqlat)+3);
       USGS.eqlon := copy(USGS.eqlon,1,pos('.',USGS.eqlon)+3);
       s_latmap := FloatToStr(StrToFloat(TstFloat(USGS.eqlat))*1000);
@@ -1703,7 +1792,9 @@ _SimpleUpdate: { Обновление без перезагрузки списка (при редактировании местопол
      end else HideCount := HideCount + 1;
     end;
    RzEQList.Items.EndUpdate;
-  cbFilter.Caption := LoadStr(Lang+200){ 'Фильтр событий USGS (скрыто: ' }+ IntToStr(HideCount) + ')';
+  cbFilter.Caption := GetStrl(200){ 'Р¤РёР»СЊС‚СЂ СЃРѕР±С‹С‚РёР№ USGS (СЃРєСЂС‹С‚Рѕ: ' } + IntToStr(HideCount) + ')';
+  RzPanelInfoUSGS.Caption := GetStrl(347){ 'Р’СЃРµРіРѕ РїРѕРєР°Р·Р°РЅРѕ' } + IntToStr(RzEQList.Items.Count);
+  Label15.Caption := '(СЃРєСЂС‹С‚Рѕ: ' + IntToStr(HideCount) + ')';
   ListToText := RzEQList.Items.Text;
   while pos(map,ListToText) > 0 do delete (ListToText,pos(map,ListToText),length(map));
   eqList.Text := ListToText;
@@ -1726,7 +1817,7 @@ _SimpleUpdate: { Обновление без перезагрузки списка (при редактировании местопол
           break;
         end;
     end;
-  SysLg('ParceUSGS: Парсинг завершен');
+  SysLg('ParceUSGS: РџР°СЂСЃРёРЅРі Р·Р°РІРµСЂС€РµРЅ');
 end;
 
 procedure TMF.Parse_EMSC;
@@ -1739,7 +1830,7 @@ procedure TMF.Parse_EMSC;
         emsc_url2: string = ('&end_date=');{2014-01-12}
         emsc_url3: string = ('&min_mag=3&min_intens=0&max_intens=8&export=csv');
 begin
-  SysLg('ParceEMSC: Приступаем к парсингу');
+  SysLg('ParceEMSC: РџСЂРёСЃС‚СѓРїР°РµРј Рє РїР°СЂСЃРёРЅРіСѓ');
   EMSC.List.Clear;
 
   TimeNow := SysUtils.Now;
@@ -1752,7 +1843,7 @@ begin
       DownloadFile(emsc_url, EMSC.TempFile);
   if FileExists(EMSC.TempFile) then EMSC.List.LoadFromFile(EMSC.TempFile) else exit;
 
-  SelLine := EQListEmsc.SelectedItem;  //  Сохраняем выделение строки после Обновления
+  SelLine := EQListEmsc.SelectedItem;  //  РЎРѕС…СЂР°РЅСЏРµРј РІС‹РґРµР»РµРЅРёРµ СЃС‚СЂРѕРєРё РїРѕСЃР»Рµ РћР±РЅРѕРІР»РµРЅРёСЏ
   EQListEmsc.Clear;
   EMSC.List.LoadFromFile(EMSC.TempFile);
   if pos('Word Verification', EMSC.List.Text) > 0 then
@@ -1777,23 +1868,23 @@ begin
           break;
         end;
     end;
-  SysLg('ParceEMSC: Парсинг завершен');
+  SysLg('ParceEMSC: РџР°СЂСЃРёРЅРі Р·Р°РІРµСЂС€РµРЅ');
 end;
 
 procedure TMF.Parse_EMSC_2;
   var i: integer;
       Line, SelLine: string;
-  const
-        emsc_url: string = ('http://www.emsc-csem.org/service/rss/rss.php?typ=emsc'); {2014-01-10}
+ (* const
+        emsc_url: string = ('http://www.emsc-csem.org/service/rss/rss.php?typ=emsc'); {2014-01-10}       *)
 begin
-  SysLg('ParceEMSC: Приступаем к парсингу');
+  SysLg('ParceEMSC: РџСЂРёСЃС‚СѓРїР°РµРј Рє РїР°СЂСЃРёРЅРіСѓ');
   EMSC.List.Clear;
 
   if (Refresh.Tag = 1) or (not FileExists(EMSC.TempFile)) then
-      DownloadFile(emsc_url, EMSC.TempFile);
+      DownloadFile(EMSC.URLFile, EMSC.TempFile);
   if FileExists(EMSC.TempFile) then EMSC.List.LoadFromFile(EMSC.TempFile) else exit;
 
-  SelLine := EQListEmsc.SelectedItem;  //  Сохраняем выделение строки после Обновления
+  SelLine := EQListEmsc.SelectedItem;  //  РЎРѕС…СЂР°РЅСЏРµРј РІС‹РґРµР»РµРЅРёРµ СЃС‚СЂРѕРєРё РїРѕСЃР»Рµ РћР±РЅРѕРІР»РµРЅРёСЏ
   EQListEmsc.Clear;
   EMSC.List.LoadFromFile(EMSC.TempFile);
   if pos('Word Verification', EMSC.List.Text) > 0 then
@@ -1818,26 +1909,26 @@ begin
           break;
         end;
     end;
-  SysLg('ParceEMSC: Парсинг завершен');
+  SysLg('ParceEMSC: РџР°СЂСЃРёРЅРі Р·Р°РІРµСЂС€РµРЅ');
 end;
 
 procedure TMF.Parse_EMSD;
   var i: integer;
       Line,SelLine: string;      // SearchLine: string;   EMSD_FileSize: cardinal;
-      // i_latmap,i_lonmap: integer;   // Цифровое  значение координат карты
-      // s_latmap,s_lonmap: string;    // Строковое значение координат карты
+      // i_latmap,i_lonmap: integer;   // Р¦РёС„СЂРѕРІРѕРµ  Р·РЅР°С‡РµРЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РєР°СЂС‚С‹
+      // s_latmap,s_lonmap: string;    // РЎС‚СЂРѕРєРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ РєРѕРѕСЂРґРёРЅР°С‚ РєР°СЂС‚С‹
   const map='MAP  ';
-    FileURL: string = 'http://ts.emsd.ru/cgi-bin/eq-cgi.txt';   // alloy: string = ('1234567890. ');
+//    FileURL: string = 'http://ts.emsd.ru/cgi-bin/eq-cgi.txt';   // alloy: string = ('1234567890. ');
 begin
-  SysLg('ParceEMSD: Приступаем к парсингу');
+  SysLg('ParceEMSD: РџСЂРёСЃС‚СѓРїР°РµРј Рє РїР°СЂСЃРёРЅРіСѓ');
 
   EMSD.List.Clear;
   if (Refresh.Tag = 1) or (not FileExists(EMSD.TempFile)) then
-      DownloadFile(FileURL, EMSD.TempFile);
+      DownloadFile(EMSD.URLFile, EMSD.TempFile);
 
   if FileExists(EMSD.TempFile) then EMSD.List.LoadFromFile(EMSD.TempFile) else exit;
 
-  SelLine := EQListEmsd.SelectedItem;  //  Сохраняем выделение строки после Обновления
+  SelLine := EQListEmsd.SelectedItem;  //  РЎРѕС…СЂР°РЅСЏРµРј РІС‹РґРµР»РµРЅРёРµ СЃС‚СЂРѕРєРё РїРѕСЃР»Рµ РћР±РЅРѕРІР»РµРЅРёСЏ
   EQListEmsd.Clear;
   EMSD.List.LoadFromFile(EMSD.TempFile);
   for i:=0 to EMSD.List.Count - 1 do
@@ -1857,7 +1948,7 @@ begin
           break;
         end;
     end;
-  SysLg('ParceEMSC: Парсинг завершен');
+  SysLg('ParceEMSC: РџР°СЂСЃРёРЅРі Р·Р°РІРµСЂС€РµРЅ');
 end;
 
 procedure TMF.Parse_Japan;
@@ -1872,12 +1963,12 @@ procedure TMF.CheckCSV;
     Buffer: array[1..160] of Byte;
     BufferLen: LongWord;
     f: File;
-    fr: File;  //  Файл для переименования
+    fr: File;  //  Р¤Р°Р№Р» РґР»СЏ РїРµСЂРµРёРјРµРЅРѕРІР°РЅРёСЏ
     fn1,fn2,FileName,bm: string;
     i: double;
-  const
+ (* const
     // FileURL: string = 'http://earthquake.usgs.gov/earthquakes/feed/csv/2.5/week';
-    FileURL: string = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.csv';
+    FileURL: string = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.csv';  *)
 begin
   fn1 := AppPath + 'opFile1';
   fn2 := AppPath + 'opFile2';
@@ -1885,7 +1976,7 @@ begin
 
 	hSession := InternetOpen(' msie 6'{STEROID Download'}, INTERNET_OPEN_TYPE_PRECONFIG, nil, nil, 0);
   if Assigned(hSession) then begin
-    hFile := InternetOpenURL(hSession, PChar(FileURL), nil, 0, INTERNET_FLAG_RELOAD, 0);
+    hFile := InternetOpenURL(hSession, PChar(USGS.URLFile), nil, 0, INTERNET_FLAG_RELOAD, 0);
     if Assigned(hFile) then begin
       AssignFile(f, FileName);
       Rewrite(f,1);
@@ -1897,7 +1988,7 @@ begin
     InternetCloseHandle(hSession);
   end;
   if (FileExists(fn1)) and (FileExists(fn2)) then
-    begin   //  Уведомляем о событии
+    begin   //  РЈРІРµРґРѕРјР»СЏРµРј Рѕ СЃРѕР±С‹С‚РёРё
       if not CompareFiles(fn1,fn2) then
         begin
         //  sndPlaySound('newemail.wav', SND_SYNC);
@@ -1933,9 +2024,9 @@ procedure TMF.bLoadClick(Sender: TObject);
       SEInfo: TShellExecuteInfo;
 begin
   if ChCreateDisplay.Checked then
-    begin  // Если создаем дисплей и Если дельта < 7 гр. корректируем SeedDate 
-   //  iRichDelta := StrToInt(RichDelta);   // Дельта с годографа
-                     // Дельта вычисленная
+    begin  // Р•СЃР»Рё СЃРѕР·РґР°РµРј РґРёСЃРїР»РµР№ Рё Р•СЃР»Рё РґРµР»СЊС‚Р° < 7 РіСЂ. РєРѕСЂСЂРµРєС‚РёСЂСѓРµРј SeedDate 
+   //  iRichDelta := StrToInt(RichDelta);   // Р”РµР»СЊС‚Р° СЃ РіРѕРґРѕРіСЂР°С„Р°
+                     // Р”РµР»СЊС‚Р° РІС‹С‡РёСЃР»РµРЅРЅР°СЏ
      iRichDelta := StrToFloat(TstFloat(DeltaPet(USGS.eqlat,USGS.eqlon)));
 
      SeedDate   := conDateTimeToSeedURL(USGS.eqdate);
@@ -1951,14 +2042,14 @@ begin
   seedURL  := SeedHttp + SeedDate+'?DATREQ='+IntTostr(SeedSec)+'M----------';
   seedFile := 'C:\Operator\'+SeedDate+GetWord(USGS.eqPlace,1)+'('+IntTostr(SeedSec)+'sec)';
   RzRegIniFile1.WriteString('Main','SeedHttp',SeedHttp);
-  //  tag для определения состояния
+  //  tag РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ СЃРѕСЃС‚РѕСЏРЅРёСЏ
   if bLoad.Tag = 0 then
    begin
     tmIdleUpdate.Enabled := False;
     chCreateDisplay.Enabled := False;
     ChOneFileCreateDisplay.Enabled := False;
-    bLoad.Caption := LoadStr(Lang+208); {'Прервать'}
-    bLoad.Tag := 1;  // Переходим в состояние "Загружается"
+    bLoad.Caption := GetStrl(208); {'РџСЂРµСЂРІР°С‚СЊ'}
+    bLoad.Tag := 1;  // РџРµСЂРµС…РѕРґРёРј РІ СЃРѕСЃС‚РѕСЏРЅРёРµ "Р—Р°РіСЂСѓР¶Р°РµС‚СЃСЏ"
     LoadSeed.SeedURL := SeedURL;
     LoadSeed.SeedFile := SeedFile;
     LoadSeed.SeedSeconds := SeedSec;
@@ -1971,7 +2062,7 @@ begin
           DisplayPath := ExtractFilePath(_disparam);
           // ShellExecute(handle, 'open', PChar(AppPath+'display\dosort.exe'),PChar(SeedFile+' '+_disparam),nil,SW_SHOW);
           if not ShellExecuteWait(AppPath+'display\dosort.exe', SeedFile+' '+_disparam, '', SW_SHOW) then
-            ShowMessage(LoadStr(Lang+206){'Создание тренировочного дисплея отменено'})
+            ShowMessage(GetStrl(206){'РЎРѕР·РґР°РЅРёРµ С‚СЂРµРЅРёСЂРѕРІРѕС‡РЅРѕРіРѕ РґРёСЃРїР»РµСЏ РѕС‚РјРµРЅРµРЅРѕ'})
           else
           if ChOneFileCreateDisplay.Checked then begin
             //  "c:\program files\winrar\winrar.exe" a -sfx -iicon"c:\dimas\japan\d1.ico" c:\dimas\japan\test.exe "c:\dimas\japan\dsp" -z"c:\dimas\japan\desc.a" -ep
@@ -1981,7 +2072,7 @@ begin
           end;
         end;
         Sleep(10);
-        ShowMessage(LoadStr(Lang+209){'Файл загружен:'}+#13#10+SeedFile);
+        ShowMessage(GetStrl(209){'Р¤Р°Р№Р» Р·Р°РіСЂСѓР¶РµРЅ:'}+#13#10+SeedFile);
         SeedOpen.Visible := True;
       end;
     bLoad.Tag := 1;
@@ -1991,7 +2082,7 @@ begin
    begin
     chCreateDisplay.Enabled := True;
     ChOneFileCreateDisplay.Enabled := True;
-    bLoad.Caption := LoadStr(Lang+210);{'Закрыть'}
+    bLoad.Caption := GetStrl(210);{'Р—Р°РєСЂС‹С‚СЊ'}
     LoadSeed.Abort;
     bLoad.Tag := 2;
     if FileExists(AppPath+'data\cache\sfxdescr.tmp') then DeleteFile(AppPath+'data\cache\sfxdescr.tmp');
@@ -2002,7 +2093,7 @@ begin
    begin
     chCreateDisplay.Enabled := True;
     ChOneFileCreateDisplay.Enabled := True;
-    bLoad.Caption := LoadStr(Lang+211);{'Загрузить'}
+    bLoad.Caption := GetStrl(211);{'Р—Р°РіСЂСѓР·РёС‚СЊ'}
     seedURL := '';
     seedFile := '';
     bLoad.Tag := 0;
@@ -2020,7 +2111,7 @@ begin
 end;
 
 
-procedure TMF.CreateDisplay(diskfile: string);  // Создаем ДИСПЛЕЙ
+procedure TMF.CreateDisplay(diskfile: string);  // РЎРѕР·РґР°РµРј Р”РРЎРџР›Р•Р™
   const
       Displays: array[1..4] of string = ('ACCSEL', 'KPH', 'SLABII', 'WORLD');
       DIMAS   : string = 'C:\DIMAS\';
@@ -2047,14 +2138,14 @@ begin
   desc1:= usgs.eqdate+': ['+usgs.eqlat+' '+usgs.eqlon+'] '+'M='+usgs.bmag+' '+usgs.eqdep+'km';
   desc2:= '';
   s_skeepblock:='2500';
-  if InputQuery(LoadStr(Lang+201){'Ввод значения'}, LoadStr(Lang+202) {'Имя дисплея:'}, mutex) then
-    if InputQuery(LoadStr(Lang+203){'Строка 1/2'}, LoadStr(Lang+205){'Описание события:'},desc1) then
-      if InputQuery(LoadStr(Lang+204){'Строка 2/2'}, LoadStr(Lang+205){'Описание события:'}, desc2) then
-        if InputQuery(LoadStr(Lang+201){'Ввод значения'}, 'SkeepBlock:', s_skeepblock) then OkDisplay := True;
+  if InputQuery(GetStrl(201){'Р’РІРѕРґ Р·РЅР°С‡РµРЅРёСЏ'}, GetStrl(202) {'РРјСЏ РґРёСЃРїР»РµСЏ:'}, mutex) then
+    if InputQuery(GetStrl(203){'РЎС‚СЂРѕРєР° 1/2'}, GetStrl(205){'РћРїРёСЃР°РЅРёРµ СЃРѕР±С‹С‚РёСЏ:'},desc1) then
+      if InputQuery(GetStrl(204){'РЎС‚СЂРѕРєР° 2/2'}, GetStrl(205){'РћРїРёСЃР°РЅРёРµ СЃРѕР±С‹С‚РёСЏ:'}, desc2) then
+        if InputQuery(GetStrl(201){'Р’РІРѕРґ Р·РЅР°С‡РµРЅРёСЏ'}, 'SkeepBlock:', s_skeepblock) then OkDisplay := True;
   mutex:= mutex+'\';
   if not OkDisplay then
     begin
-      ShowMessage(LoadStr(Lang+206){'Создание тренировочного дисплея отменено'});
+      ShowMessage(GetStrl(206){'РЎРѕР·РґР°РЅРёРµ С‚СЂРµРЅРёСЂРѕРІРѕС‡РЅРѕРіРѕ РґРёСЃРїР»РµСЏ РѕС‚РјРµРЅРµРЅРѕ'});
       Exit;
     end;
 
@@ -2094,7 +2185,7 @@ if not Ch3CreateDisplay.Checked then begin
           ion.Add('TempMode');
           ion.Add('Overwrite=1');
           ion.Add('Title='+desc1);
-          ion.Add('License='+LoadStr(Lang+224)+' ---== '+mutex+' ==---');
+          ion.Add('License='+GetStrl(224)+' ---== '+mutex+' ==---');
           ion.Add('{'+#13#10+desc1+#13#10+'}');
         end;
         ion.SaveToFile(AppPath+'data\cache\sfxdescr.tmp');
@@ -2105,7 +2196,7 @@ if not Ch3CreateDisplay.Checked then begin
      except
       //
     end;
-  end else begin   //  Нужно создать 3 дисплея.
+  end else begin   //  РќСѓР¶РЅРѕ СЃРѕР·РґР°С‚СЊ 3 РґРёСЃРїР»РµСЏ.
     copyfile(PChar(AppPath+'display\event.wav'),     PChar(DIMAS+mutex+'event.wav'),     False);
     bat := TStringList.Create;
     bat.Add('@echo off');
@@ -2186,7 +2277,7 @@ procedure TMF.FormActivate(Sender: TObject);
 begin
 if (ChartWnd.Visible = True) or (DescWnd.Visible = True) then exit;
 
-  SysLg('FormActivate: Активация формы');
+  SysLg('FormActivate: РђРєС‚РёРІР°С†РёСЏ С„РѕСЂРјС‹');
   Parse_Emsc_2;  // Parse_Emsc;
   Parse_Emsd;
   //Refresh.Tag := 1;
@@ -2230,14 +2321,14 @@ end;
 procedure TMF.RzEQListClick(Sender: TObject);
   var SelLine, i: integer;
 begin
-  RzEQList.Refresh; // Для обновления цвета
+  RzEQList.Refresh; // Р”Р»СЏ РѕР±РЅРѕРІР»РµРЅРёСЏ С†РІРµС‚Р°
   if pos('//',RzEQList.SelectedItem) = 1 then exit;
   if RzEQList.Tag = 1 then exit else RzEQList.Tag := 1;
 
   if eqList.Count < 1 then exit;
 
 //v1  Screen.Cursor := crHourGlass;
-  StatusBar.SimpleText := LoadStr(Lang+207);  {'Обновляю.'}
+  StatusBar.SimpleText := GetStrl(207);  {'РћР±РЅРѕРІР»СЏСЋ.'}
 
   for i:=0 to RzEQList.Count - 1 do begin
       if RzEQList.Selected[i] = true then SelLine := i;
@@ -2247,12 +2338,12 @@ begin
 
   if eqList.Count > 1 then
     begin
-      USGS.eqlat := GetWord(eqList.Strings[SelLine],4);
-      USGS.eqlon := GetWord(eqList.Strings[SelLine],5);
-      USGS.eqdep := GetWord(eqList.Strings[SelLine],6);
-      USGS.eqtim := GetWord(eqList.Strings[SelLine],3);
+      USGS.eqlat  := GetWord(eqList.Strings[SelLine],4);
+      USGS.eqlon  := GetWord(eqList.Strings[SelLine],5);
+      USGS.eqdep  := GetWord(eqList.Strings[SelLine],6);
+      USGS.eqtim  := GetWord(eqList.Strings[SelLine],3);
       USGS.eqdate := GetWord(RzEQList.Items.Strings[SelLine],4) + ' ' + GetWord(RzEQList.Items.Strings[SelLine],5);
-      USGS.bmag  := GetWord(eqList.Strings[SelLine],2);
+      USGS.bmag   := GetWord(eqList.Strings[SelLine],2);
       USGS.eqPlace := GetWord(eqList.Strings[SelLine],7) + ' ' + GetWord(eqList.Strings[SelLine],8) + ' ' + GetWord(eqList.Strings[SelLine],9);
     end;
  Application.HintPause := 10;
@@ -2272,8 +2363,8 @@ begin
                 'LAT='+USGS.eqlat+'   LON='+USGS.eqlon + #13#10 +
                 'H = '+USGS.eqdep;
   Edit1.Text := Url;
-  StatusBar.SimpleText := LoadStr(Lang+207)+'.'; {'Обновляю..';}
-  //v1 Button1Click(MF.RzEQList);  Старое заполнение RichEdit1
+  StatusBar.SimpleText := GetStrl(207)+'.'; {'РћР±РЅРѕРІР»СЏСЋ..';}
+  //v1 Button1Click(MF.RzEQList);  РЎС‚Р°СЂРѕРµ Р·Р°РїРѕР»РЅРµРЅРёРµ RichEdit1
   RichEdit1.Lines.BeginUpdate;
   Button2Click(MF.RzEQList);
   RichColorize(RichEdit1, clGrayText, clRed, clBlue);
@@ -2290,12 +2381,12 @@ begin
   ShowMap(mf.RzEQList);
   Edit7.Text := GetDescription(EQmaps[SelLine]);
 
-  DepthTrack.Tag := StrToInt(FloatToStr(RoundEx(StrToFloat(TstFloat(usgs.eqdep)),0)));  // глубина usgs.eqdep
+  DepthTrack.Tag := StrToInt(FloatToStr(RoundEx(StrToFloat(TstFloat(usgs.eqdep)),0)));  // РіР»СѓР±РёРЅР° usgs.eqdep
   DepthTrack.SelStart := DepthTrack.Tag - 3;
   DepthTrack.SelEnd   := DepthTrack.Tag + 4;
-  SelDepth := False;    // Не пересчитываем дельту с глубиной для нового элемента
+  SelDepth := False;    // РќРµ РїРµСЂРµСЃС‡РёС‚С‹РІР°РµРј РґРµР»СЊС‚Сѓ СЃ РіР»СѓР±РёРЅРѕР№ РґР»СЏ РЅРѕРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р°
   if DescWnd.Visible = True then DescWnd.LoadInfo(usgs.eqlat,usgs.eqlon,usgs.eqdep);
-//  Время в очаге
+//  Р’СЂРµРјСЏ РІ РѕС‡Р°РіРµ
   StaticText3.Visible := True;
   RzpTime.Visible := False;
   TimeSec := 0;
@@ -2316,7 +2407,7 @@ end;
 procedure TMF.Image1MouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
 begin
   ReleaseCapture;
-  {а если сюда написать Form1, то можно таскать форму по экрану}
+  {Р° РµСЃР»Рё СЃСЋРґР° РЅР°РїРёСЃР°С‚СЊ Form1, С‚Рѕ РјРѕР¶РЅРѕ С‚Р°СЃРєР°С‚СЊ С„РѕСЂРјСѓ РїРѕ СЌРєСЂР°РЅСѓ}
   Panel1.Perform(WM_SYSCOMMAND, $F012, 0);
   Image1.Tag := 1;
   //MouseDownPoint.X := x;
@@ -2348,9 +2439,9 @@ begin   Edit2.Font.Color := clInfoText;   end;
 procedure TMF.Edit2Enter(Sender: TObject);
 begin   Edit2.Font.Color := clInfoText;   end;    }
 procedure TMF.Edit6Enter(Sender: TObject);
-begin   if Edit6.Text = LoadStr(Lang+73){'Вычислить дельту...'} then Edit6.Text := ''; end;
+begin   if Edit6.Text = GetStrl(73){'Р’С‹С‡РёСЃР»РёС‚СЊ РґРµР»СЊС‚Сѓ...'} then Edit6.Text := ''; end;
 procedure TMF.Edit6Exit(Sender: TObject);
-begin   if Edit6.Text = '' then Edit6.Text := LoadStr(Lang+73){'Вычислить дельту...'}; end;
+begin   if Edit6.Text = '' then Edit6.Text := GetStrl(73){'Р’С‹С‡РёСЃР»РёС‚СЊ РґРµР»СЊС‚Сѓ...'}; end;
 
 
 
@@ -2393,7 +2484,7 @@ procedure TMF.Edit6Change(Sender: TObject);
       b9,b12: extended;
 	  dLat,dLon: string;  
 begin
-  if Edit6.Text = LoadStr(Lang+73){'Вычислить дельту...'} then exit;
+  if Edit6.Text = GetStrl(73){'Р’С‹С‡РёСЃР»РёС‚СЊ РґРµР»СЊС‚Сѓ...'} then exit;
   if Edit6.Text = '777' then bAdmin.Visible := True else bAdmin.Visible := False;
   with Sender as TCustomEdit do
   begin
@@ -2511,18 +2602,24 @@ end;
 
 procedure TMF.CopyToClip(CopyLine: String);
 var
-  hg: THandle;
+ // hg: THandle;
   P: PChar;
 begin
-  hg:=GlobalAlloc(GMEM_DDESHARE or GMEM_MOVEABLE, Length(CopyLine)+1);
+  {hg:=GlobalAlloc(GMEM_DDESHARE or GMEM_MOVEABLE, Length(CopyLine)+1);
   P:=GlobalLock(hg);
   StrPCopy(P, CopyLine);
   GlobalUnlock(hg);
   OpenClipboard(Application.Handle);
-//  EmptyClipboard;
   SetClipboardData(CF_TEXT, hg);
   CloseClipboard;
-  GlobalFree(hg);
+  GlobalFree(hg);    }
+  ClipBoard.Open;
+  try
+    P  := PChar(CopyLine);
+    Clipboard.SetTextBuf(P);
+  finally
+    Clipboard.Close;
+  end;
 end;
 
 procedure TMF.OpEnableClick(Sender: TObject);
@@ -2562,13 +2659,13 @@ end;
 
 procedure TMF.ThreadListBegin(Sender: TObject);
 begin
-  SysLg('ParceUSGS: Приступаем к обновлению');
+  SysLg('ParceUSGS: РџСЂРёСЃС‚СѓРїР°РµРј Рє РѕР±РЅРѕРІР»РµРЅРёСЋ');
   cb1.Checked := True;
   if (Sender as TJvThread) = mf.ThreadIdleUpdate then TbNeic.ImageIndex := 6 else TbNeic.ImageIndex := 4;
 end;
 procedure TMF.ThreadEmsdBegin(Sender: TObject);
 begin
-  SysLg('ParceEMSD: Приступаем к парсингу');
+  SysLg('ParceEMSD: РџСЂРёСЃС‚СѓРїР°РµРј Рє РїР°СЂСЃРёРЅРіСѓ');
   cb3.Checked := True;
   TbEmsd.ImageIndex := 4;
 end;
@@ -2639,13 +2736,13 @@ end;
 procedure TMF.DownloadCCDClick(Sender: TObject);
 begin
   if Richedit1.Lines.Count < 2 then begin
-    ShowMessage(LoadStr(Lang+212));{'Необходимо обновить годограф.'}    //,mtInformation,[mbOK],0);
+    ShowMessage(GetStrl(212));{'РќРµРѕР±С…РѕРґРёРјРѕ РѕР±РЅРѕРІРёС‚СЊ РіРѕРґРѕРіСЂР°С„.'}    //,mtInformation,[mbOK],0);
     Exit;
   end;
 
   if RzP.Visible = True then
     begin
-   //   ShowMessage('Диалоговое окно загрузки файла уже открыто.');     // MessageDlg('Диалоговое окно загрузки файла уже',mtInformation,[mbOK],0);
+   //   ShowMessage('Р”РёР°Р»РѕРіРѕРІРѕРµ РѕРєРЅРѕ Р·Р°РіСЂСѓР·РєРё С„Р°Р№Р»Р° СѓР¶Рµ РѕС‚РєСЂС‹С‚Рѕ.');     // MessageDlg('Р”РёР°Р»РѕРіРѕРІРѕРµ РѕРєРЅРѕ Р·Р°РіСЂСѓР·РєРё С„Р°Р№Р»Р° СѓР¶Рµ',mtInformation,[mbOK],0);
       Exit;
     end else RzP.Visible := True;
 
@@ -2676,7 +2773,7 @@ begin
       if dotpos = 0 then begin
           SeedSec := 1000;
           SeedLab.Caption := IntToStr(SeedSec div 60);
-          ShowMessage(LoadStr(Lang+213));{'Не удалось определить длительность события.'}
+          ShowMessage(GetStrl(213));{'РќРµ СѓРґР°Р»РѕСЃСЊ РѕРїСЂРµРґРµР»РёС‚СЊ РґР»РёС‚РµР»СЊРЅРѕСЃС‚СЊ СЃРѕР±С‹С‚РёСЏ.'}
         //  Exit;
         end else begin
       i:=0;
@@ -2695,7 +2792,7 @@ end;
 
 procedure TMF.SpeedButton2Click(Sender: TObject);
 begin
-  bLoad.Caption := LoadStr(Lang+211); {'Загрузить'}
+  bLoad.Caption := GetStrl(211); {'Р—Р°РіСЂСѓР·РёС‚СЊ'}
   bLoad.Tag := 0;
   rzp.Visible := False;
 end;
@@ -2706,11 +2803,11 @@ begin
     begin
       SeedLab.Tag := 1;
       SeedLab.Caption := IntToStr(SeedSec);
-      Label7.Caption := LoadStr(Lang+214);{'сек.'}
+      Label7.Caption := GetStrl(214);{'СЃРµРє.'}
      end else begin
       SeedLab.Tag := 0;
       SeedLab.Caption := IntToStr(SeedSec div 60);
-      Label7.Caption := LoadStr(Lang+215);{'мин.'}
+      Label7.Caption := GetStrl(215);{'РјРёРЅ.'}
     end;
 end;
 
@@ -2741,7 +2838,7 @@ const
   SC_DRAGMOVE = $F012;
 begin
   ReleaseCapture;
-  {а если сюда написать Form1, то можно таскать форму по экрану}
+  {Р° РµСЃР»Рё СЃСЋРґР° РЅР°РїРёСЃР°С‚СЊ Form1, С‚Рѕ РјРѕР¶РЅРѕ С‚Р°СЃРєР°С‚СЊ С„РѕСЂРјСѓ РїРѕ СЌРєСЂР°РЅСѓ}
   GroupBox1.Perform(WM_SYSCOMMAND, SC_DRAGMOVE, 0);
 end;
 
@@ -2750,6 +2847,7 @@ var
   TextOffset: Integer;     ts: array[0..1] of Integer;
   bmag: string;
 begin
+  if (RzEQList.Count < 1) or (RzEQList.Count = 4) then exit;
   bmag  := GetWord(RzEQList.Items[Index],3);
   RzEQList.Canvas.FillRect( Rect );   { Clear area for icon and text }
   TextOffset := ( RzEQList.ItemHeight - RzEQList.Canvas.TextHeight( 'Pp' ) ) div 2;
@@ -2809,22 +2907,22 @@ end;
 
 procedure TMF.Button2Click(Sender: TObject);
   var 
-      WavesPath: string;                  { Путь к таблицам волн }
-      WaveList: TStringList;              { Список "разрешенных" волн. Файл 'incfile.scm' }
-      M: Array of array of double;        { Динамический Массив для текущего файла из списка WaveList }
-      sl, sv, MText: TStringList;         { Формирование массива }
-      ds: string;                         { Формирование массива }
+      WavesPath: string;                  { РџСѓС‚СЊ Рє С‚Р°Р±Р»РёС†Р°Рј РІРѕР»РЅ }
+      WaveList: TStringList;              { РЎРїРёСЃРѕРє "СЂР°Р·СЂРµС€РµРЅРЅС‹С…" РІРѕР»РЅ. Р¤Р°Р№Р» 'incfile.scm' }
+      M: Array of array of double;        { Р”РёРЅР°РјРёС‡РµСЃРєРёР№ РњР°СЃСЃРёРІ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ С„Р°Р№Р»Р° РёР· СЃРїРёСЃРєР° WaveList }
+      sl, sv, MText: TStringList;         { Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР° }
+      ds: string;                         { Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РјР°СЃСЃРёРІР° }
       i,j, x1,x2, y1,y2, x,y,n: integer;  
-      Tx,Tx1,Tx2: double;                 { Расчетное,итоговое(Tx) и промежуточные(Tx1,Tx2) времена }
-      n1,n2,n3  : double;                 { Вычисление Tx -ов }
+      Tx,Tx1,Tx2: double;                 { Р Р°СЃС‡РµС‚РЅРѕРµ,РёС‚РѕРіРѕРІРѕРµ(Tx) Рё РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅС‹Рµ(Tx1,Tx2) РІСЂРµРјРµРЅР° }
+      n1,n2,n3  : double;                 { Р’С‹С‡РёСЃР»РµРЅРёРµ Tx -РѕРІ }
       Xitem, Yitem: double;               { Xitem == Depth, Yitem == Delta }
-      Delta, depth: double;               { Дельта, Глубина }
-      eqLat, eqLon: double;               { Координаты }
-      eqTim: string;                      { Время от очага }
-      WvList: TStringList;                { Список волн только с данными (сек > 0) ---> Вывод данных }
-      EQTime: TDateTime;                  { Время в очаге }
-  // сортировка
-      TxList: TStringList;                { Список Tx, синхронный WvList }
+      Delta, depth: double;               { Р”РµР»СЊС‚Р°, Р“Р»СѓР±РёРЅР° }
+      eqLat, eqLon: double;               { РљРѕРѕСЂРґРёРЅР°С‚С‹ }
+      eqTim: string;                      { Р’СЂРµРјСЏ РѕС‚ РѕС‡Р°РіР° }
+      WvList: TStringList;                { РЎРїРёСЃРѕРє РІРѕР»РЅ С‚РѕР»СЊРєРѕ СЃ РґР°РЅРЅС‹РјРё (СЃРµРє > 0) ---> Р’С‹РІРѕРґ РґР°РЅРЅС‹С… }
+      EQTime: TDateTime;                  { Р’СЂРµРјСЏ РІ РѕС‡Р°РіРµ }
+  // СЃРѕСЂС‚РёСЂРѕРІРєР°
+      TxList: TStringList;                { РЎРїРёСЃРѕРє Tx, СЃРёРЅС…СЂРѕРЅРЅС‹Р№ WvList }
       si,sj,smin: integer;
       sbuf1,sbuf2: string;
       bufTx: double;
@@ -2832,7 +2930,7 @@ procedure TMF.Button2Click(Sender: TObject);
       //soMi,soRes: string;
   const incfile: string = 'inclist.scm';
 begin
-  if Sender = MF.RzEQList then           // Вводим параметры для годографа (координаты, глубина, время)
+  if Sender = MF.RzEQList then           // Р’РІРѕРґРёРј РїР°СЂР°РјРµС‚СЂС‹ РґР»СЏ РіРѕРґРѕРіСЂР°С„Р° (РєРѕРѕСЂРґРёРЅР°С‚С‹, РіР»СѓР±РёРЅР°, РІСЂРµРјСЏ)
     begin
       eqLat := StrToFloat(TstFloat(usgs.eqlat));
       eqLon := StrToFloat(TstFloat(usgs.eqlon));
@@ -2860,8 +2958,9 @@ begin
            Delta := DeltaABF(eqLat,eqLon,StrToFloat(StLat(RzStationBox.Value)),StrToFloat(StLon(RzStationBox.Value)));
       eqTim := emsd.eqtim;
     end;
-
+  if length(eqTim) < 6 then Exit;
   RichEdit1.Clear;
+
   WavesPath := AppPath+'wvs\' + GdgName + '\';
   if depth < 0 then
     begin
@@ -2878,7 +2977,7 @@ begin
     end;
 
   WaveList := TStringList.Create;
-  WaveList.LoadFromFile(WavesPath + incfile);  { Заполняем список "разрешенных" волн с файла incfile }
+  WaveList.LoadFromFile(WavesPath + incfile);  { Р—Р°РїРѕР»РЅСЏРµРј СЃРїРёСЃРѕРє "СЂР°Р·СЂРµС€РµРЅРЅС‹С…" РІРѕР»РЅ СЃ С„Р°Р№Р»Р° incfile }
   if (WaveList.Count < 1) or (Delta = -1) then
     begin
       RichEdit1.Lines.Add('No waves list found. Or check Delta ('+FloatToStr(Delta)+')');
@@ -2887,18 +2986,18 @@ begin
     end;
   TxList  := TStringList.Create;  WvList  := TStringList.Create;
   sl      := TStringList.Create;  sv      := TStringList.Create;
-  MText   := TStringList.Create;  //  Создаем списки для работы
+  MText   := TStringList.Create;  //  РЎРѕР·РґР°РµРј СЃРїРёСЃРєРё РґР»СЏ СЂР°Р±РѕС‚С‹
 
   RichEdit1.Lines.Add(' Delta '+RzStationBox.Items.Strings[RzStationBox.ItemIndex]+#13' (deg)'#13+FloatToStr(RoundEx(Delta,3)));
   RichEdit1.Lines.Add('              travel   arrival time');
   RichEdit1.Lines.Add('  #  code     time(s)  hr mn sec');
-  // время ( '110051' --> '11:00:51' )
+  // РІСЂРµРјСЏ ( '110051' --> '11:00:51' )
   EQTime := StrToTime( copy(eqTim,1,2)+':' + copy(eqTim,3,2)+':' + copy(eqTim,5,2) );
   for n := 0 to WaveList.Count -1 do
     begin
       if FileExists(WavesPath+WaveList.Strings[n]+'.scm')
-           and (GetFileSize(WavesPath+WaveList.Strings[n]+'.scm') > 20) then begin    //  Если файл из списка разрешенных
-{ ### ФОРМИРУЕМ МАССИВ ИЗ ФАЙЛА ### --->> }                             //  нашелся --> обрабатываем его.
+           and (GetFileSize(WavesPath+WaveList.Strings[n]+'.scm') > 20) then begin    //  Р•СЃР»Рё С„Р°Р№Р» РёР· СЃРїРёСЃРєР° СЂР°Р·СЂРµС€РµРЅРЅС‹С…
+{ ### Р¤РћР РњРР РЈР•Рњ РњРђРЎРЎРР’ РР— Р¤РђР™Р›Рђ ### --->> }                             //  РЅР°С€РµР»СЃСЏ --> РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј РµРіРѕ.
         sl.Clear;                                                       
 		    sv.Clear;
 		    MText.Clear;
@@ -2924,8 +3023,8 @@ begin
                   M[i,j] := -1;
                 end;
               end;
-          end;  { <<--- ### МАССИВ ГОТОВ ### }
-        
+          end;  { <<--- ### РњРђРЎРЎРР’ Р“РћРўРћР’ ### }
+
      Xitem := Depth;
      x1:=0; x2:=0;
      x :=-1;
@@ -2974,7 +3073,7 @@ begin
         if y <> -1 then Edit4.Text := FloatToStr(y) else
         if y1 = 0 then Edit4.Text := '-1' else Edit4.Text := FloatToStr(M[y1,0])+' x '+ FloatToStr(M[y2,0]);
 
-        if (y = -1) and (x <> -1) then   //  x в таблице,   y не в таблице
+        if (y = -1) and (x <> -1) then   //  x РІ С‚Р°Р±Р»РёС†Рµ,   y РЅРµ РІ С‚Р°Р±Р»РёС†Рµ
           begin
             if (y1 = 0) or (y2 > slRow-1)
               or (M[y1,x] = -1) or (M[y2,x] = -1) then Tx:=-1
@@ -2985,9 +3084,9 @@ begin
               Tx := (n1*n2*n3)+M[y1,x];
             end;
           end;
-        if (y <> -1) and (x <> -1) then Tx := M[y,x]; //  x,y в таблице
+        if (y <> -1) and (x <> -1) then Tx := M[y,x]; //  x,y РІ С‚Р°Р±Р»РёС†Рµ
 
-        if (y= -1) and (x= -1) then   //  x,y не в таблице
+        if (y= -1) and (x= -1) then   //  x,y РЅРµ РІ С‚Р°Р±Р»РёС†Рµ
           begin
             if (x1 = 0) or (x2 > svCol-1) or (y1 = 0) or (y2 > slRow-1)
               or (M[y1,x1]=-1) or (M[y2,x1]=-1) or (M[y1,x2]=-1) or (M[y2,x2]=-1) then Tx:=-1
@@ -3006,7 +3105,7 @@ begin
              Tx := (n1*n2*n3)+Tx1;
             end;
           end;
-        if (y <> -1) and (x= -1) then   //  x не в таблице,   y в таблице
+        if (y <> -1) and (x= -1) then   //  x РЅРµ РІ С‚Р°Р±Р»РёС†Рµ,   y РІ С‚Р°Р±Р»РёС†Рµ
           begin
             if (x1 = 0) or (x2 > svCol-1)
               or (M[y,x1]=-1) or (M[y,x2]=-1) then Tx:=-1
@@ -3027,7 +3126,7 @@ begin
     end;  // END: for n := 0
 
   for si:=0 to TxList.Count -2 do
-    begin      { # СОРТИРОВКА СПИСКОВ # }
+    begin      { # РЎРћР РўРР РћР’РљРђ РЎРџРРЎРљРћР’ # }
       smin := si;
       for sj:=si+1 to TxList.Count -1 do
         if StrToFloat(TstFloat(TxList.Strings[sj])) < StrToFloat(TstFloat(TxList.Strings[smin])) then smin:=sj;
@@ -3037,11 +3136,11 @@ begin
       sbuf2 := WvList.Strings[si];
       WvList.Strings[si] := WvList.Strings[smin];
       WvList.Strings[smin] := sbuf2;
-    end;  { # СОРТИРОВКА ЗАКОНЧЕНА # }
- setlength(chArray,0);   setlength(chArray,181{WvList.Count});  // Массив для графика
+    end;  { # РЎРћР РўРР РћР’РљРђ Р—РђРљРћРќР§Р•РќРђ # }
+ setlength(chArray,0);   setlength(chArray,181{WvList.Count});  // РњР°СЃСЃРёРІ РґР»СЏ РіСЂР°С„РёРєР°
 
   for si:=0 to WvList.Count -1 do
-    begin      { ### ЗАПОЛНЕНИЕ СПИСКА ВЫВОДА ###  + Дополнение пробелами }
+    begin      { ### Р—РђРџРћР›РќР•РќРР• РЎРџРРЎРљРђ Р’Р«Р’РћР”Рђ ###  + Р”РѕРїРѕР»РЅРµРЅРёРµ РїСЂРѕР±РµР»Р°РјРё }
       bufTx   := StrToFloat(TstFloat(TxList.Strings[si]));
       bufTime := TimeToStr(IncSecond(EQTime, StrToInt(FloatToStr(RoundEx(bufTx,0)))));
       bufTime := '   ' + StringReplace(bufTime,TimeSeparator,' ',[rfReplaceAll]);
@@ -3050,10 +3149,10 @@ begin
       bufNum  := PADL(IntToStr(si+1),3);
       WvList.Strings[si] := bufNum + bufWv + bufTxSt + bufTime;
       chArray[si] := bufTx;
-    end;      { ### КОНЕЦ ЗАПОЛНЕНИЯ ### }
+    end;      { ### РљРћРќР•Р¦ Р—РђРџРћР›РќР•РќРРЇ ### }
   //<< ----  NON DEBUG  ---->>
   if chChartShow.Checked then PlotChar(Depth,EQTime);
-    // bChart.Click;        // Рисуем график годографа
+    // bChart.Click;        // Р РёСЃСѓРµРј РіСЂР°С„РёРє РіРѕРґРѕРіСЂР°С„Р°
   RichEdit1.Lines.AddStrings(WvList.Create);
   TxList.Free;
   sl.Free;
@@ -3105,11 +3204,13 @@ begin    // Show / Hide Admin-Features
     Edit7.Visible := True;
     Panel2.Visible := True;
     GroupBox1.Visible := True;
+    MemoErrors.Visible := True;
     bAdmin.Tag := 1;
    end else begin
     Edit7.Visible := False;
     Panel2.Visible := False;
     GroupBox1.Visible := False;
+    MemoErrors.Visible := False;
     bAdmin.Tag := 0;
    end;
 end;
@@ -3117,7 +3218,7 @@ end;
 procedure TMF.EQListEmscClick(Sender: TObject);
   var SelLine: string;
 begin
-  EQListEmsc.Refresh; // Для обновления цвета
+  EQListEmsc.Refresh; // Р”Р»СЏ РѕР±РЅРѕРІР»РµРЅРёСЏ С†РІРµС‚Р°
   if pos('//',EQListEmsc.SelectedItem) = 1 then exit;
   if EQListEmsc.Count < 1 then exit;
   SelLine := EQListEmsc.SelectedItem;
@@ -3145,12 +3246,12 @@ begin
 
   RichColorize(RichEdit1, clGrayText, clRed, clBlue);
   RichEdit1.Lines.EndUpdate;
-  DepthTrack.Tag := StrToInt(FloatToStr(RoundEx(StrToFloat(TstFloat(emsc.eqdep)),0)));  // глубина emsc.eqdep
+  DepthTrack.Tag := StrToInt(FloatToStr(RoundEx(StrToFloat(TstFloat(emsc.eqdep)),0)));  // РіР»СѓР±РёРЅР° emsc.eqdep
   DepthTrack.SelStart := DepthTrack.Tag - 3;
   DepthTrack.SelEnd   := DepthTrack.Tag + 4;
   if DescWnd.Visible = True then DescWnd.LoadInfo(EMSC.eqlat,EMSC.eqlon,EMSC.eqdep);
   ShowMap(mf.EQListEmsc);
-//  Время в очаге
+//  Р’СЂРµРјСЏ РІ РѕС‡Р°РіРµ
   StaticText3.Visible := True;
   RzpTime.Visible := False;
   TimeSec := 0;
@@ -3170,13 +3271,13 @@ begin
   while pos('  ',SelLine) > 0 do SelLine:= StringReplace(SelLine, '  ', ' ', [rfReplaceAll]);
   while pos(' ',SelLine)  = 1 do delete(SelLine,1,1);      // Remove all spaces
   if length(SelLine) < 10 then exit;
-
-      EMSD.eqlat := GetWord(SelLine,3);
-      EMSD.eqlon := GetWord(SelLine,4);
-      EMSD.eqdep := GetWord(SelLine,5);
-      EMSD.eqtim := copy(GetWord(SelLine,2),1,2) + copy(GetWord(SelLine,2),4,2) + copy(GetWord(SelLine,2),7,2);
-      EMSD.eqdate := GetWord(SelLine,1) + ' ' + GetWord(SelLine,2);
-      EMSD.bmag  := GetWord(SelLine,6);
+      EMSD.operator := GetWord(SelLine,1);
+      EMSD.eqlat    := GetWord(SelLine,4);
+      EMSD.eqlon    := GetWord(SelLine,5);
+      EMSD.eqdep    := GetWord(SelLine,6);
+      EMSD.eqtim    := copy(GetWord(SelLine,3),1,2) + copy(GetWord(SelLine,3),4,2) + copy(GetWord(SelLine,3),7,2);
+      EMSD.eqdate   := GetWord(SelLine,2) + ' ' + GetWord(SelLine,3);
+      EMSD.bmag     := GetWord(SelLine,7);
 
    RichEdit1.Lines.BeginUpdate;
    Button2Click(MF.EQListEmsd);   // Call Fill RichEdit (Time Travels)
@@ -3186,12 +3287,12 @@ begin
 
   RichColorize(RichEdit1, clGrayText, clRed, clBlue);
   RichEdit1.Lines.EndUpdate;
-  DepthTrack.Tag := StrToInt(FloatToStr(RoundEx(StrToFloat(TstFloat(emsd.eqdep)),0)));  // глубина emsd.eqdep
+  DepthTrack.Tag := StrToInt(FloatToStr(RoundEx(StrToFloat(TstFloat(emsd.eqdep)),0)));  // РіР»СѓР±РёРЅР° emsd.eqdep
   DepthTrack.SelStart := DepthTrack.Tag - 3;
   DepthTrack.SelEnd   := DepthTrack.Tag + 4;
   if DescWnd.Visible = True then DescWnd.LoadInfo(EMSD.eqlat,EMSD.eqlon,EMSD.eqdep);
   ShowMap(mf.EQListEmsd);
-//  Время в очаге
+//  Р’СЂРµРјСЏ РІ РѕС‡Р°РіРµ
   StaticText3.Visible := True;
   RzpTime.Visible := False;
   TimeSec := 0;
@@ -3282,12 +3383,12 @@ begin
   RichEdit1.Lines.EndUpdate;
 end;
 
-// Активируем выбранный элемент списка при переходе на вкладку
+// РђРєС‚РёРІРёСЂСѓРµРј РІС‹Р±СЂР°РЅРЅС‹Р№ СЌР»РµРјРµРЅС‚ СЃРїРёСЃРєР° РїСЂРё РїРµСЂРµС…РѕРґРµ РЅР° РІРєР»Р°РґРєСѓ
 procedure TMF.TbNeicShow(Sender: TObject); begin  if (rzeqlist.Count > 0)   and (rzeqlist.SelectedItem   <> '') then rzeqlistclick(mf);   end;
 procedure TMF.TbEmscShow(Sender: TObject); begin  if (EQListEmsc.Count > 0) and (EQListEmsc.SelectedItem <> '') then EQListEmscClick(mf); end;
 procedure TMF.TbEmsdShow(Sender: TObject); begin  if (EQListEmsd.Count > 0) and (EQListEmsd.SelectedItem <> '') then EQListEmsdClick(mf); end;
 
-// Кнопка "Печать"
+// РљРЅРѕРїРєР° "РџРµС‡Р°С‚СЊ"
 procedure TMF.BtnPrintClick(Sender: TObject); begin  RichEdit1.Print(''); end;
 
 procedure TMF.OpenSEISMOClick(Sender: TObject);
@@ -3311,41 +3412,67 @@ end;
 
 procedure TMF.RzFormState1SaveState(Sender: TObject);
 begin
+
   RzRegIniFile1.WriteString ('Seismo','PathToSeismoDir',SeisPath);
   RzRegIniFile1.WriteBool   ('Seismo','Show',      cbSeismo.Checked);
   RzRegIniFile1.WriteBool   ('Filter','Active',    cbFilter.Checked);
-  RzRegIniFile1.WriteString ('Main',  'Language',  sLang);
+
+  RzRegIniFile1.WriteString ('Main',  'Language',  LastLng);
+  RzRegIniFile1.WriteString ('Main',  'DefStation',DefStation);
   RzRegIniFile1.WriteBool   ('Neic',  'AutoUpdate',tmIdleUpdate.Enabled);
   RzRegIniFile1.WriteInteger('Neic',  'Everysec',  tmIdleUpdate.Interval div 1000);
   RzRegIniFile1.WriteInteger('Emsc',  'MaxDays',   SpinDays.Value);
+
+  RzRegIniFile1.WriteString ('URLs',  'Neic', USGS.URLFile);
+  RzRegIniFile1.WriteString ('URLs',  'Emsc', Emsc.URLFile);
+  RzRegIniFile1.WriteString ('URLs',  'Emsd', Emsd.URLFile);
+
   RzRegIniFile1.WriteString('Buttons','Dimas',      b1);
   RzRegIniFile1.WriteString('Buttons','DataAn',     b2);
   RzRegIniFile1.WriteString('Buttons','GET-PET-TS', b3);
   RzRegIniFile1.WriteString('Buttons','eReport',    b4);
   RzRegIniFile1.WriteString('Buttons','BULLPET',    b5);
   RzRegIniFile1.WriteString('Buttons','SEISMOPET',  b6);
+  // sLang := RzRegIniFile1.ReadString('Main','Language', 'TTP_RUS.LNG');
+  {[Values]}
+  ValuesSave;
+
 end;
 
 procedure TMF.RzFormState1RestoreState(Sender: TObject);
+  var LangPath: string;
 begin
-  SeisPath := RzRegIniFile1.ReadString('Seismo','PathToSeismoDir','\\Rioc3\rioc3\РАБОЧАЯ ПАПКА\СРОЧНОЕ\2015\');
+  SeisPath := RzRegIniFile1.ReadString('Seismo','PathToSeismoDir','\\Rioc3\rioc3\Р РђР‘РћР§РђРЇ РџРђРџРљРђ\РЎР РћР§РќРћР•\2016\');
+  leSeismoPath.Text := SeisPath;
   cbSeismo.Checked := RzRegIniFile1.ReadBool('Seismo','Show',True);
   cbFilter.Checked := RzRegIniFile1.ReadBool('Filter','Active',True);
   tmIdleUpdate.Interval := RzRegIniFile1.ReadInteger('Neic',  'Everysec',   60) * 1000;
   tmIdleUpdate.Enabled  := RzRegIniFile1.ReadBool   ('Neic',  'AutoUpdate', False);
   if tmIdleUpdate.Interval < 30000 then tmIdleUpdate.Interval := 30000;
   SpinDays.Value        := RzRegIniFile1.ReadInteger('Emsc',  'MaxDays', 2);
-  sLang := RzRegIniFile1.ReadString('Main','Language','RU');
+  sLang := RzRegIniFile1.ReadString('Main','Language', AppPath+'data\language\' + 'TTP_RUS.LNG');
+  LangPath := ExtractFilePath(sLang);
+  sLang := ExtractFileName(sLang);
   { [Buttons] }
   b1 := RzRegIniFile1.ReadString('Buttons','Dimas','C:\DIMAS\ANALYSE\dimas.exe');
   b2 := RzRegIniFile1.ReadString('Buttons','DataAn','C:\Operator\dataan.exe');
   b3 := RzRegIniFile1.ReadString('Buttons','GET-PET-TS','GET-PET-TS (Dataan).exe');
   b4 := RzRegIniFile1.ReadString('Buttons','eReport','C:\Operator\e-Report.exe');
-  b5 := RzRegIniFile1.ReadString('Buttons','BULLPET','\\Rioc3\rioc3\РАБОЧАЯ ПАПКА\ЕЖЕДНЕВНОЕ\2015\');
-  b6 := RzRegIniFile1.ReadString('Buttons','SEISMOPET','\\Rioc3\rioc3\РАБОЧАЯ ПАПКА\БЮЛЛЕТЕНЬ\Рабочая\2015\');
+  b5 := RzRegIniFile1.ReadString('Buttons','BULLPET','\\Rioc3\rioc3\Р РђР‘РћР§РђРЇ РџРђРџРљРђ\Р•Р–Р•Р”РќР•Р’РќРћР•\2016\');
+  b6 := RzRegIniFile1.ReadString('Buttons','SEISMOPET','\\Rioc3\rioc3\Р РђР‘РћР§РђРЇ РџРђРџРљРђ\Р‘Р®Р›Р›Р•РўР•РќР¬\Р Р°Р±РѕС‡Р°СЏ\2016\');
+  { [URLs] }
+  leNeic.Text := RzRegIniFile1.ReadString('URLs','Neic','http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.csv');
+  leEmsc.Text := RzRegIniFile1.ReadString('URLs','Emsc','http://www.emsc-csem.org/service/rss/rss.php?typ=emsc');
+  leEmsd.Text := RzRegIniFile1.ReadString('URLs','Emsd','http://ts.emsd.ru/cgi-bin/eq-cgi.txt');
+  USGS.URLFile := leNeic.Text;  Emsc.URLFile := leEmsc.Text;     Emsd.URLFile := leEmsd.Text;
+  {[Values]}
+  DefStation := RzRegIniFile1.ReadString('Main','DefStation','PET');
+  ValuesLoad;
   CurVersion := StaticText1.Caption;
   if sLang = 'EN' then Lang := 0;
   if sLang = 'RU' then Lang := 2000;
+  cbLang.ItemIndex := LoadLanguages(cbLang.Items, LangPath, sLang);
+  if cbLang.ItemIndex > -1 then SetLng(cbLang.ItemIndex);
   ChangeLanguage;
 end;
 
@@ -3365,124 +3492,193 @@ end;
 
 procedure TMF.ChangeLanguage;
 begin
-MF.Caption := LoadStr(Lang+0);
-CopyStringToClipboard.Caption  := LoadStr(Lang+1);
-CopyStringToClipboard1.Caption := LoadStr(Lang+1);
-DownloadCCD.Caption := LoadStr(Lang+2);
-OpenSEISMO.Caption := LoadStr(Lang+3);
-bLoad.Caption := LoadStr(Lang+4);
-Ch3CreateDisplay.Caption := LoadStr(Lang+5);
-ChCreateDisplay.Caption := LoadStr(Lang+6);
-ChCreateDisplay.Hint := LoadStr(Lang+7);
-EQInfo.Caption := LoadStr(Lang+8);
-l8.Caption := LoadStr(Lang+9);
-Label5.Caption := LoadStr(Lang+10);
-Label7.Caption := LoadStr(Lang+11);
-//SeedLab.Caption := LoadStr(Lang+12);
-SeedOpen.Caption := LoadStr(Lang+13);
-SpeedButton1.Caption := LoadStr(Lang+14);
-SpeedButton1.Hint := LoadStr(Lang+15);
-SpeedButton2.Caption := LoadStr(Lang+16);
-SpeedButton2.Hint := LoadStr(Lang+17);
-Label9.Caption := LoadStr(Lang+18);
-Label9.Hint := LoadStr(Lang+19);
-radDataan.Caption := LoadStr(Lang+20);
-radInternal.Caption := LoadStr(Lang+21);
-radUsgs.Caption := LoadStr(Lang+22);
-chChartShow.Caption := LoadStr(Lang+23);
-TbNeic.Caption := LoadStr(Lang+24);
-cbSeismo.Caption := LoadStr(Lang+25);
-cbSeismo.Hint := LoadStr(Lang+26);
-TbEmsc.Caption := LoadStr(Lang+27);
-Oop.Caption := LoadStr(Lang+28);
-OpEnable.Caption := LoadStr(Lang+29);
-gCount.Caption := LoadStr(Lang+30);
-Label4.Caption := LoadStr(Lang+31);
-Label6.Caption := LoadStr(Lang+32);
-Label3.Caption := LoadStr(Lang+33);
-TbEmsd.Caption := LoadStr(Lang+34);
-TbChart.Caption := LoadStr(Lang+35);
-bChartMF.Caption := LoadStr(Lang+36);
-TabSheet2.Caption := LoadStr(Lang+37);
-gbEmsc.Caption := LoadStr(Lang+38);
-gbEmsd.Caption := LoadStr(Lang+39);
-gbNeic.Caption := LoadStr(Lang+40);
-cbFilterNeic.Caption := LoadStr(Lang+41);
-Label11.Caption := LoadStr(Lang+42);
-Label12.Caption := LoadStr(Lang+43);
-Label10.Caption := LoadStr(Lang+44);
-TabSheet1.Caption := LoadStr(Lang+45);
-cbFilter.Caption := LoadStr(Lang+46);
-cbFilter.Hint := LoadStr(Lang+47);
-chkDepth.Caption := LoadStr(Lang+48);
-gdgLoad.Caption := LoadStr(Lang+49);
-StaticText1.Caption := LoadStr(Lang+50) + CurVersion;
-BtnHelp.Caption := LoadStr(Lang+51);
-BtnHelp.Hint := LoadStr(Lang+52);
-BtnPrint.Caption := LoadStr(Lang+53);
-BtnPrint.Hint := LoadStr(Lang+54);
-Edit6.Hint := LoadStr(Lang+55);
-// удалено ### Label2.Caption := LoadStr(Lang+56);    // " << -Выбор станции "
-Refresh.Caption := LoadStr(Lang+57);
-Refresh.Hint := LoadStr(Lang+58);
-RzExit.Caption := LoadStr(Lang+59);
-RzExit.Hint := LoadStr(Lang+60);     
-RzRefresh.Caption := LoadStr(Lang+61);
-RzRefresh.Hint := LoadStr(Lang+62);
-RzStationBox.Hint := LoadStr(Lang+63);
-RzToolButton2.Hint := LoadStr(Lang+64);
-ChartWnd.Caption := LoadStr(Lang+65);
-ChartWnd.Label1.Caption := LoadStr(Lang+66);
-ChartWnd.Label2.Caption := LoadStr(Lang+67);
-ChartWnd.Label3.Caption := LoadStr(Lang+68);
-ChartWnd.Label4.Caption := LoadStr(Lang+69);
-ChartWnd.Label5.Caption := LoadStr(Lang+70);
-ChartWnd.Label6.Caption := LoadStr(Lang+71);
-ChartWnd.Label7.Caption := LoadStr(Lang+72);
-Edit6.Text := LoadStr(Lang+73);
-StaticText2.Caption := LoadStr(Lang+74);
-OpenSEISMOPath.Caption := LoadStr(Lang+75);
-Label17.Caption := LoadStr(Lang+214);{'сек.'}
-StaticText3.Caption := LoadStr(Lang+80);
-BtnCom1.Caption := LoadStr(Lang+240);
-BtnCom2.Caption := LoadStr(Lang+241);
-BtnCom3.Caption := LoadStr(Lang+242);
-BtnCom4.Caption := LoadStr(Lang+243);
-BtnCom5.Caption := LoadStr(Lang+244);
-BtnCom6.Caption := LoadStr(Lang+245);
-BtnCom1.Hint    := LoadStr(Lang+320);
-BtnCom2.Hint    := LoadStr(Lang+321);
-BtnCom3.Hint    := LoadStr(Lang+322);
-BtnCom4.Hint    := LoadStr(Lang+323);
-BtnCom5.Hint    := LoadStr(Lang+324);
-BtnCom6.Hint    := LoadStr(Lang+325);
-ChOneFileCreateDisplay.Caption := LoadStr(Lang+225);
-ChOneFileCreateDisplay.Hint    := LoadStr(Lang+226);
-OpenPetDimas.Caption := LoadStr(Lang+328);
-RzToolbar1_Delta.Caption := LoadStr(Lang+336);
+MF.Caption := GetStrl(0);
+CopyStringToClipboard.Caption  := GetStrl(1);
+CopyStringToClipboard1.Caption  := GetStrl(1);
+DownloadCCD.Caption := GetStrl(Lang+2);
+OpenSEISMO.Caption := GetStrl(Lang+3);
+bLoad.Caption := GetStrl(4);
+Ch3CreateDisplay.Caption := GetStrl(Lang+5);
+ChCreateDisplay.Caption := GetStrl(Lang+6);
+ChCreateDisplay.Hint := GetStrl(Lang+7);
+EQInfo.Caption := GetStrl(Lang+8);
+l8.Caption := GetStrl(Lang+9);
+Label5.Caption := GetStrl(Lang+10);
+Label7.Caption := GetStrl(Lang+11);
+//SeedLab.Caption := GetStrl(12);
+SeedOpen.Caption := GetStrl(Lang+13);
+SpeedButton1.Caption := GetStrl(Lang+14);
+SpeedButton1.Hint := GetStrl(Lang+15);
+SpeedButton2.Caption := GetStrl(Lang+16);
+SpeedButton2.Hint := GetStrl(Lang+17);
+Label9.Caption := GetStrl(Lang+18);
+Label9.Hint := GetStrl(Lang+19);
+radDataan.Caption := GetStrl(Lang+20);
+radInternal.Caption := GetStrl(Lang+21);
+radUsgs.Caption := GetStrl(Lang+22);
+chChartShow.Caption := GetStrl(Lang+23);
+TbNeic.Caption := GetStrl(Lang+24);
+cbSeismo.Caption := GetStrl(Lang+25);
+cbSeismo.Hint := GetStrl(Lang+26);
+TbEmsc.Caption := GetStrl(Lang+27);
+Oop.Caption := GetStrl(Lang+28);
+OpEnable.Caption := GetStrl(Lang+29);
+gCount.Caption := GetStrl(Lang+30);
+Label4.Caption := GetStrl(Lang+31);
+Label6.Caption := GetStrl(Lang+32);
+Label3.Caption := GetStrl(Lang+33);
+TbEmsd.Caption := GetStrl(Lang+34);
+TbChart.Caption := GetStrl(Lang+35);
+bChartMF.Caption := GetStrl(Lang+36);
+TabSheet2.Caption := GetStrl(Lang+37);
+gbEmsc.Caption := GetStrl(Lang+38);
+gbEmsd.Caption := GetStrl(Lang+39);
+gbNeic.Caption := GetStrl(Lang+40);
+cbFilterNeic.Caption := GetStrl(Lang+41);
+lNeicFilter1.Caption := GetStrl(Lang+42);
+lNeicFilter2.Caption := GetStrl(Lang+43);
+lFillter1.Caption := GetStrl(Lang+44);
+TabSheet1.Caption := GetStrl(Lang+45);
+cbFilter.Caption := GetStrl(Lang+46);
+cbFilter.Hint := GetStrl(Lang+47);
+chkDepth.Caption := GetStrl(Lang+48);
+gdgLoad.Caption := GetStrl(Lang+49);
+StaticText1.Caption := GetStrl(Lang+50) + CurVersion;
+BtnHelp.Caption := GetStrl(Lang+51);
+BtnHelp.Hint := GetStrl(Lang+52);
+BtnPrint.Caption := GetStrl(Lang+53);
+BtnPrint.Hint := GetStrl(Lang+54);
+Edit6.Hint := GetStrl(Lang+55);
+// СѓРґР°Р»РµРЅРѕ ### Label2.Caption := GetStrl(56);    // " << -Р’С‹Р±РѕСЂ СЃС‚Р°РЅС†РёРё "
+Refresh.Caption := GetStrl(57);
+Refresh.Hint := GetStrl(58);
+RzExit.Caption := GetStrl(59);
+RzExit.Hint := GetStrl(60);
+RzRefresh.Caption := GetStrl(61);
+RzRefresh.Hint := GetStrl(62);
+RzStationBox.Hint := GetStrl(63);
+RzToolButton2.Hint := GetStrl(64);
+ChartWnd.Caption := GetStrl(65);
+ChartWnd.Label1.Caption := GetStrl(66);
+ChartWnd.Label2.Caption := GetStrl(67);
+ChartWnd.Label3.Caption := GetStrl(68);
+ChartWnd.Label4.Caption := GetStrl(69);
+ChartWnd.Label5.Caption := GetStrl(70);
+ChartWnd.Label6.Caption := GetStrl(71);
+ChartWnd.Label7.Caption := GetStrl(72);
+Edit6.Text := GetStrl(73);
+StaticText2.Caption := GetStrl(74);
+OpenSEISMOPath.Caption := GetStrl(75);
+Label17.Caption := GetStrl(214);{'СЃРµРє.'}
+StaticText3.Caption := GetStrl(80);
+BtnCom1.Caption := GetStrl(240);
+BtnCom2.Caption := GetStrl(241);
+BtnCom3.Caption := GetStrl(242);
+BtnCom4.Caption := GetStrl(243);
+BtnCom5.Caption := GetStrl(244);
+BtnCom6.Caption := GetStrl(245);
+BtnCom1.Hint    := GetStrl(320);
+BtnCom2.Hint    := GetStrl(321);
+BtnCom3.Hint    := GetStrl(322);
+BtnCom4.Hint    := GetStrl(323);
+BtnCom5.Hint    := GetStrl(324);
+BtnCom6.Hint    := GetStrl(325);
+ChOneFileCreateDisplay.Caption := GetStrl(225);
+ChOneFileCreateDisplay.Hint    := GetStrl(226);
+OpenPetDimas.Caption := GetStrl(328);
+RzToolbar1_Delta.Caption := GetStrl(336);
 RzToolbar1_Delta.Hint    := RzToolbar1_Delta.Caption;
 RzToolbar2_Delta.Hint    := RzToolbar1_Delta.Caption;
 RzToolbar2_Delta.Caption := RzToolbar1_Delta.Caption;
-rtb1_usgs.Caption := LoadStr(Lang+24);
+rtb1_usgs.Caption := GetStrl(24);
 rtb1_usgs.Hint    := rtb1_usgs.Caption;
 rtb2_usgs.Hint    := rtb1_usgs.Caption;
 rtb2_usgs.Caption := rtb1_usgs.Caption;
-rtb1_emsc.Caption := LoadStr(Lang+38);
+rtb1_emsc.Caption := GetStrl(38);
 rtb1_emsc.Hint    := rtb1_emsc.Caption;
 rtb2_emsc.Hint    := rtb1_emsc.Caption;
 rtb2_emsc.Caption := rtb1_emsc.Caption;
-rtb1_emsd.Caption := LoadStr(Lang+39);
+rtb1_emsd.Caption := GetStrl(39);
 rtb1_emsd.Hint    := rtb1_emsd.Caption;
 rtb2_emsd.Hint    := rtb1_emsd.Caption;
 rtb2_emsd.Caption := rtb1_emsd.Caption;
-rtb1_clear.Caption := LoadStr(Lang+337);
+rtb1_clear.Caption := GetStrl(337);
 rtb1_clear.Hint    := rtb1_clear.Caption;
 rtb2_clear.Hint    := rtb1_clear.Caption;
 rtb2_clear.Caption := rtb1_clear.Caption;
-lDot1.Caption := LoadStr(Lang+338) + ' 1';
-lDot2.Caption := LoadStr(Lang+338) + ' 2';
-TbDelta.Caption := LoadStr(Lang+339);
+lDot1.Caption := GetStrl(338) + ' 1';
+lDot2.Caption := GetStrl(338) + ' 2';
+TbDelta.Caption := GetStrl(339);
+TbSettings.Caption := GetStrl(340);
+bNeicWeek.Caption  := GetStrl(341);
+bNeicMonth.Caption := GetStrl(342);
+lStEditor.Caption  := GetStrl(343);
+ValueStationEditor.TitleCaptions.CommaText := GetStrl(344);
+Label2.Caption   := GetStrl(345);
+Label14.Caption  := GetStrl(346);
+RzPanelInfoUSGS.Caption  := GetStrl(347);
+Label10.Caption  := GetStrl(348);
+tsSetMain.Caption  :=  GetStrl(400);
+tsSetPath.Caption  :=  GetStrl(401);
+tsSetView.Caption  :=  GetStrl(402);
+tsSetPages.Caption   :=  GetStrl(403);
+tsSetFilter.Caption  :=  GetStrl(404);
+tsSetDebug.Caption   :=  GetStrl(405);
+gbLanguageSelect.Caption := GetStrl(430);
+gbFontsSelect.Caption    := GetStrl(431);
+gbLocalPath.Caption  := GetStrl(420);
+gbURLs.Caption     := GetStrl(421);
+bApplyURLs.Caption := GetStrl(422);
+bDefURLs.Caption   := GetStrl(423);
+leSeismoPath.EditLabel.Caption := GetStrl(424);
+bBrowseSeismo.Hint := GetStrl(425);
+ bApplySeismo.Hint := GetStrl(426);
+ bApplyFilterNeic.Caption := GetStrl(426);
+ CopyLineToClipboard.Caption := GetStrl(90);
 end;
+
+procedure TMF.ValuesLoad;
+  var StationList: TStringList;
+      i: integer;
+begin
+  if not fileexists(AppPath+'vstations2.ini') then exit;
+  try
+    StationList := TStringList.Create;
+    StationList.LoadFromFile('vstations2.ini');
+    RzStationBox.Items.Clear; RzStationBox.Values.Clear;
+    i:=0;
+    while i < StationList.Count do begin if (pos('###',StationList.Strings[i]) = 1) then begin StationList.Delete(i); dec(i); end; inc(i); end;
+    for i:=0 to StationList.Count-1 do begin
+      if pos('=',StationList.Strings[i]) > 2 then begin
+        RzStationBox.Items.Add ( copy(StationList.Strings[i],1,pos('=',StationList.Strings[i])-1) );
+        RzStationBox.Values.Add( copy(StationList.Strings[i],pos('=',StationList.Strings[i])+1,length(StationList.Strings[i])));
+      end;
+    end;
+    if RzStationBox.Items.Count > 0 then
+      if RzStationBox.Items.IndexOf(DefStation) > -1
+        then RzStationBox.ItemIndex := RzStationBox.Items.IndexOf(DefStation)
+        else RzStationBox.ItemIndex := 0;
+   finally
+    StationList.Free;
+  end;
+end;
+
+procedure TMF.ValuesSave;
+  var StationList: TStringList;
+      i: integer;
+begin
+  try
+    StationList := TStringList.Create;
+    if fileexists(AppPath+'vstations2.ini') then StationList.LoadFromFile('vstations2.ini');
+    i:=0;
+    while i < StationList.Count do begin if (pos('###',StationList.Strings[i]) <> 1) then begin StationList.Delete(i); dec(i); end; inc(i); end;
+    for i:=0 to RzStationBox.Items.Count-1 do StationList.Add(RzStationBox.Items.Strings[i] + '=' + RzStationBox.Values.Strings[i]);
+    StationList.SaveToFile('vstations2.ini');
+  finally
+    StationList.Free;
+  end;
+end;
+
 
 procedure TMF.BtnHelpClick(Sender: TObject);
 begin
@@ -3509,16 +3705,16 @@ end;
 procedure TMF.ThreadIdleUpdateExecute(Sender: TObject; Params: Pointer);
   var fLine: string;      USGS_FileSize,USGSNew_FileSize: integer;
       fList: TStringList;
-  const
-    FileURL: string = 'http://earthquake.usgs.gov/earthquakes/feed/csv/2.5/week';
+ { const
+    FileURL: string = 'http://earthquake.usgs.gov/earthquakes/feed/csv/2.5/week';   }
 begin
-  fList := TStringList.Create;                                                  // Создаем список
-  fList.LoadFromFile(USGS.TempFile);                                            // в который помещаем файл из кеша на диске
-  fLine := copy(fList.Strings[1],1,length(fList.Strings[1]));                   // Копируем первую строку земл-я
-  fList.Free;                                                                   // Все, файл не нужен
+  fList := TStringList.Create;                                                  // РЎРѕР·РґР°РµРј СЃРїРёСЃРѕРє
+  fList.LoadFromFile(USGS.TempFile);                                            // РІ РєРѕС‚РѕСЂС‹Р№ РїРѕРјРµС‰Р°РµРј С„Р°Р№Р» РёР· РєРµС€Р° РЅР° РґРёСЃРєРµ
+  fLine := copy(fList.Strings[1],1,length(fList.Strings[1]));                   // РљРѕРїРёСЂСѓРµРј РїРµСЂРІСѓСЋ СЃС‚СЂРѕРєСѓ Р·РµРјР»-СЏ
+  fList.Free;                                                                   // Р’СЃРµ, С„Р°Р№Р» РЅРµ РЅСѓР¶РµРЅ
   if (RzEQList.Count < 1) or (eqList.Count < 1) then exit;
   USGS_FileSize := GetFileSize( USGS.TempFile );
-  USGSNew_FileSize := DownloadFilebf(FileURL, fLine, USGS.TempFile+'.aup');
+  USGSNew_FileSize := DownloadFilebf(USGS.URLFile, fLine, USGS.TempFile+'.aup');
   if (USGSNew_FileSize = 1) {or (USGS_FileSize=USGSNew_FileSize)} then exit;
   SimpleUpdate := True;
   Parse_USGS;
@@ -3553,7 +3749,15 @@ end;
 
 procedure TMF.ThreadEmscExecute(Sender: TObject; Params: Pointer);
 begin
-  Parse_Emsc_2; // Parse_Emsc;
+  case cbEmscType.ItemIndex of
+    0:  Parse_Emsc;       // html
+    1:   ;
+    2:  Parse_Emsc_2;     // rss
+    3:   ;
+    4:   ;
+  else
+    //Key := #0;
+  end;
 end;
 
 procedure TMF.ThreadEmscFinish(Sender: TObject);
@@ -3631,6 +3835,28 @@ begin
     TabbedTextOut( EQListEmsc.Canvas.Handle, Rect.Left + 2, Rect.Top + TextOffset, PChar( EQListEmsc.Items[ Index ] ), Length( EQListEmsc.Items[Index] ), 4, ts, 0 );
    finally
      SelectClipRgn( EQListEmsc.Canvas.Handle, 0 );  { Removing clipping region }
+  end;
+end;
+
+procedure TMF.EQListEmsdDrawItem(Control: TWinControl; Index: Integer; Rect: TRect; State: TOwnerDrawState);
+var
+  oper: shortstring;
+  myColor: TColor;
+  myBrush: TBrush;
+begin
+  oper  := GetWord(EQListEmsd.Items[Index],1);
+  if oper=':KAM1' then myColor := $93FFFF else if oper=':KAM' then myColor := clInactiveCaptionText else
+    if pos('L',oper)=1 then myColor := $B1E9B1{77C479} else myColor := clWhite;
+  if odSelected in State then myColor := clHighlight;
+  myBrush := TBrush.Create;
+  with (Control as TRzTabbedListBox).Canvas do
+  begin
+    myBrush.Style := bsSolid;
+    myBrush.Color := myColor;
+    Windows.FillRect(handle, Rect, myBrush.Handle);
+    Brush.Style := bsClear;
+    TextOut(Rect.Left, Rect.Top, (Control as TRzTabbedListBox).Items[Index]);
+    MyBrush.Free;
   end;
 end;
 
@@ -3785,14 +4011,18 @@ begin
 end;
 
 
-procedure TMF.Button5Click(Sender: TObject);
+procedure TMF.bNeicWeekClick(Sender: TObject);
 begin
-  FileURL := 'http://earthquake.usgs.gov/earthquakes/feed/csv/2.5/week';
+  // FileURL := 'http://earthquake.usgs.gov/earthquakes/feed/csv/2.5/week';
+  USGS.URLFile := 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.csv';
+  leNeic.Text := USGS.URLFile;
 end;
 
 procedure TMF.bNeicMonthClick(Sender: TObject);
 begin
-  FileURL := 'http://earthquake.usgs.gov/earthquakes/feed/csv/2.5/month';
+  // FileURL := 'http://earthquake.usgs.gov/earthquakes/feed/csv/2.5/month';
+  USGS.URLFile := 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.csv';
+  leNeic.Text := USGS.URLFile;
 end;
 
 procedure TMF.ThreadJapanBegin(Sender: TObject);
@@ -3819,18 +4049,18 @@ begin
  if OpenWithDataan95.Tag = 0 then
   if FileExists('dataan') then begin
       OpenWithDataan95.Enabled := False;
-      OpenWithDataan95.Caption := LoadStr(Lang+326)+' ("dataan.exe")';
+      OpenWithDataan95.Caption := GetStrl(326)+' ("dataan.exe")';
      end else begin
       OpenWithDataan95.Enabled := True;
-      OpenWithDataan95.Caption := LoadStr(Lang+327);
+      OpenWithDataan95.Caption := GetStrl(327);
     end;
  if OpenWithDimas.Tag = 0 then
   if FileExists('dimas') then begin
       OpenWithDimas.Enabled    := False;
-      OpenWithDimas.Caption    := LoadStr(Lang+326)+' ("dimas.exe")';
+      OpenWithDimas.Caption    := GetStrl(326)+' ("dimas.exe")';
      end else begin
       OpenWithDimas.Enabled    := True;
-      OpenWithDimas.Caption    := LoadStr(Lang+329);
+      OpenWithDimas.Caption    := GetStrl(329);
     end;
 end;
 
@@ -3845,14 +4075,14 @@ procedure TMF.OpenWithDimasClick(Sender: TObject);
   const FileEx='C:\DIMAS\ANALYSE\dimas.exe';
         DirApp='C:\DIMAS\ANALYSE\';
 begin
-    OpenWithDimas.Enabled := False; { Нажали загрузить }   OpenWithDimas.Tag := 1;
+    OpenWithDimas.Enabled := False; { РќР°Р¶Р°Р»Рё Р·Р°РіСЂСѓР·РёС‚СЊ }   OpenWithDimas.Tag := 1;
       SeedDateK := conDateTimeToSeedURL(EMSD.eqdate); //r--> 2015-02-17-10-34-22
       if (pos('sys_info',Richedit1.Text) > 0) or (pos('for Depth:',Richedit1.Text)>0) then sSeedSecK := Richedit1.Lines.Strings[Richedit1.Lines.Count-3]
           else sSeedSecK := Richedit1.Lines.Strings[Richedit1.Lines.Count-1];
       dotpos := pos(DecimalSeparator,sSeedSecK);
       if dotpos < 1 then begin
           iSeedSecK := 500;
-          ShowMessage(LoadStr(Lang+213));{'Не удалось определить длительность события.'}
+          ShowMessage(GetStrl(213));{'РќРµ СѓРґР°Р»РѕСЃСЊ РѕРїСЂРµРґРµР»РёС‚СЊ РґР»РёС‚РµР»СЊРЅРѕСЃС‚СЊ СЃРѕР±С‹С‚РёСЏ.'}
         end else begin
           i:=0;
           while s1 <> ' ' do begin
@@ -3880,7 +4110,7 @@ begin
     ProgressOpen.Visible := False;
     if FileExists(LoadSeedWith.SeedFile) then
         ShellExecute(handle, 'open', PChar(FileEx), PChar(LoadSeedWith.SeedFile), PChar(DirApp), SW_SHOW);
-    OpenWithDimas.Enabled := True; { Загрузили }   OpenWithDimas.Tag := 0;
+    OpenWithDimas.Enabled := True; { Р—Р°РіСЂСѓР·РёР»Рё }   OpenWithDimas.Tag := 0;
 end;
 
 function DateTimeToStr1(ExDT: TDateTime): string;
@@ -3903,14 +4133,14 @@ procedure TMF.OpenWithDataan95Click(Sender: TObject);
        FileExD='C:\DIMAS\ANALYSE\dimas.exe';
         DirApp='C:\Operator\';
 begin
-    OpenWithDataan95.Enabled := False; { Нажали загрузить }   OpenWithDataan95.Tag := 1;
+    OpenWithDataan95.Enabled := False; { РќР°Р¶Р°Р»Рё Р·Р°РіСЂСѓР·РёС‚СЊ }   OpenWithDataan95.Tag := 1;
       SeedDateK := conDateTimeToSeedURL(EMSD.eqdate); //r--> 2015-02-17-10-34-22
       if (pos('sys_info',Richedit1.Text) > 0) or (pos('for Depth:',Richedit1.Text)>0) then sSeedSecK := Richedit1.Lines.Strings[Richedit1.Lines.Count-3]
           else sSeedSecK := Richedit1.Lines.Strings[Richedit1.Lines.Count-1];
       dotpos := pos(DecimalSeparator,sSeedSecK);
       if dotpos < 1 then begin
           iSeedSecK := 500;
-          ShowMessage(LoadStr(Lang+213));{'Не удалось определить длительность события.'}
+          ShowMessage(GetStrl(213));{'РќРµ СѓРґР°Р»РѕСЃСЊ РѕРїСЂРµРґРµР»РёС‚СЊ РґР»РёС‚РµР»СЊРЅРѕСЃС‚СЊ СЃРѕР±С‹С‚РёСЏ.'}
         end else begin
           i:=0;
           while s1 <> ' ' do begin
@@ -3939,7 +4169,7 @@ begin
            end else
             ShellExecute(handle, 'open', PChar(FileEx), PChar(ExtractShortPathName(DirApp + DateTimeToStr3(stdate))), PChar(DirApp), SW_SHOW);
         // end;
-    OpenWithDataan95.Enabled := True; { Загрузили }   OpenWithDataan95.Tag := 0;
+    OpenWithDataan95.Enabled := True; { Р—Р°РіСЂСѓР·РёР»Рё }   OpenWithDataan95.Tag := 0;
 end;
 
 procedure TMF.GetFile(fromDateTime: TDateTime; Seconds: Integer);
@@ -3962,13 +4192,13 @@ begin
       GetExitCodeProcess(hProcess,ExitCode);
      until
       (ExitCode <> STILL_ACTIVE) or (t2 > 35000);
-  // Здесь нужно убивать создавшийся процесс, тк. он будет висеть, если ему передаются неверные данные. Так что - @KillProcess RunTsk.
-  //if (r<>0) or (ExitCode<>0) then Memo.Lines.Add('Ошибки запуска('+inttoStr(r)+') Ошибки выполнения(' +inttostr(ExitCode)+')');
-  // Конвертим и копируем
+  // Р—РґРµСЃСЊ РЅСѓР¶РЅРѕ СѓР±РёРІР°С‚СЊ СЃРѕР·РґР°РІС€РёР№СЃСЏ РїСЂРѕС†РµСЃСЃ, С‚Рє. РѕРЅ Р±СѓРґРµС‚ РІРёСЃРµС‚СЊ, РµСЃР»Рё РµРјСѓ РїРµСЂРµРґР°СЋС‚СЃСЏ РЅРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ. РўР°Рє С‡С‚Рѕ - @KillProcess RunTsk.
+  //if (r<>0) or (ExitCode<>0) then Memo.Lines.Add('РћС€РёР±РєРё Р·Р°РїСѓСЃРєР°('+inttoStr(r)+') РћС€РёР±РєРё РІС‹РїРѕР»РЅРµРЅРёСЏ(' +inttostr(ExitCode)+')');
+  // РљРѕРЅРІРµСЂС‚РёРј Рё РєРѕРїРёСЂСѓРµРј
   RunTskP(hProcess, PChar(AppPath+'data\c512-4096.exe'),PChar(par2),PChar(AppPath),SW_HIDE);
   CopyFile(PChar(AppPath+par2+'.4096'),PChar(SavePath+copy(par2,1,pos('.ts',par2))),False);
-  DeleteFile(AppPath+par2+'.4096');  // Удаляем сконв файл
-  DeleteFile(AppPath+par2);          // Удаляем оригинал
+  DeleteFile(AppPath+par2+'.4096');  // РЈРґР°Р»СЏРµРј СЃРєРѕРЅРІ С„Р°Р№Р»
+  DeleteFile(AppPath+par2);          // РЈРґР°Р»СЏРµРј РѕСЂРёРіРёРЅР°Р»
 
   //if not chOnlyGet.Checked then ShellExecute(handle, 'open', PChar(DirPlot+'template.html'), nil, nil, SW_SHOW);
 end;
@@ -3981,7 +4211,7 @@ begin           // ExtractShortPathName
 end;
 
 procedure TMF.TbDeltaShow(Sender: TObject);
-begin     //  Подсказки к кнопкам
+begin     //  РџРѕРґСЃРєР°Р·РєРё Рє РєРЅРѕРїРєР°Рј
   if (usgs.eqtim <> '') then {'O= '  + usgs.eqtim + #10#13 + }
    rtb1_usgs.Hint := 'Lat= '+ usgs.eqlat + #10#13 + 'Lon= '+ usgs.eqlon ;
   if (emsc.eqtim <> '') then
@@ -4036,16 +4266,183 @@ procedure TMF.Label2Click(Sender: TObject);
 begin
   FontDialog1.Font := RichEdit1.Font;
   if FontDialog1.Execute then RichEdit1.Font := FontDialog1.Font;
+
+  RichEdit1.Font.Pitch := fpFixed;
+  RichEdit1.Repaint;
+  RichEdit1.Refresh;
 end;
 
 procedure TMF.Label14Click(Sender: TObject);
 begin
-
   FontDialog1.Font := RzEQList.Font;
-
   if FontDialog1.Execute then RzEQList.Font := FontDialog1.Font;
   RzEQList.Font.Charset := OEM_CHARSET;
   RzEQList.Font.Pitch := fpFixed;
 end;
+
+procedure TMF.Label10Click(Sender: TObject);
+  var i: integer;
+begin
+  FontDialog1.Font.Name := 'Comic Sans MS';
+  FontDialog1.Font.Name := MF.Font.Name;
+  if FontDialog1.Execute then MF.Font.Name := FontDialog1.Font.Name;
+
+  for i := 0 to MF.ComponentCount - 1 do
+    if (MF.Components[i] is TLabel) then
+      (MF.Components[i] as TLabel).ParentFont := True;
+  for i := 0 to MF.ComponentCount - 1 do
+    if (MF.Components[i] is TGroupBox)  then
+      (MF.Components[i] as TGroupBox).ParentFont := True;
+  for i := 0 to MF.ComponentCount - 1 do
+    if (MF.Components[i] is TRzPageControl)  then
+      (MF.Components[i] as TRzPageControl).ParentFont := True;
+  MF.Update;
+end;
+
+procedure TMF.lStEditorClick(Sender: TObject);
+  var i: integer;
+begin
+  if lStEditor.Align = alNone then begin
+    ValuesLoad;
+    ValueStationEditor.Strings := RzStationBox.Values;
+    for i:=0 to RzStationBox.Items.Count -1 do
+      begin
+        ValueStationEditor.Keys[i+1] := RzStationBox.Items.Strings[i];
+      end;
+    ValueStationEditor.Visible := True;
+    ValueStationEditor.Align := alClient;
+    lStEditor.Align := alTop;
+   end else begin
+    //RzStationBox.Values := ValueStationEditor.Strings;
+    for i:=0 to RzStationBox.Items.Count -1 do
+      begin
+        RzStationBox.Values.Strings[i] := copy(ValueStationEditor.Strings[i],pos('=',ValueStationEditor.Strings[i])+1,length(ValueStationEditor.Strings[i]));
+        RzStationBox.Items.Strings[i] := ValueStationEditor.Keys[i+1];
+      end;
+    ValuesSave;
+    ValueStationEditor.Visible := False;
+    ValueStationEditor.Align := alNone;
+    lStEditor.Align := alNone;
+    lStEditor.Left := 8;
+    lStEditor.Top  := 16;
+    ValuesLoad;
+  end;
+end;
+
+procedure TMF.lStEditorMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+begin  lStEditor.Font.Style := [fsBold,fsUnderline]; end;
+procedure TMF.lStEditorMouseLeave(Sender: TObject);
+begin  lStEditor.Font.Style := [fsBold]; end;
+procedure TMF.lStEditorMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+begin  lStEditor.Font.Color := clMaroon; end;
+procedure TMF.lStEditorMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+begin  lStEditor.Font.Color := clActiveCaption; end;
+
+procedure TMF.cbLangChange(Sender: TObject);
+begin
+  sLang := SetLng(cbLang.ItemIndex);
+  ChangeLanguage;
+end;
+
+procedure TMF.FormDestroy(Sender: TObject);
+begin
+  LngFree;
+end;
+
+
+
+procedure TMF.cbFilterClick(Sender: TObject);
+begin
+  SimpleUpdate:=True;
+  RefreshClick(MF);
+end;
+
+procedure TMF.bApplyURLsClick(Sender: TObject);
+begin
+  USGS.URLFile := leNeic.Text;
+  EMSC.URLFile := leEmsc.Text;
+  EMSD.URLFile := leEmsd.Text;
+  bApplyURLs.Enabled := False;
+end;
+
+procedure TMF.bDefURLsClick(Sender: TObject);
+begin
+  leNeic.Text := 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.csv';
+  leEmsc.Text := 'http://www.emsc-csem.org/service/rss/rss.php?typ=emsc';
+  leEmsd.Text := 'http://ts.emsd.ru/cgi-bin/eq-cgi.txt';
+  bApplyURLsClick(MF);
+end;
+
+procedure TMF.leNeicChange(Sender: TObject);
+begin
+  if USGS.URLFile <> leNeic.Text then bApplyURLs.Enabled := True else bApplyURLs.Enabled := False;
+end;
+
+procedure TMF.leEmscChange(Sender: TObject);
+begin
+  if EMSC.URLFile <> leEmsc.Text then bApplyURLs.Enabled := True else bApplyURLs.Enabled := False;
+end;
+
+procedure TMF.leEmsdChange(Sender: TObject);
+begin
+  if EMSD.URLFile <> leEmsd.Text then bApplyURLs.Enabled := True else bApplyURLs.Enabled := False;
+end;
+
+procedure TMF.bBrowseSeismoClick(Sender: TObject);
+  var Folder: string;
+begin
+  Folder := leSeismoPath.Text;
+  {$IFNDEF VER100}
+  if SelectDirectory('Seismo Path:', '', Folder) then leSeismoPath.Text := Folder;
+  {$ELSE}
+  if SelectDirectory(Folder, [], 0) then leSeismoPath.Text := Folder;
+  {$ENDIF}
+  if SeisPath <> leSeismoPath.Text then bApplySeismo.Enabled := True else bApplySeismo.Enabled := False;
+end;
+
+procedure TMF.bApplySeismoClick(Sender: TObject);
+begin
+  SeisPath := leSeismoPath.Text;
+  bApplySeismo.Enabled := False;
+end;
+
+procedure TMF.leSeismoPathChange(Sender: TObject);
+begin
+  if SeisPath <> leSeismoPath.Text then bApplySeismo.Enabled := True else bApplySeismo.Enabled := False;
+end;
+
+procedure TMF.bApplyFilterNeicClick(Sender: TObject);
+begin
+  Page.ActivePage := TbNeic;
+  SimpleUpdate:=True;
+  RefreshClick(MF);
+  Page.ActivePage := TbSettings;
+end;
+
+procedure TMF.CopyLineToClipboardClick(Sender: TObject);
+begin
+  CopyToClip(RzEQList.SelectedItem);
+end;
+
+procedure TMF.RichEdit1SaveClipboard(Sender: TObject; NumObjects,
+  NumChars: Integer; var SaveClipboard: Boolean);
+begin
+ RichEdit1.CopyToClipboard;
+end;
+
+
+procedure TMF.Button5Click(Sender: TObject);
+  var snt: TStrings;
+      snt2 : TStringList;
+      i2: integer;
+begin
+  for i2 := 0 to snt2.Count - 1 do
+  begin
+    snt.Add(IntToStr(1+(i2*14)));
+  end;
+
+end;
+
+
 
 end.
