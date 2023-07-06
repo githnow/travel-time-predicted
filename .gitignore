@@ -1,2 +1,4 @@
+*.dcu
 /*.dcu
 /.vscode
+/display/d345
